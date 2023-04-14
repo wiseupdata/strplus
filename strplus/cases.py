@@ -25,35 +25,24 @@ def to_pascal(text):
     # Join the words back together to form the CamelCase string
     return ''.join(capitalized_words)
 
-import re
-
-import re
 
 def to_camel(text):
     """
-    Convert a string from any case to camelCase.
+    Convert a string from any case to CamelCase.
     """
     text = text.strip()
     
-    if not text:  # If the input string is empty or only whitespace, return an empty string
+    if not text:  # If the input string is empty, return an empty string
         return ""
     
-    # Remove any underscores, hyphens, or spaces and split the string into words
-    words = re.findall(r'[a-zA-Z0-9]+', text)
-
-    # Capitalize the first letter of each word except the first word
-    capitalized_words = []
-    for i, word in enumerate(words):
-        if i == 0:
-            capitalized_words.append(word.lower())
-        else:
-            capitalized_words.append(word.capitalize())
+    # Split the string into words using regex
+    words = re.sub('([A-Z][a-z]+)', r' \1', re.sub('([A-Z]+)', r' \1', text)).split()
     
-    # Join the words back together to form the camelCase string
+    # Capitalize the first letter of each word except the first word
+    capitalized_words = [words[0].lower()] + [word.capitalize() for word in words[1:]]
+    
+    # Join the words back together to form the CamelCase string
     return ''.join(capitalized_words)
-
-
-
 
 
 
