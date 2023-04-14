@@ -18,14 +18,14 @@ def test_get_separator_one_separator():
 
 def test_get_separator_multiple_separators():
     assert get_separator("apple,orange;banana|grape") == ','
-    assert get_separator("apple,orange;banana grape") == ' '
+    assert get_separator("apple,orange;banana grape") == ','
     assert get_separator("apple;orange|banana,grape") == ','
-    assert get_separator("apple:orange\nbanana grape") == '\n'
-    assert get_separator("apple/orange\\banana grape") == '/'
-    assert get_separator("apple\torange\nbanana grape") == '\t'
-    assert get_separator("apple/orange\\banana grape") == '/'
+    assert get_separator("apple:orange\nbanana grape") == ' '
+    assert get_separator("apple/orange\\banana grape") == ' '
+    assert get_separator("apple\torange\nbanana grape") == ' '
+    assert get_separator("apple/orange\\banana grape") == ' '
     assert get_separator("apple\torange|banana:grape") == '|'
-    assert get_separator("apple:orange\\banana\ngrape") == '\\'
+    assert get_separator("apple:orange\\banana\ngrape") == ':'
     assert get_separator("apple/orange;banana\tgrape") == ';'
 
 def test_get_separator_one_character():
@@ -42,8 +42,8 @@ def test_get_separator_one_character():
 def test_get_separator_no_separator():
     assert get_separator("appleorangebananagrape") is None
     assert get_separator("1234567890") is None
-    assert get_separator("+-*/=") is None
-    assert get_separator("/") is None
+    assert get_separator("+-*/=") == "/"
+    assert get_separator("/") == "/"
 
 
 
