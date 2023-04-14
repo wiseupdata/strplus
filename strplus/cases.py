@@ -49,6 +49,30 @@ def to_camel(text):
     
     return words[0] + ''.join(word.capitalize() for word in words[1:]).replace('_', '')
 
+def to_snake(text):
+    """Converts a string to snake_case"""
+    text = text.strip()
 
+    if not text:  # If the input string is empty or only whitespace, return an empty string
+        return ""
+
+    # Remove any non-alphanumeric characters and split the string into words
+    words = sum([re.findall(r'[a-zA-Z0-9]+', word) for word in re.sub('([A-Z][a-z]+)', r'_\1', re.sub('([A-Z]+)', r'_\1', text)).split()], [])
+
+    # Join the words back together to form the snake_case string
+    return '_'.join([word.lower() for word in words])
+
+
+def to_list(text):
+    """Converts a string to list"""
+    text = text.strip()
+
+    if not text:  # If the input string is empty or only whitespace, return an empty string
+        return []
+
+    # Remove any non-alphanumeric characters and split the string into words
+    word_list = sum([re.findall(r'[a-zA-Z0-9]+', word) for word in re.sub('([A-Z][a-z]+)', r'_\1', re.sub('([A-Z]+)', r'_\1', text)).split()], [])
+
+    return word_list
 
 

@@ -1,4 +1,4 @@
-from strplus.cases import to_pascal, to_camel
+from strplus.cases import to_pascal, to_camel, to_snake, to_list
 
 class Str(str):
     def __new__(cls, wrapped_str):
@@ -23,3 +23,7 @@ class Str(str):
         return Str(to_pascal(self))
     def camel(self):
         return Str(to_camel(self))
+    def snake(self):
+        return Str(to_snake(self))
+    def list(self):
+        return [Str(word) for word in to_list(self) ]
