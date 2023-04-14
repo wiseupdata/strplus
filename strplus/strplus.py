@@ -1,24 +1,8 @@
 from strplus.cases import to_pascal, to_camel, to_snake, to_list
 
 class Str(str):
-    def __new__(cls, wrapped_str):
-        if not isinstance(wrapped_str, str):
-            raise TypeError("wrapped_str must be a string")
-        return super().__new__(cls, wrapped_str)
-
-    def __getattr__(self, attr):
-        return super().__getattribute__(attr)
-
-    def __getitem__(self, key):
-        if isinstance(key, int):
-            item = super().__getitem__(key)
-            if isinstance(item, str):
-                return Str(item)
-            return item
-        elif isinstance(key, slice):
-            return Str(super().__getitem__(key))
-        else:
-            raise TypeError("indices must be integers")
+    def __new__(cls, *args, **kwargs):
+        return super().__new__(cls, *args, **kwargs)
     def pascal(self):
         return Str(to_pascal(self))
     def camel(self):
@@ -27,3 +11,18 @@ class Str(str):
         return Str(to_snake(self))
     def list(self):
         return [Str(word) for word in to_list(self) ]
+
+for name in dir(str):
+    if not name.startswith('__'):
+        setattr(Str, name, getattr(str, name))
+        if callable(getattr(str, name)):
+            def wrapper(func):
+                def wrapped(self, *args, **kwargs):
+                    result = func(self, *args, **kwargs)
+                    if isinstance(result, str):
+                        return Str(result)
+                    elif isinstance(result, list):
+                        return [Str(s) for s in result]
+                    return result
+                return wrapped
+            setattr(Str, name, wrapper(getattr(Str, name)))
