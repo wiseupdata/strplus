@@ -52,13 +52,19 @@ assert s.upper() == "HELLO"
 <br>
 <br>
 
+
+![](assets/20230414_203231_image.png)
+
+
+
 # References 🌍 🗄️
 
 1. [Wise Up Data](https://github.com/wiseupdata)
-1. [Emojis](https://github.com/wiseupdata/emojis)
-1. [Pypi Deploy](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)
+2. [Emojis](https://github.com/wiseupdata/emojis)
+3. [Pypi Deploy](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)
 
-<br><br>
+<br>
+<br>
 ---
 
 #### Maintainer 🤗 👨‍💻
@@ -69,7 +75,6 @@ Sivio Liborio
 
 <a href="https://www.linkedin.com/in/silvio-de-melo-liborio">silvio-de-melo-liborio <img align="left" alt="LinkedIN" width="18px" src="https://raw.githubusercontent.com/wiseupdata/wsl-latest/main/assets/linkedin.svg" />
 </a>
-
 
 <br>
 <br>

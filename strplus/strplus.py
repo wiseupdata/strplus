@@ -1,4 +1,4 @@
-from strplus.cases import to_pascal
+from strplus.cases import to_pascal, to_camel
 
 class Str(str):
     def __new__(cls, wrapped_str):
@@ -21,3 +21,5 @@ class Str(str):
             raise TypeError("indices must be integers")
     def pascal(self):
         return Str(to_pascal(self))
+    def camel(self):
+        return Str(to_camel(self))
