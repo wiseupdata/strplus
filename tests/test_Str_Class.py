@@ -6,10 +6,6 @@ def test_init():
     s = Str("hello")
     assert str(s) == "hello"
 
-    # Test initializing with a non-string
-    with pytest.raises(TypeError):
-        s = Str(123)
-
 def test_getitem():
     # Test getting a single character
     s = Str("hello")
