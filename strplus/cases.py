@@ -35,7 +35,7 @@ def to_camel(text):
     if not text:  # If the input string is empty, return an empty string
         return ""
     
-    # Split the string into words using regex
+    # Split the string into words using regex, split 1
     words = re.sub('([A-Z][a-z]+)', r' \1', re.sub('([A-Z]+)', r' \1', text)).split()
     
     # Capitalize the first letter of each word except the first word
@@ -43,6 +43,7 @@ def to_camel(text):
     
     # Join the words back together to form the CamelCase string
     return ''.join(capitalized_words)
+
 
 
 
