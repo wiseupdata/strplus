@@ -51,4 +51,4 @@ def test_pascal_1():
 def test_pascal_2():
     # Test accessing an attribute
     s = Str("1234!@#$% abcdEFGH")
-    assert s.pascal() == "1234Abcdefgh"
+    assert s.pascal() == "1234AbcdEfgh"

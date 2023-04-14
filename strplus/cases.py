@@ -12,7 +12,7 @@ def to_pascal(text):
         return ""
     
     # Remove any underscores, hyphens, or spaces and split the string into words
-    words = re.findall(r'[a-zA-Z0-9]+', text)
+    words = sum([re.findall(r'[a-zA-Z0-9]+', word) for word in re.sub('([A-Z][a-z]+)', r' \1', re.sub('([A-Z]+)', r' \1', text)).split()], [])
 
     # Capitalize the first letter of each word except the first word
     capitalized_words = []
@@ -36,13 +36,18 @@ def to_camel(text):
         return ""
     
     # Split the string into words using regex, split 1
-    words = re.sub('([A-Z][a-z]+)', r' \1', re.sub('([A-Z]+)', r' \1', text)).split()
+    words = sum([re.findall(r'[a-zA-Z0-9]+', word) for word in re.sub('([A-Z][a-z]+)', r' \1', re.sub('([A-Z]+)', r' \1', text)).split()], [])
     
     # Capitalize the first letter of each word except the first word
     capitalized_words = [words[0].lower()] + [word.capitalize() for word in words[1:]]
     
     # Join the words back together to form the CamelCase string
-    return ''.join(capitalized_words)
+    check_01 = ''.join(capitalized_words)
+    
+    # Final check
+    words = re.split('[-_]', check_01)
+    
+    return words[0] + ''.join(word.capitalize() for word in words[1:]).replace('_', '')
 
 
 
