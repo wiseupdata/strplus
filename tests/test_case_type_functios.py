@@ -20,8 +20,8 @@ def test_function_to_pascal(input_string, expected_output):
     assert to_pascal("   ") == ""
     assert to_pascal("a") == "A"
     assert to_pascal("A") == "A"
-    # assert to_pascal("aA") == "Aa"
-    # assert to_pascal("AA") == "Aa"
+    assert to_pascal("aA") == "AA"
+    assert to_pascal("AA") == "Aa"
     assert to_pascal("theQuick_brown_10Fox_jumps_over_the_lazy_dog") == "TheQuickBrown10FoxJumpsOverTheLazyDog"
     assert to_pascal("1234!@#$% abcdEFGH") == "1234AbcdEfgh"
 
