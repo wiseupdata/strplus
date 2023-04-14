@@ -29,6 +29,10 @@ Python extra functions for strings ❤️
 
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 
 ```
 from pystring import Str
