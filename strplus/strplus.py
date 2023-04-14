@@ -1,3 +1,5 @@
+from strplus.cases import to_pascal
+
 class Str(str):
     def __new__(cls, wrapped_str):
         if not isinstance(wrapped_str, str):
@@ -17,3 +19,5 @@ class Str(str):
             return Str(super().__getitem__(key))
         else:
             raise TypeError("indices must be integers")
+    def pascal(self):
+        return Str(to_pascal(self))
