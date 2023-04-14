@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pystring"
+name = "python_functions"
 version = "0.1.0"
 description = ""
 authors = ["silllvio <silllvio@hotmail.com>"]
