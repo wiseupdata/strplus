@@ -53,7 +53,7 @@ assert s.upper() == "HELLO"
 <br>
 
 
-![](assets/20230414_203231_image.png)
+![](https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/20230414_203231_image.png)
 
 
 
