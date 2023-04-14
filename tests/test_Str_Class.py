@@ -43,7 +43,12 @@ def test_attr():
     # Test accessing a method
     assert s.capitalize() == "Hello"
 
-def test_pascal():
+def test_pascal_1():
     # Test accessing an attribute
     s = Str("UPPERCASE")
     assert s.pascal() == "Uppercase"
+
+def test_pascal_2():
+    # Test accessing an attribute
+    s = Str("1234!@#$% abcdEFGH")
+    assert s.pascal() == "1234!@#$%Abcdefgh"
