@@ -1,5 +1,5 @@
 import pytest
-from python_functions import Str
+from strplus import Str
 
 def test_init():
     # Test initializing with a string

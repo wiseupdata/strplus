@@ -11,8 +11,8 @@
   <img align="left" alt="wise Up Data's LinkedIN" width="22px" src="https://raw.githubusercontent.com/wiseupdata/wiseupdata/main/assets/linkedin.png" />
 </a>
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=wiseupdata.python-functions&left_color=green&right_color=black)
-![license](https://img.shields.io/github/license/wiseupdata/python-functions)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=wiseupdata.strplus&left_color=green&right_color=black)
+![license](https://img.shields.io/github/license/wiseupdata/strplus)
 
 ---
 
@@ -20,7 +20,7 @@
 <br>
 
 <a href="https://github.com/wiseupdata/wiseupdata">
-<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/python-functions/main/assets/python.png" width="300" />
+<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/python.png" width="300" />
 </a>
 
 <h1>
@@ -35,7 +35,7 @@ Python extra functions for strings ❤️
 <br>
 
 ```
-from python_functions import Str
+from strplus import Str
 s = Str("hello")
 assert s.upper() == "HELLO"
 ```
@@ -45,7 +45,7 @@ assert s.upper() == "HELLO"
 <br>
 <br>
 <a href="https://github.com/wiseupdata/wiseupdata">
-<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/python-functions/main/assets/under_construction.gif" width="300" />
+<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/under_construction.gif" width="300" />
 </a>
 
 <br>
