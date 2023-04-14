@@ -13,5 +13,7 @@ class Str(str):
             if isinstance(item, str):
                 return Str(item)
             return item
+        elif isinstance(key, slice):
+            return Str(super().__getitem__(key))
         else:
             raise TypeError("indices must be integers")

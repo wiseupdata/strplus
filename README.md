@@ -29,7 +29,13 @@ Python extra functions for strings ❤️
 
 <br>
 <br>
-<br>
+
+```
+from pystring import Str
+s = Str("hello")
+assert s.upper() == "HELLO"
+```
+
 <br>
 <br>
 <br>
