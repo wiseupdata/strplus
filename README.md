@@ -44,9 +44,6 @@ assert s.upper() == "HELLO"
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 <a href="https://github.com/wiseupdata/wiseupdata">
 <img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/pystring/main/assets/under_construction.gif" width="300" />
 </a>
