@@ -1,1 +1,1 @@
-*.css linguist-style=monokai
+* linguist-vendored linguist-detectable=true linguist-language=monokai
