@@ -3,4 +3,5 @@ def copy_docstring(func):
         if to_func.__doc__ is None:
             to_func.__doc__ = func.__doc__
         return to_func
+
     return wrapper

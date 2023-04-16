@@ -3,13 +3,10 @@ import pytest
 from strplus.cases import to_pascal, to_camel, to_snake, to_list
 
 
-@pytest.mark.parametrize("input_string, expected_output", [
-    ("the quick brown fox", "TheQuickBrownFox"),
-    ("a b c d e f g", "ABCDEFG"),
-    ("1234 5678 90", "1234567890"),
-    ("PascalCase", "PascalCase"),
-    ("UPPERCASE", "Uppercase")
-])
+@pytest.mark.parametrize(
+    "input_string, expected_output",
+    [("the quick brown fox", "TheQuickBrownFox"), ("a b c d e f g", "ABCDEFG"), ("1234 5678 90", "1234567890"), ("PascalCase", "PascalCase"), ("UPPERCASE", "Uppercase")],
+)
 def test_function_to_pascal(input_string, expected_output):
     assert to_pascal(input_string) == expected_output
     assert to_pascal("1_word") == "1Word"
@@ -42,13 +39,11 @@ def test_to_camel():
     assert to_camel("theQuick_brown_10Fox_jumps_over_the_lazy_dog") == "theQuickBrown10FoxJumpsOverTheLazyDog"
     assert to_camel("1234!@#$% abcdEFGH") == "1234AbcdEfgh"
 
-@pytest.mark.parametrize("input_string, expected_output", [
-    ("the quick brown fox", "the_quick_brown_fox"),
-    ("a b c d e f g", "a_b_c_d_e_f_g"),
-    ("1234 5678 90", "1234_5678_90"),
-    ("PascalCase", "pascal_case"),
-    ("UPPERCASE", "uppercase")
-])
+
+@pytest.mark.parametrize(
+    "input_string, expected_output",
+    [("the quick brown fox", "the_quick_brown_fox"), ("a b c d e f g", "a_b_c_d_e_f_g"), ("1234 5678 90", "1234_5678_90"), ("PascalCase", "pascal_case"), ("UPPERCASE", "uppercase")],
+)
 def test_function_to_snake_case(input_string, expected_output):
     assert to_snake(input_string) == expected_output
     assert to_snake("1_word") == "1_word"
@@ -63,23 +58,29 @@ def test_function_to_snake_case(input_string, expected_output):
     assert to_snake("1234!@#$% abcdEFGH") == "1234_abcd_efgh"
     assert to_snake("MyString") == "my_string"
 
+
 def test_empty_string():
     assert to_list("") == []
+
 
 def test_only_whitespace():
     assert to_list("  \n\t ") == []
 
+
 def test_one_word():
     assert to_list("hello") == ["hello"]
 
+
 def test_multiple_words():
     assert to_list("hello world") == ["hello", "world"]
+
 
 def test_uppercase_words():
     assert to_list("HelloWorld") == ["Hello", "World"]
     assert to_list("HELLO_WORLD") == ["HELLO", "WORLD"]
     assert to_list("ThisIsATest") == ["This", "Is", "A", "Test"]
     assert to_list("T") == ["T"]
+
 
 def test_special_characters():
     assert to_list("hello-world") == ["hello", "world"]

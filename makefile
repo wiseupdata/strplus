@@ -1,11 +1,31 @@
-# Variables
-PROJECT_DIR = .
+# Makefile
 
-# Commands
+# Default path
+path ?= .
 
-test:
-    pytest --cov=$(PROJECT_DIR) tests/
+# Automatic code formatting
+format-black:
+	@black --line-length 200 --skip-magic-trailing-comma $(path)
 
-cover:
-    rm -rf htmlcov/
-    pytest --cov=$(PROJECT_DIR) --cov-report html tests/
+format-isort:
+	@isort .
+
+# Linting tasks
+lint-black:
+	@black --line-length 200 --skip-magic-trailing-comma $(path) --check
+
+lint-isort:
+	@isort . --check
+
+lint-flake8:
+	@flake8 .
+
+# Tasks: Run `make format` or `make lint` to manually run each of the steps
+format: format-black format-isort
+
+lint: lint-black lint-isort lint-flake8
+
+
+#use Example:
+# make path=strplus/functions.py
+# make 

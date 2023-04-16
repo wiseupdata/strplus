@@ -1,6 +1,7 @@
 from strplus.cases import to_pascal, to_camel, to_snake, to_list
 from strplus.decorators import copy_docstring
 
+
 class Str(str):
     """A subclass of the built-in str class with additional string manipulation methods.
 
@@ -30,6 +31,7 @@ class Str(str):
     Note that all methods provided by the Str class are based on regular expressions, so they may not be
     appropriate for all string manipulation tasks.
     """
+
     def __new__(cls, *args, **kwargs):
         if not all(isinstance(arg, str) for arg in args):
             raise TypeError("Str argument must be a string")
@@ -37,16 +39,17 @@ class Str(str):
 
     def __init__(self, *args, **kwargs):
         super().__init__()
+
         def __new__(cls, *args, **kwargs):
             return super().__new__(cls, *args, **kwargs)
-    
+
     def pascal(self):
         """
         Converts a string to PascalCase.
-        
+
         Returns:
             str: The PascalCase version of the input string.
-        
+
         Example:
             >>> my_string = Str('hello_world')
             >>> my_string.pascal()
@@ -56,7 +59,7 @@ class Str(str):
             'SomeMixedStringWithSpacesUnderscoresAndHyphens'
         """
         return Str(to_pascal(self))
-    
+
     def camel(self):
         """Converts a string from any case to CamelCase.
 
@@ -73,7 +76,7 @@ class Str(str):
             'thisIsATest'
         """
         return Str(to_camel(self))
-    
+
     def snake(self):
         """Converts a string to snake_case.
 
@@ -94,16 +97,18 @@ class Str(str):
             'hello_world'
         """
         return Str(to_snake(self))
-    
+
     def list(self):
-        return [Str(word) for word in to_list(self) ]
+        return [Str(word) for word in to_list(self)]
+
 
 for name in dir(str):
-    if not name.startswith('__'):
+    if not name.startswith("__"):
         original_method = getattr(str, name)
         setattr(Str, name, original_method)
 
         if callable(original_method):
+
             def wrapper(func):
                 def wrapped(self, *args, **kwargs):
                     result = func(self, *args, **kwargs)
