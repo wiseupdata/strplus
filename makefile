@@ -34,6 +34,20 @@ coverage-html:
 htmlclean:
 	@rm -rf htmlcov/
 
+# Generate the documentation
+doc:
+	### Generate the RST files
+	@find sphinx/source/ -type f -name "*.rst" ! -name "index.rst" -delete
+	@poetry run sphinx-apidoc -f -o sphinx/source/ ./strplus
+
+	### Generate the HTML
+	@rm -Rf sphinx/build/html
+	@poetry run sphinx-build -b html sphinx/source/ sphinx/build/html
+
+	###########################################
+	@mkdir docs && touch docs/.nojekyll
+	@cp -r sphinx/build/html/* ./docs/        
+
 # Tasks: Run `make format` or `make lint` to manually run each of the steps
 format: format-black format-isort
 lint: lint-black lint-isort lint-flake8
