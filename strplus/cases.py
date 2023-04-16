@@ -4,8 +4,28 @@ from typing import List
 
 logger = logging.getLogger(__name__)
 
-def to_pascal(text):
-    """Converts a string to PascalCase"""
+import re
+
+def to_pascal(text: str) -> str:
+    """
+    Converts a string to PascalCase.
+    
+    Args:
+        text (str): The input string.
+    
+    Returns:
+        str: The PascalCase version of the input string.
+    
+    Example:
+        >>> to_pascal('hello_world')
+        'HelloWorld'
+        >>> to_pascal('CamelCase')
+        'CamelCase'
+        >>> to_pascal('some-mixed_string With spaces_underscores-and-hyphens')
+        'SomeMixedStringWithSpacesUnderscoresAndHyphens'
+        >>> to_pascal('123abc')
+        '123abc'
+    """
     text = text.strip()
     
     if not text:  # If the input string is empty or only whitespace, return an empty string
@@ -25,10 +45,24 @@ def to_pascal(text):
     # Join the words back together to form the CamelCase string
     return ''.join(capitalized_words)
 
-
 def to_camel(text):
-    """
-    Convert a string from any case to CamelCase.
+    """Converts a string from any case to CamelCase.
+
+    Args:
+        text (str): The string to convert.
+
+    Returns:
+        str: The converted string in CamelCase.
+
+    Raises:
+        ValueError: If the input string is empty.
+
+    Examples:
+        >>> to_camel('this_is-an_example')
+        'thisIsAnExample'
+
+        >>> to_camel('This is a test!')
+        'thisIsATest'
     """
     text = text.strip()
     
@@ -50,10 +84,29 @@ def to_camel(text):
     return words[0] + ''.join(word.capitalize() for word in words[1:]).replace('_', '')
 
 def to_snake(text):
-    """Converts a string to snake_case"""
+    """Converts a string to snake_case.
+
+    Args:
+        text (str): The input string to convert.
+
+    Returns:
+        str: The string converted to snake_case.
+
+    Examples:
+        >>> to_snake("HelloWorld")
+        'hello_world'
+
+        >>> to_snake("  AnotherString!  ")
+        'another_string'
+
+        >>> to_snake("hello-world")
+        'hello_world'
+    """
+
     text = text.strip()
 
-    if not text:  # If the input string is empty or only whitespace, return an empty string
+    if not text:  
+        # If the input string is empty or only whitespace, return an empty string
         return ""
 
     # Remove any non-alphanumeric characters and split the string into words
@@ -62,9 +115,28 @@ def to_snake(text):
     # Join the words back together to form the snake_case string
     return '_'.join([word.lower() for word in words])
 
-
 def to_list(text):
-    """Converts a string to list"""
+    """Converts a string to a list of alphanumeric words.
+
+    Args:
+        text (str): The input string to convert.
+
+    Returns:
+        list: A list of words extracted from the input string.
+
+    Examples:
+        >>> to_list("Hello world!")
+        ['Hello', 'world']
+
+        >>> to_list("   another-string_123  ")
+        ['another', 'string', '123']
+
+        >>> to_list("   ")
+        []
+
+        >>> to_list("")
+        []
+    """
     text = text.strip()
 
     if not text:  # If the input string is empty or only whitespace, return an empty string
