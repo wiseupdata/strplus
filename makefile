@@ -45,7 +45,7 @@ doc:
 	@poetry run sphinx-build -b html sphinx/source/ sphinx/build/html
 
 	###########################################
-	@mkdir docs && touch docs/.nojekyll
+	@rm -Rf docs && mkdir docs && touch docs/.nojekyll
 	@cp -r sphinx/build/html/* ./docs/        
 
 # Tasks: Run `make format` or `make lint` to manually run each of the steps

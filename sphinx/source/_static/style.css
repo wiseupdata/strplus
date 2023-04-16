@@ -1,0 +1,39 @@
+/* Set the background color for the entire page */
+body {
+    background-color: #df0404;
+}
+
+/* Set the background color for the sidebar and menu */
+nav.md-sidebar.md-sidebar--primary {
+    background-color: #212121;
+}
+
+/* Set the text color for the sidebar and menu */
+nav.md-sidebar.md-sidebar--primary a.md-sidebar__link, nav.md-sidebar.md-sidebar--primary span.md-sidebar__item-title {
+    color: #fff;
+}
+
+/* Set the hover color for the sidebar and menu */
+nav.md-sidebar.md-sidebar--primary a.md-sidebar__link:hover, nav.md-sidebar.md-sidebar--primary a.md-sidebar__link--active {
+    color: #bc0b6d;
+}
+
+/* Set the background color for the page header */
+header.md-header.md-header--primary {
+    background-color: #79106b;
+}
+
+/* Set the text color for the page header */
+header.md-header.md-header--primary h1.md-header__title {
+    color: #fff;
+}
+
+/* Set the background color for the main content area */
+div.md-content {
+    background-color: #fff;
+}
+
+/* Set the text color for the main content area */
+div.md-content h1, div.md-content h2, div.md-content h3, div.md-content h4, div.md-content h5, div.md-content h6, div.md-content p, div.md-content ul, div.md-content ol, div.md-content pre {
+    color: #333;
+}
