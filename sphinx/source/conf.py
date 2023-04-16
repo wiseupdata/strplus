@@ -25,8 +25,9 @@ html_theme_options = {
     "color_accent": "gray",
     "logo_icon": "&#xe869",
     "nav_links": [
-        {"href": "https://wiseupdata.github.io/strplus/", "title": "HOME", "internal": True},
-        {"href": "https://github.com/wiseupdata", "title": "GitHub", "internal": False},
+        {"href": "https://wiseupdata.github.io/strplus/", "title": "Home", "internal": False},
+        {"href": "https://github.com/wiseupdata/strplus", "title": "GitHub", "internal": False},
+        {"href": "https://github.com/wiseupdata", "title": "GitHub Site", "internal": False},
         {"href": "https://wiseupdata.com", "title": "Site", "internal": False},
     ],
 }
