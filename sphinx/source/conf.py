@@ -54,13 +54,16 @@ html_theme_options = {
     ],
      "heroes": {
         "index": "Extend your string powers with Str+",
-        "customization": "Configuration options to personalize your site."
-    }
+        "customization": "Good function to use like the natives ones!"
+    },
+     "table_classes": ["plain"]
 }
 
 html_static_path = ["_static"]
 html_use_index = True
 html_domain_indices = True
+todo_include_todos = True
+html_use_index = True
 
 # Add custom CSS file
 html_css_files = ["style.css"]
