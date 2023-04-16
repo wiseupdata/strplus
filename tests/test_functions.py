@@ -1,6 +1,6 @@
-from strplus.functions import get_separator
-
 import pytest
+
+from strplus.functions import get_separator
 
 
 def test_get_separator_one_separator():

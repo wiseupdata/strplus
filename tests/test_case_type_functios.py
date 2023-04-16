@@ -1,6 +1,6 @@
 import pytest
 
-from strplus.cases import to_pascal, to_camel, to_snake, to_list
+from strplus.cases import to_camel, to_list, to_pascal, to_snake
 
 
 @pytest.mark.parametrize(
