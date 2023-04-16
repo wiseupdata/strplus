@@ -9,22 +9,11 @@ copyright = "2023, WiseUpData"
 author = "WiseUpData"
 release = "0.0.8"
 
-extensions = [
-    
-"sphinx.ext.autodoc",
-   "sphinx.ext.doctest",
-   "sphinx.ext.extlinks",
-   "sphinx.ext.intersphinx",
-   "sphinx.ext.todo",
-   "sphinx.ext.mathjax",
-   "sphinx.ext.viewcode",
-   "sphinx_copybutton"    
-]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.doctest", "sphinx.ext.extlinks", "sphinx.ext.intersphinx", "sphinx.ext.todo", "sphinx.ext.mathjax", "sphinx.ext.viewcode", "sphinx_copybutton"]
 
 
 autosummary_generate = True
 autoclass_content = "class"
-
 
 
 templates_path = ["_templates"]
@@ -45,18 +34,15 @@ html_theme_options = {
     "color_accent": "teal",
     # "logo_icon": "&#xe021",
     "logo_icon": "&#xE88A",
-    'nav_title': 'strplus package',
+    "nav_title": "strplus package",
     "nav_links": [
         {"href": "https://wiseupdata.github.io/strplus/", "title": "Home", "internal": False},
         {"href": "https://github.com/wiseupdata/strplus", "title": "GitHub", "internal": False},
         {"href": "https://github.com/wiseupdata", "title": "GitHub Site", "internal": False},
         {"href": "https://wiseupdata.com", "title": "Site", "internal": False},
     ],
-     "heroes": {
-        "index": "Extend your string powers with Str+",
-        "customization": "Good function to use like the natives ones!"
-    },
-     "table_classes": ["plain"]
+    "heroes": {"index": "Extend your string powers with Str+", "customization": "Good function to use like the natives ones!"},
+    "table_classes": ["plain"],
 }
 
 html_static_path = ["_static"]

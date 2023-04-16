@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "strplus"
-version = "0.0.10"
+version = "0.0.11"
 authors = ["Silvio Liborio <silvio.liborio@wiseupdata.com>"]
 readme = "README.md"
 
@@ -17,7 +17,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/wiseupdata/strplus/issues"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.0"
