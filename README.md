@@ -33,32 +33,27 @@ Python extra functions for strings ❤️
 [Documentation](https://wiseupdata.github.io/strplus/index.html)  🚀
 
 <br>
-<br>
-<br>
+
+## Features ✨️
+
+- Wrapper Class
+- +234 test in 32 Tests files!
+- Simple use! 
+
 <br>
 
+### Simple use example 😍
 ```
-from strplus import Str
-s = Str("hello")
-assert s.upper() == "HELLO"
+>>> my_string = Str('this_is-an_example')
+>>> my_string.camel()
+'thisIsAnExample'
 ```
+<br>
+
+> Check the documentations for more examples: [Documentation](https://wiseupdata.github.io/strplus/index.html)! 
 
 <br>
 <br>
-<br>
-<br>
-<a href="https://github.com/wiseupdata/wiseupdata">
-<img align="center" alt="img" src="https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/under_construction.gif" width="300" />
-</a>
-
-<br>
-<br>
-<br>
-
-
-![](https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/20230414_203231_image.png)
-
-
 
 # References 🌍 🗄️
 
