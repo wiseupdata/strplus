@@ -1,5 +1,4 @@
 from strplus.cases import to_camel, to_list, to_pascal, to_snake
-from strplus.decorators import copy_docstring
 
 
 class Str(str):
