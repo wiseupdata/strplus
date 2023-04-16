@@ -170,3 +170,5 @@ pip-wheel-metadata
 /poetry.toml
 poetry/core/*
 poetry.lock
+
+__docs

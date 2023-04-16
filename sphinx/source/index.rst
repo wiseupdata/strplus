@@ -1,5 +1,5 @@
 .. strplus documentation master file, created by
-   sphinx-quickstart on Sat Apr 15 10:57:47 2023.
+   sphinx-quickstart on Sun Apr 16 13:15:07 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
