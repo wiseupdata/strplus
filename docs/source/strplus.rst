@@ -12,14 +12,6 @@ strplus.cases module
    :undoc-members:
    :show-inheritance:
 
-strplus.decorators module
--------------------------
-
-.. automodule:: strplus.decorators
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 strplus.functions module
 ------------------------
 
