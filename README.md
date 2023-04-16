@@ -29,6 +29,8 @@ Python extra functions for strings ❤️
 
 <br>
 <br>
+<br>
+<br>
 
 [Documentation](https://wiseupdata.github.io/strplus/index.html)  🚀
 
