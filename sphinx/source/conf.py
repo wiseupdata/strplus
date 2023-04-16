@@ -21,8 +21,8 @@ html_theme_options = {
     "repo_url": "https://github.com/wiseupdata/strplus/",
     "repo_name": "strplus",
     "globaltoc_depth": 3,
-    "color_primary": "indigo",
-    "color_accent": "indigo",
+    "color_primary": "pink",
+    "color_accent": "gray",
     "logo_icon": "&#xe869",
     "nav_links": [
         {
@@ -46,7 +46,7 @@ html_theme_options = {
             "internal": True,
         },
         {
-            "href": "https://github.com/your-username/your-repo/",
+            "href": "https://github.com/wiseupdata/strplus/",
             "title": "GitHub",
             "internal": False,
         },
