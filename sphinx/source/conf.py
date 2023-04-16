@@ -23,6 +23,8 @@ html_theme_options = {
     "globaltoc_depth": 3,
     "theme_color": "e92164",
     "color_primary": "pink",
+    "css_minify": True,
+    "repo_type": "github",
     "color_accent": "teal",
     # "logo_icon": "&#xe021",
     "logo_icon": "&#xE88A",
@@ -36,6 +38,8 @@ html_theme_options = {
 }
 
 html_static_path = ["_static"]
+html_use_index = True
+html_domain_indices = True
 
 # Add custom CSS file
 html_css_files = ["style.css"]
