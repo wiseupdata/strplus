@@ -18,13 +18,13 @@ def to_pascal(text: str) -> str:
         str: The PascalCase version of the input string.
 
     Example:
-        >>> to_pascal('hello_world')
+         to_pascal('hello_world')
         'HelloWorld'
-        >>> to_pascal('CamelCase')
+         to_pascal('CamelCase')
         'CamelCase'
-        >>> to_pascal('some-mixed_string With spaces_underscores-and-hyphens')
+         to_pascal('some-mixed_string With spaces_underscores-and-hyphens')
         'SomeMixedStringWithSpacesUnderscoresAndHyphens'
-        >>> to_pascal('123abc')
+         to_pascal('123abc')
         '123abc'
     """
     text = text.strip()
@@ -60,10 +60,10 @@ def to_camel(text):
         ValueError: If the input string is empty.
 
     Examples:
-        >>> to_camel('this_is-an_example')
+         to_camel('this_is-an_example')
         'thisIsAnExample'
 
-        >>> to_camel('This is a test!')
+         to_camel('This is a test!')
         'thisIsATest'
     """
     text = text.strip()
@@ -96,13 +96,13 @@ def to_snake(text):
         str: The string converted to snake_case.
 
     Examples:
-        >>> to_snake("HelloWorld")
+         to_snake("HelloWorld")
         'hello_world'
 
-        >>> to_snake("  AnotherString!  ")
+         to_snake("  AnotherString!  ")
         'another_string'
 
-        >>> to_snake("hello-world")
+         to_snake("hello-world")
         'hello_world'
     """
 
@@ -129,16 +129,16 @@ def to_list(text):
         list: A list of words extracted from the input string.
 
     Examples:
-        >>> to_list("Hello world!")
+         to_list("Hello world!")
         ['Hello', 'world']
 
-        >>> to_list("   another-string_123  ")
+         to_list("   another-string_123  ")
         ['another', 'string', '123']
 
-        >>> to_list("   ")
+         to_list("   ")
         []
 
-        >>> to_list("")
+         to_list("")
         []
     """
     text = text.strip()
