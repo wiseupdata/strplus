@@ -11,20 +11,20 @@ class Str(str):
     with any of the methods provided by this class or by the built-in str class.
 
     Examples:
-         my_string = Str('hello_world')
-         my_string.pascal()
+        >>> my_string = Str('hello_world')
+        >>> my_string.pascal()
         'HelloWorld'
 
-         my_string = Str('this_is-an_example')
-         my_string.camel()
+        >>> my_string = Str('this_is-an_example')
+        >>> my_string.camel()
         'thisIsAnExample'
 
-         my_string = Str("HelloWorld")
-         my_string.snake()
+        >>> my_string = Str("HelloWorld")
+        >>> my_string.snake()
         'hello_world'
 
-         my_string = Str("Hello, World!")
-         my_string.lower()
+        >>> my_string = Str("Hello, World!")
+        >>> my_string.lower()
         'hello, world!'
 
     Note that all methods provided by the Str class are based on regular expressions, so they may not be
@@ -50,11 +50,11 @@ class Str(str):
             str: The PascalCase version of the input string.
 
         Example:
-             my_string = Str('hello_world')
-             my_string.pascal()
+            >>> my_string = Str('hello_world')
+            >>> my_string.pascal()
             'HelloWorld'
-             my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')
-             my_string.pascal()
+            >>> my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')
+            >>> my_string.pascal()
             'SomeMixedStringWithSpacesUnderscoresAndHyphens'
         """
         return Str(to_pascal(self))
@@ -66,12 +66,12 @@ class Str(str):
             str: The converted string in CamelCase.
 
         Examples:
-             my_string = Str('this_is-an_example')
-             my_string.camel()
+            >>> my_string = Str('this_is-an_example')
+            >>> my_string.camel()
             'thisIsAnExample'
 
-             my_string = Str('This is a test!')
-             my_string.camel()
+            >>> my_string = Str('This is a test!')
+            >>> my_string.camel()
             'thisIsATest'
         """
         return Str(to_camel(self))
@@ -83,16 +83,16 @@ class Str(str):
             str: The string converted to snake_case.
 
         Examples:
-             my_string = Str("HelloWorld")
-             my_string.snake("HelloWorld")
+            >>> my_string = Str("HelloWorld")
+            >>> my_string.snake("HelloWorld")
             'hello_world'
 
-             my_string = Str("  AnotherString!  ")
-             my_string.snake()
+            >>> my_string = Str("  AnotherString!  ")
+            >>> my_string.snake()
             'another_string'
 
-              my_string = Str("hello-world")
-             my_string.snake()
+            >>>  my_string = Str("hello-world")
+            >>> my_string.snake()
             'hello_world'
         """
         return Str(to_snake(self))
