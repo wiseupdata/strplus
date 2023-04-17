@@ -1,0 +1,9 @@
+[run]
+branch = True
+omit =
+       *test*
+       *version*
+       olympus/audience/facebook/facebook_ads_api_to_landing_job.py
+
+[html]
+directory = htmlcov
