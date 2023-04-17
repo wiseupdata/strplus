@@ -1,0 +1,19 @@
+{% extends '!layout.html' %}
+
+{% block content %}
+    {% set html = super() %}
+    {% set start_index = html.find('<section id="indices-and-tables">') %}
+    {% if start_index != -1 %}
+        {% set end_index = html.find('</section>', start_index) %}
+        {% set section_html = html[start_index:end_index] %}
+        {% set section_html = section_html | replace('</ul>', '<li> <p><a class="reference internal" href="https://wiseupdata.com"><span class="std std-ref">WiseUpData</span></a> </p> </li></ul>') %}
+        {% set html = html[:start_index] + section_html + html[end_index:] %}
+    {% endif %}
+
+    {% if '<nav class="md-nav md-nav--secondary">' in html %}
+      {% set html = html | replace('</ul>', '<li> <p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p> </li>') %}
+  {% endif %}
+
+    {{ html }}
+{% endblock %}
+

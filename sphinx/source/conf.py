@@ -43,7 +43,16 @@ html_theme_options = {
     ],
     "heroes": {"index": "Extend your string powers with Str+", "customization": "Good function to use like the natives ones!"},
     "table_classes": ["plain"],
+    
 }
+
+html_sidebars = {
+    "**": ["meu_template.html", "logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+}
+
+# html_sidebars = {
+#     "**": ["meu_template.html"]
+# }
 
 html_static_path = ["_static"]
 html_use_index = True
