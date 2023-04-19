@@ -17,6 +17,8 @@ for path in sorted(Path(PACKAGE_NAME).rglob("*.py")):
 
     if parts[-1] == "__init__":
         parts = parts[:-1]
+        doc_path = doc_path.with_name("index.md")
+        full_doc_path = full_doc_path.with_name("index.md")
         if len(parts) == 0:
             # parts = ("__init__")
             continue

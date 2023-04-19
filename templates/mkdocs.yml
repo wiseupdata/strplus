@@ -1,13 +1,19 @@
-site_name: strplus
+site_name: Extend your string powers with Str+
+
+theme:
+  name: "material"
+  palette:
+    primary: pink
 
 nav:
-- index: index.md
-- Code Reference: strplus/
+- Index: index.md
+- Str+: strplus/
 
 plugins:
   - search 
   - literate-nav:
-      nav_file: SUMMARY.md 
+      nav_file: SUMMARY.md
+  - section-index 
   - mkdocstrings:
       handlers:
         python:
