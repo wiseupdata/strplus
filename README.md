@@ -13,6 +13,11 @@
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=wiseupdata.strplus&left_color=green&right_color=black)
 ![license](https://img.shields.io/github/license/wiseupdata/strplus)
+[![pypi](https://img.shields.io/pypi/v/strplus?color=green)](https://pypi.python.org/pypi/strplus)
+[![downloads](https://pepy.tech/badge/strplus/month)](https://pepy.tech/project/strplus)
+[![versions](https://img.shields.io/pypi/pyversions/strplus.svg)](https://github.com/wiseupdata/strplus)
+
+
 
 ---
 

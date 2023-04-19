@@ -50,28 +50,28 @@ def test_attr():
 def test_pascal_1():
     # Test accessing an attribute
     s = Str("UPPERCASE")
-    assert s.pascal() == "Uppercase"
+    assert s.to_pascal() == "Uppercase"
 
 
 def test_pascal_2():
     # Test accessing an attribute
     s = Str("1234!@#$% abcdEFGH")
-    assert s.pascal() == "1234AbcdEfgh"
+    assert s.to_pascal() == "1234AbcdEfgh"
 
 
 def test_camel():
     # Test accessing an attribute
     s = Str("my_string")
-    assert s.camel() == "myString"
+    assert s.to_camel() == "myString"
 
 
 def test_snake():
     # Test accessing an attribute
     s = Str("MyString")
-    assert s.snake() == "my_string"
+    assert s.to_snake() == "my_string"
 
 
 def test_list():
     # Test accessing an attribute
     s = Str("MyString")
-    assert s.list() == ["My", "String"]
+    assert s.to_list() == ["My", "String"]

@@ -45,6 +45,12 @@ html_theme_options = {
     "table_classes": ["plain"],
 }
 
+html_sidebars = {"**": ["meu_template.html", "logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]}
+
+# html_sidebars = {
+#     "**": ["meu_template.html"]
+# }
+
 html_static_path = ["_static"]
 html_use_index = True
 html_domain_indices = True

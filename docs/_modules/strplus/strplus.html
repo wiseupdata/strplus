@@ -251,15 +251,15 @@
 
 <span class="sd">    Examples:</span>
 <span class="sd">        &gt;&gt;&gt; my_string = Str('hello_world')</span>
-<span class="sd">        &gt;&gt;&gt; my_string.pascal()</span>
+<span class="sd">        &gt;&gt;&gt; my_string.to_pascal()</span>
 <span class="sd">        'HelloWorld'</span>
 
 <span class="sd">        &gt;&gt;&gt; my_string = Str('this_is-an_example')</span>
-<span class="sd">        &gt;&gt;&gt; my_string.camel()</span>
+<span class="sd">        &gt;&gt;&gt; my_string.to_camel()</span>
 <span class="sd">        'thisIsAnExample'</span>
 
 <span class="sd">        &gt;&gt;&gt; my_string = Str("HelloWorld")</span>
-<span class="sd">        &gt;&gt;&gt; my_string.snake()</span>
+<span class="sd">        &gt;&gt;&gt; my_string.to_snake()</span>
 <span class="sd">        'hello_world'</span>
 
 <span class="sd">        &gt;&gt;&gt; my_string = Str("Hello, World!")</span>
@@ -281,7 +281,27 @@
         <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Str.pascal"><a class="viewcode-back" href="../../strplus.html#strplus.strplus.Str.pascal">[docs]</a>    <span class="k">def</span> <span class="nf">pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_pascal</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_camel</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_snake</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Str.to_pascal"><a class="viewcode-back" href="../../strplus.html#strplus.strplus.Str.to_pascal">[docs]</a>    <span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Converts a string to PascalCase.</span>
 
@@ -290,15 +310,15 @@
 
 <span class="sd">        Example:</span>
 <span class="sd">            &gt;&gt;&gt; my_string = Str('hello_world')</span>
-<span class="sd">            &gt;&gt;&gt; my_string.pascal()</span>
+<span class="sd">            &gt;&gt;&gt; my_string.to_pascal()</span>
 <span class="sd">            'HelloWorld'</span>
 <span class="sd">            &gt;&gt;&gt; my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')</span>
-<span class="sd">            &gt;&gt;&gt; my_string.pascal()</span>
+<span class="sd">            &gt;&gt;&gt; my_string.to_pascal()</span>
 <span class="sd">            'SomeMixedStringWithSpacesUnderscoresAndHyphens'</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Str.camel"><a class="viewcode-back" href="../../strplus.html#strplus.strplus.Str.camel">[docs]</a>    <span class="k">def</span> <span class="nf">camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Str.to_camel"><a class="viewcode-back" href="../../strplus.html#strplus.strplus.Str.to_camel">[docs]</a>    <span class="k">def</span> <span class="nf">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""Converts a string from any case to CamelCase.</span>
 
 <span class="sd">        Returns:</span>
@@ -306,16 +326,16 @@
 
 <span class="sd">        Examples:</span>
 <span class="sd">            &gt;&gt;&gt; my_string = Str('this_is-an_example')</span>
-<span class="sd">            &gt;&gt;&gt; my_string.camel()</span>
+<span class="sd">            &gt;&gt;&gt; my_string.to_camel()</span>
 <span class="sd">            'thisIsAnExample'</span>
 
 <span class="sd">            &gt;&gt;&gt; my_string = Str('This is a test!')</span>
-<span class="sd">            &gt;&gt;&gt; my_string.camel()</span>
+<span class="sd">            &gt;&gt;&gt; my_string.to_camel()</span>
 <span class="sd">            'thisIsATest'</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Str.snake"><a class="viewcode-back" href="../../strplus.html#strplus.strplus.Str.snake">[docs]</a>    <span class="k">def</span> <span class="nf">snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Str.to_snake"><a class="viewcode-back" href="../../strplus.html#strplus.strplus.Str.to_snake">[docs]</a>    <span class="k">def</span> <span class="nf">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""Converts a string to snake_case.</span>
 
 <span class="sd">        Returns:</span>
@@ -327,16 +347,16 @@
 <span class="sd">            'hello_world'</span>
 
 <span class="sd">            &gt;&gt;&gt; my_string = Str("  AnotherString!  ")</span>
-<span class="sd">            &gt;&gt;&gt; my_string.snake()</span>
+<span class="sd">            &gt;&gt;&gt; my_string.to_snake()</span>
 <span class="sd">            'another_string'</span>
 
 <span class="sd">            &gt;&gt;&gt;  my_string = Str("hello-world")</span>
-<span class="sd">            &gt;&gt;&gt; my_string.snake()</span>
+<span class="sd">            &gt;&gt;&gt; my_string.to_snake()</span>
 <span class="sd">            'hello_world'</span>
 <span class="sd">        """</span>
         <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Str.list"><a class="viewcode-back" href="../../strplus.html#strplus.strplus.Str.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Str.to_list"><a class="viewcode-back" href="../../strplus.html#strplus.strplus.Str.to_list">[docs]</a>    <span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">Str</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)]</span></div></div>
 
 
