@@ -45,6 +45,22 @@ class Str(str):
     @property
     def pascal(self):
         return self.to_pascal()
+    
+    @property
+    def camel(self):
+        return self.to_camel()
+    
+    @property
+    def snake(self):
+        return self.to_snake()
+    
+    @property
+    def list(self):
+        return self.to_list()
+    
+    @property
+    def print(self):
+        print(self)
 
     def to_pascal(self):
         """
