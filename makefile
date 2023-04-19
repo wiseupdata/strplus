@@ -33,14 +33,9 @@ htmlclean:
 
 # Generate the documentation
 doc:
-	@find sphinx/source/ -type f -name "*.rst" ! -name "index.rst" -delete
-	@poetry run sphinx-apidoc -f -o sphinx/source/ ./strplus
-	@rm -Rf sphinx/build/html
-	@poetry run sphinx-build -b html sphinx/source/ sphinx/build/html
-	@rm -Rf docs && mkdir docs && touch docs/.nojekyll
-	@cp -r sphinx/build/html/* ./docs/        
-
+	@echo "under construction"
 # Tasks: Run `make format` or `make lint` to manually run each of the steps
+
 format: black isort
 lint: black-lint isort-lint flake8-lint
 
