@@ -53,13 +53,19 @@ Python extra functions for strings ❤️
 
 ### Simple use example 😍
 ```
->>> my_string = Str('this_is-an_example')
->>> my_string.camel()
-'thisIsAnExample'
+>>> my_string = Str('Cast_this_string_TO_Pascal')
+>>> my_string.pascal
+'CastThisStringToPascal'
+
+>>> my_string = Str('CastMeUseLikeANormalFunction')
+>>> my_string.snake
+'cast_me_use_like_a_normal_function'
+
 ```
 <br>
 
-> Check the documentations for more examples: [Documentation](https://wiseupdata.github.io/strplus/index.html)! 
+* [More Examples !](https://github.com/wiseupdata/strplus/blob/main/examples/examples_01.ipynb)
+* [Documentations examples](https://wiseupdata.github.io/strplus/index.html)! 
 
 <br>
 <br>
