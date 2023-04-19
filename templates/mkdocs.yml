@@ -1,7 +1,7 @@
 site_name: strplus
 
 nav:
-- Index: index.md
+- index: index.md
 - Code Reference: strplus/
 
 plugins:

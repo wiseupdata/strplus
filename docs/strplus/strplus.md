@@ -1,1 +1,1 @@
-::: strplus.strplus
+::: strplus

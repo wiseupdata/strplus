@@ -1,0 +1,5 @@
+{
+    "reportGeneralTypeIssues": "warning",
+    "reportOptionalMemberAccess":false,
+    "reportGeneralTypeIssues":false
+  }

@@ -139,7 +139,7 @@ poetry.toml
 # ruff
 .ruff_cache/
 # LSP config files
-pyrightconfig.json
+# pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/python
 oneclik-deploy.sh
 .dev

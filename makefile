@@ -33,8 +33,8 @@ htmlclean:
 
 # Generate the documentation
 doc:
-	@echo "under construction"
-# Tasks: Run `make format` or `make lint` to manually run each of the steps
+	@rm -Rf docs/strplus
+	@poetry run python scripts/gen_ref_pages.py
 
 format: black isort
 lint: black-lint isort-lint flake8-lint

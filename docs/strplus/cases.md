@@ -1,1 +1,1 @@
-::: strplus.cases
+::: cases
