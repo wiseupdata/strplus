@@ -7,7 +7,7 @@ pygments_style = "monokai"
 project = "strplus"
 copyright = "2023, WiseUpData"
 author = "WiseUpData"
-release = "0.0.8"
+release = "1.0.1"
 
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.doctest", "sphinx.ext.extlinks", "sphinx.ext.intersphinx", "sphinx.ext.todo", "sphinx.ext.mathjax", "sphinx.ext.viewcode", "sphinx_copybutton"]
 
