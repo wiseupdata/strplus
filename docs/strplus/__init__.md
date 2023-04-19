@@ -1,0 +1,1 @@
+::: strplus.__init__
