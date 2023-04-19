@@ -12,15 +12,15 @@ class Str(str):
 
     Examples:
         >>> my_string = Str('hello_world')
-        >>> my_string.pascal()
+        >>> my_string.to_pascal()
         'HelloWorld'
 
         >>> my_string = Str('this_is-an_example')
-        >>> my_string.camel()
+        >>> my_string.to_camel()
         'thisIsAnExample'
 
         >>> my_string = Str("HelloWorld")
-        >>> my_string.snake()
+        >>> my_string.to_snake()
         'hello_world'
 
         >>> my_string = Str("Hello, World!")
@@ -42,7 +42,11 @@ class Str(str):
         def __new__(cls, *args, **kwargs):
             return super().__new__(cls, *args, **kwargs)
 
+    @property
     def pascal(self):
+        return self.to_pascal()
+
+    def to_pascal(self):
         """
         Converts a string to PascalCase.
 
@@ -51,15 +55,15 @@ class Str(str):
 
         Example:
             >>> my_string = Str('hello_world')
-            >>> my_string.pascal()
+            >>> my_string.to_pascal()
             'HelloWorld'
             >>> my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')
-            >>> my_string.pascal()
+            >>> my_string.to_pascal()
             'SomeMixedStringWithSpacesUnderscoresAndHyphens'
         """
         return Str(to_pascal(self))
 
-    def camel(self):
+    def to_camel(self):
         """Converts a string from any case to CamelCase.
 
         Returns:
@@ -67,16 +71,16 @@ class Str(str):
 
         Examples:
             >>> my_string = Str('this_is-an_example')
-            >>> my_string.camel()
+            >>> my_string.to_camel()
             'thisIsAnExample'
 
             >>> my_string = Str('This is a test!')
-            >>> my_string.camel()
+            >>> my_string.to_camel()
             'thisIsATest'
         """
         return Str(to_camel(self))
 
-    def snake(self):
+    def to_snake(self):
         """Converts a string to snake_case.
 
         Returns:
@@ -88,16 +92,16 @@ class Str(str):
             'hello_world'
 
             >>> my_string = Str("  AnotherString!  ")
-            >>> my_string.snake()
+            >>> my_string.to_snake()
             'another_string'
 
             >>>  my_string = Str("hello-world")
-            >>> my_string.snake()
+            >>> my_string.to_snake()
             'hello_world'
         """
         return Str(to_snake(self))
 
-    def list(self):
+    def to_list(self):
         return [Str(word) for word in to_list(self)]
 
 
