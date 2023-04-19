@@ -1,7 +1,1 @@
-site_name: str+
-
-plugins:
-- mkdocstrings:
-    handlers:
-      python:
-        paths: [strplus]
+site_name: My Docs
