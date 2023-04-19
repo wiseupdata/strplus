@@ -34,7 +34,7 @@ htmlclean:
 # Generate the documentation
 doc:
 	@rm -Rf docs/strplus
-	@poetry run python scripts/gen_ref_pages.py
+	@poetry run python artifacts/scripts/gen_ref_pages.py
 
 format: black isort
 lint: black-lint isort-lint flake8-lint
