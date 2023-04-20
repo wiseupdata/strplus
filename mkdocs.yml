@@ -59,7 +59,7 @@ extra_css:
 
 nav:
 - Str+: strplus/
-- Python file: examples_01.ipynb
+- Python file: examples/examples_01.ipynb
 
 plugins:
   - search 
