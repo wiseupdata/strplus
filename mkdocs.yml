@@ -9,7 +9,7 @@ copyright: Copyright &copy; 2023 - 2023 Silvio Liborio
 
 theme:
   name: 'material'
-  custom_dir: assets/overrides
+  custom_dir: assets/overrides/html
   palette:
   - media: "(prefers-color-scheme: dark)"
     scheme: strplus
@@ -54,8 +54,9 @@ repo_url: https://github.com/wiseupdata/strplus
 
 
 extra_css:
-  - stylesheets/strplus.css
-  - stylesheets/test.css
+  - themes/strplus.css
+  # - stylesheets/test.css
+  # - ./assets/overrides/css/themes/strplus.css
 
 nav:
 - Str+: strplus/

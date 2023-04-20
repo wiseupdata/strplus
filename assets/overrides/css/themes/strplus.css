@@ -14,17 +14,17 @@
   --md-accent-fg-color: rgb(9, 236, 59);
 
   /* name code */
-  --md-code-fg-color: #bb0909;
+  --md-code-fg-color: #adaaaa;
   
   /* side name code */
   --md-default-fg-color: #e92163;
   
   /* main texts */
-  --md-typeset-color: #da0e74;
+  --md-typeset-color: #f8f2f5;
   
 
   
-  --md-default-fg-color--lightest: #464606;
+  --md-default-fg-color--lightest: #f8f8f2;
   
   --md-default-bg-color--light: #3e3d32;
   --md-default-bg-color--lighter: #75715e;
@@ -40,12 +40,12 @@
   --md-code-hl-constant-color: #ae81ff;
   --md-code-hl-keyword-color: #e92163;
   --md-code-hl-string-color: #e6db74;
-  --md-code-hl-name-color: #1a0543;
-  --md-code-hl-operator-color: #dfdf0b;
-  --md-code-hl-punctuation-color: #3f3f08;
+  --md-code-hl-name-color: #f4f2f8;
+  --md-code-hl-operator-color: #f8f8f2;
+  --md-code-hl-punctuation-color: #f8f8f2;
   --md-code-hl-comment-color: #75715e;
-  --md-code-hl-generic-color: #ecec13;
-  --md-code-hl-variable-color: #757507;
+  --md-code-hl-generic-color: #f8f8f2;
+  --md-code-hl-variable-color: #f8f8f2;
 
   
   --md-typeset-a-color: #e92163;
@@ -53,7 +53,7 @@
   --md-typeset-del-color: #75715e;
   --md-typeset-ins-color: #a6e22e;
 
-  --md-typeset-kbd-color: #0ee177;
+  --md-typeset-kbd-color: #f2f8f5;
   --md-typeset-kbd-accent-color: #ae81ff;
   --md-typeset-kbd-border-color: #75715e;
 
