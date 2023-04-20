@@ -12,8 +12,8 @@ theme:
   custom_dir: assets/overrides/html
   palette:
   - media: "(prefers-color-scheme: dark)"
-    scheme: strplus
-    # scheme: slate
+    # scheme: strplus
+    scheme: slate
     toggle:
       icon: material/brightness-4
       name: "Switch to light mode"
@@ -55,8 +55,6 @@ repo_url: https://github.com/wiseupdata/strplus
 
 extra_css:
   - themes/strplus.css
-  # - stylesheets/test.css
-  # - ./assets/overrides/css/themes/strplus.css
 
 nav:
 - Str+: strplus/
