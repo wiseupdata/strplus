@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "strplus"
-version = "1.0.2"
+version = "1.0.3"
 authors = ["Silvio Liborio <silvio.liborio@wiseupdata.com>"]
 readme = "README.md"
 
