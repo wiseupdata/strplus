@@ -9,10 +9,11 @@ copyright: Copyright &copy; 2023 - 2023 Silvio Liborio
 
 theme:
   name: 'material'
-  # custom_dir: 'docs/theme'
+  custom_dir: overrides
   palette:
   - media: "(prefers-color-scheme: dark)"
     scheme: strplus
+    # scheme: slate
     toggle:
       icon: material/brightness-4
       name: "Switch to light mode"
@@ -58,6 +59,7 @@ extra_css:
 
 nav:
 - Str+: strplus/
+- Python file: examples_01.ipynb
 
 plugins:
   - search 
@@ -68,6 +70,10 @@ plugins:
       handlers:
         python:
           paths: [strplus]
+  - mkdocs-jupyter:
+     theme: slate
+     show_input: True
+     highlight_extra_classes: "strplus"
 
 markdown_extensions:
 - tables
