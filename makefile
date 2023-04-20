@@ -1,7 +1,7 @@
 # Default path
 path ?= .
 
-make: black isort test
+make: poetry black isort test
 
 # Automatic code formatting
 black:
@@ -33,14 +33,13 @@ htmlclean:
 
 # Generate the documentation
 doc:
-	@find sphinx/source/ -type f -name "*.rst" ! -name "index.rst" -delete
-	@poetry run sphinx-apidoc -f -o sphinx/source/ ./strplus
-	@rm -Rf sphinx/build/html
-	@poetry run sphinx-build -b html sphinx/source/ sphinx/build/html
-	@rm -Rf docs && mkdir docs && touch docs/.nojekyll
-	@cp -r sphinx/build/html/* ./docs/        
+	@rm -Rf docs/strplus
+	@poetry run python artifacts/scripts/gen_ref_pages.py
 
-# Tasks: Run `make format` or `make lint` to manually run each of the steps
+poetry:
+	@poetry install
+	@poetry shell
+
 format: black isort
 lint: black-lint isort-lint flake8-lint
 

@@ -2,6 +2,15 @@ from strplus.cases import *
 
 
 def get_separator(input_string):
+    """get_separator _summary_
+
+    _extended_summary_
+
+    :param input_string: _description_
+    :type input_string: _type_
+    :return: _description_
+    :rtype: _type_
+    """
     separators = [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]
 
     # check each separator in the order of priority

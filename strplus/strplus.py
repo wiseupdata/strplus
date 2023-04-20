@@ -11,6 +11,7 @@ class Str(str):
     with any of the methods provided by this class or by the built-in str class.
 
     Examples:
+    
         >>> my_string = Str('hello_world')
         >>> my_string.to_pascal()
         'HelloWorld'
@@ -69,13 +70,16 @@ class Str(str):
         Returns:
             str: The PascalCase version of the input string.
 
-        Example:
+        Examples:
+        
             >>> my_string = Str('hello_world')
             >>> my_string.to_pascal()
             'HelloWorld'
+            
             >>> my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')
             >>> my_string.to_pascal()
             'SomeMixedStringWithSpacesUnderscoresAndHyphens'
+            
         """
         return Str(to_pascal(self))
 
@@ -86,6 +90,7 @@ class Str(str):
             str: The converted string in CamelCase.
 
         Examples:
+        
             >>> my_string = Str('this_is-an_example')
             >>> my_string.to_camel()
             'thisIsAnExample'
@@ -93,6 +98,7 @@ class Str(str):
             >>> my_string = Str('This is a test!')
             >>> my_string.to_camel()
             'thisIsATest'
+            
         """
         return Str(to_camel(self))
 
@@ -103,6 +109,7 @@ class Str(str):
             str: The string converted to snake_case.
 
         Examples:
+        
             >>> my_string = Str("HelloWorld")
             >>> my_string.snake("HelloWorld")
             'hello_world'
@@ -114,6 +121,7 @@ class Str(str):
             >>>  my_string = Str("hello-world")
             >>> my_string.to_snake()
             'hello_world'
+            
         """
         return Str(to_snake(self))
 

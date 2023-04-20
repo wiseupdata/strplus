@@ -1,0 +1,133 @@
+:root {
+    --fg: #212121;
+    --bg: #f2f2f2;
+    --bg-accent: #fafafa;
+    --border-color: #dbdbdb;
+    --link-color: #3366bb;
+    --link-color-hover: #254896;
+    --highlight: #ffd6a5;
+  }
+  
+  body {
+    color: var(--fg);
+    background-color: var(--bg);
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--fg);
+  }
+  
+  /* Links */
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--link-color);
+  }
+  
+  a:hover {
+    color: var(--link-color-hover);
+    border-bottom-color: var(--link-color-hover);
+  }
+  
+  /* Code blocks */
+  pre {
+    color: #d14;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px;
+  }
+  
+  /* Code inline */
+  code {
+    color: #d14;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 2px 4px;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #ddd;
+    margin: 0;
+    padding: 0 15px;
+    color: #aaa;
+  }
+  
+  /* Inline quotes */
+  q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+  
+  q:before {
+    content: open-quote;
+  }
+  
+  q:after {
+    content: close-quote;
+  }
+  
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    width: 100%;
+  }
+  
+  table td, table th {
+    border: 1px solid var(--border-color);
+    padding: 6px 13px;
+  }
+  
+  table th {
+    background-color: var(--bg-accent);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table th:first-child,
+  table td:first-child {
+    padding-left: 10px;
+  }
+  
+  table th:last-child,
+  table td:last-child {
+    padding-right: 10px;
+  }
+  
+  /* Lists */
+  ul, ol {
+    margin-bottom: 1.25em;
+  }
+  
+  ul li, ol li {
+    padding-left: 2em;
+    text-indent: -2em;
+    margin-bottom: 0.5em;
+  }
+  
+  ol li {
+    list-style-type: decimal;
+  }
+  
+  ul ul, ol ul,
+  ul ol, ol ol {
+    margin: 0.5em 0 1em 2em;
+    font-size: 90%;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+  }
+  

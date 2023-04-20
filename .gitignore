@@ -172,3 +172,4 @@ poetry/core/*
 poetry.lock
 
 __docs
+.coveragerc

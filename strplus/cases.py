@@ -17,13 +17,16 @@ def to_pascal(text: str) -> str:
     Returns:
         str: The PascalCase version of the input string.
 
-    Example:
+    Examples:
         >>> to_pascal('hello_world')
         'HelloWorld'
+        
         >>> to_pascal('CamelCase')
         'CamelCase'
+        
         >>> to_pascal('some-mixed_string With spaces_underscores-and-hyphens')
         'SomeMixedStringWithSpacesUnderscoresAndHyphens'
+        
         >>> to_pascal('123abc')
         '123abc'
     """
