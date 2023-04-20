@@ -12,14 +12,13 @@ theme:
   # custom_dir: 'docs/theme'
   palette:
   - media: "(prefers-color-scheme: dark)"
-    scheme: strplusTheme
-    accent: pink
+    scheme: strplus
     toggle:
       icon: material/brightness-4
       name: "Switch to light mode"
   - media: "(prefers-color-scheme: light)"
     primary: pink
-    accent: lime
+    accent: pink
     toggle:
       icon: material/weather-night
       name: "Switch to dark mode"
@@ -46,9 +45,6 @@ theme:
       - search.suggest
       - toc.follow
       - footnotes
-    # - toc.integrate
-  # logo: 'logo-white.svg'
-  # favicon: 'favicon.png'
   icon:
     repo: fontawesome/brands/github-alt
   language: en
@@ -57,13 +53,10 @@ repo_url: https://github.com/wiseupdata/strplus
 
 
 extra_css:
-  - stylesheets/strplusTheme.css
-# - 'extra/tweaks.css'
-# extra_javascript:
-# - 'extra/redirects.js'
+  - stylesheets/strplus.css
+  - stylesheets/test.css
 
 nav:
-# - Index: index.md
 - Str+: strplus/
 
 plugins:
@@ -84,12 +77,8 @@ markdown_extensions:
 - admonition
 - pymdownx.highlight
 - pymdownx.extra
-# - pymdownx.emoji:
-#     emoji_index: !!python/name:materialx.emoji.twemoji
-#     emoji_generator: !!python/name:materialx.emoji.to_svg
 - pymdownx.tabbed:
     alternate_style: true
-
 
 # language options
 extra:
