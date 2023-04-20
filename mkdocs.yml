@@ -1,12 +1,45 @@
-site_name: Extend your string powers with Str+
+site_name: strplus
+site_description: Extend your string powers with Str+
+site_url: https://wiseupdata.github.io/strplus/index.html
 
 theme:
-  name: "material"
+  name: 'material'
+  # custom_dir: 'docs/theme'
   palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
     primary: pink
+    accent: pink
+    toggle:
+      icon: material/lightbulb-outline
+      name: "Switch to dark mode"
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: pink
+    accent: pink
+    toggle:
+      icon: material/lightbulb
+      name: "Switch to light mode"
+    features:
+      - search.suggest
+      - search.highlight
+  # logo: 'logo-white.svg'
+  # favicon: 'favicon.png'
+  icon:
+    repo: fontawesome/brands/github-alt
+  language: en
+repo_name: wiseupdata/strplus
+repo_url: https://github.com/wiseupdata/strplus
+
+
+# extra_css:
+# - 'extra/terminal.css'
+# - 'extra/tweaks.css'
+# extra_javascript:
+# - 'extra/redirects.js'
 
 nav:
-- Index: index.md
+# - Index: index.md
 - Str+: strplus/
 
 plugins:
@@ -18,3 +51,24 @@ plugins:
       handlers:
         python:
           paths: [strplus]
+
+markdown_extensions:
+- tables
+- toc:
+    permalink: true
+    title: Pages
+- admonition
+- pymdownx.highlight
+- pymdownx.extra
+# - pymdownx.emoji:
+#     emoji_index: !!python/name:materialx.emoji.twemoji
+#     emoji_generator: !!python/name:materialx.emoji.to_svg
+- pymdownx.tabbed:
+    alternate_style: true
+
+
+# language options
+extra:
+  alternate:
+    - link: /
+      name: English

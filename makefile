@@ -1,7 +1,7 @@
 # Default path
 path ?= .
 
-make: black isort test
+make: poetry black isort test
 
 # Automatic code formatting
 black:
@@ -35,6 +35,10 @@ htmlclean:
 doc:
 	@rm -Rf docs/strplus
 	@poetry run python artifacts/scripts/gen_ref_pages.py
+
+poetry:
+	@poetry install
+	@poetry shell
 
 format: black isort
 lint: black-lint isort-lint flake8-lint
