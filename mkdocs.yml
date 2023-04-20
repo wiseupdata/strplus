@@ -1,6 +1,11 @@
 site_name: strplus
-site_description: Extend your string powers with Str+
+site_author: Silvio Liborio
+site_description: >-
+  Extend your string powers with Str+  
 site_url: https://wiseupdata.github.io/strplus/index.html
+
+# Copyright
+copyright: Copyright &copy; 2023 - 2023 Silvio Liborio
 
 theme:
   name: 'material'
@@ -15,7 +20,9 @@ theme:
       name: "Switch to dark mode"
   - media: "(prefers-color-scheme: dark)"
     scheme: slate
-    primary: pink
+    # primary: pink
+    color:
+    primary: '#00bcd4'
     accent: pink
     toggle:
       icon: material/lightbulb
@@ -23,6 +30,29 @@ theme:
     features:
       - search.suggest
       - search.highlight
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
   # logo: 'logo-white.svg'
   # favicon: 'favicon.png'
   icon:
