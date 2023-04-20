@@ -25,7 +25,7 @@
 <br>
 
 <a href="https://github.com/wiseupdata/wiseupdata">
-<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/python.png" width="300" />
+<img align="left" alt="img" src="https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/imgs/python.png" width="300" />
 </a>
 
 <h1>
