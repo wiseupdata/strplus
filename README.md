@@ -64,7 +64,7 @@ Python extra functions for strings ❤️
 ```
 <br>
 
-* [More Examples !](https://github.com/wiseupdata/strplus/blob/main/examples/examples_01.ipynb)
+* [More Examples !](https://wiseupdata.github.io/strplus/examples/examples_01/)
 * [Documentations examples](https://wiseupdata.github.io/strplus/index.html)! 
 
 <br>
