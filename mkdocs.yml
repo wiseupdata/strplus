@@ -9,7 +9,7 @@ copyright: Copyright &copy; 2023 - 2023 Silvio Liborio
 
 theme:
   name: 'material'
-  custom_dir: overrides
+  custom_dir: assets/overrides
   palette:
   - media: "(prefers-color-scheme: dark)"
     scheme: strplus
