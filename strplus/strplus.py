@@ -2,34 +2,51 @@ from strplus.cases import to_camel, to_list, to_pascal, to_snake
 
 
 class Str(str):
-    """A subclass of the built-in str class with additional string manipulation methods.
+    """
 
-    This class provides several methods for converting strings to different cases, as well as a method for
-    converting a string to a list of words.
+    !!! info
 
-    All methods that return strings return instances of the Str class, so they can be further manipulated
-    with any of the methods provided by this class or by the built-in str class.
+        The Str Class is a Wrapper class that extends the str Class, giving it superpowers
+        to handle strings and making it easy to use the strplus functions! You don't need to import, only if you want!
+        All methods from Str are recursive and return the Str object itself, so you always have the same features in the result.
 
-    Examples:
-    
-        >>> my_string = Str('hello_world')
-        >>> my_string.to_pascal()
-        'HelloWorld'
+    !!! example "Never was so easy! Simple no parentheses! "
 
-        >>> my_string = Str('this_is-an_example')
-        >>> my_string.to_camel()
-        'thisIsAnExample'
+        === "Snake case"
+            ```python
+            my_string = Str("Cast_this_StringToSnake")
 
-        >>> my_string = Str("HelloWorld")
-        >>> my_string.to_snake()
-        'hello_world'
+            my_string.snake
+            ```
+            'cast_this_string_to_snake'
 
-        >>> my_string = Str("Hello, World!")
-        >>> my_string.lower()
-        'hello, world!'
+        === "Camel case"
+            ```python
+            my_string = Str("cast_this_string_to_camel")
 
-    Note that all methods provided by the Str class are based on regular expressions, so they may not be
-    appropriate for all string manipulation tasks.
+            my_string.camel
+            ```
+            'castThisStringToCamel'
+
+        === "Pascal"
+            ```python
+            my_string = Str("Cast_this_string_TO_Pascal!")
+
+            my_string.pascal
+            ```
+            'CastThisStringToPascal'
+
+
+    !!! tip "Use parentheses if you prefer!"
+
+        === "Snake case"
+            ```python
+            my_string = Str("HelloWorld")
+
+            my_string.to_snake()
+
+            ```
+            'hello_world'
     """
 
     def __new__(cls, *args, **kwargs):
@@ -65,21 +82,23 @@ class Str(str):
 
     def to_pascal(self):
         """
-        Converts a string to PascalCase.
+        !!! info
+            Simple method to converts a string to PascalCase.
+            Extend the method: to_pascal
 
         Returns:
             str: The PascalCase version of the input string.
 
-        Examples:
-        
-            >>> my_string = Str('hello_world')
-            >>> my_string.to_pascal()
-            'HelloWorld'
-            
-            >>> my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')
-            >>> my_string.to_pascal()
+
+        !!! example
+
+            ```python
+            my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')
+
+            my_string.to_pascal()
+            ```
             'SomeMixedStringWithSpacesUnderscoresAndHyphens'
-            
+
         """
         return Str(to_pascal(self))
 
@@ -90,7 +109,7 @@ class Str(str):
             str: The converted string in CamelCase.
 
         Examples:
-        
+
             >>> my_string = Str('this_is-an_example')
             >>> my_string.to_camel()
             'thisIsAnExample'
@@ -98,7 +117,7 @@ class Str(str):
             >>> my_string = Str('This is a test!')
             >>> my_string.to_camel()
             'thisIsATest'
-            
+
         """
         return Str(to_camel(self))
 
@@ -109,7 +128,7 @@ class Str(str):
             str: The string converted to snake_case.
 
         Examples:
-        
+
             >>> my_string = Str("HelloWorld")
             >>> my_string.snake("HelloWorld")
             'hello_world'
@@ -121,7 +140,7 @@ class Str(str):
             >>>  my_string = Str("hello-world")
             >>> my_string.to_snake()
             'hello_world'
-            
+
         """
         return Str(to_snake(self))
 
