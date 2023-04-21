@@ -124,7 +124,7 @@ def to_camel(text) -> str:
         - `to_snake()` - Converts a string to snake_case formatting.
     """
 
-    text = text.strip()
+    text: str = text.strip()
 
     if not text:  # If the input string is empty, return an empty string
         return ""
@@ -187,7 +187,7 @@ def to_snake(text) -> str:
         - `to_pascal()` - Converts a string to PascalCase formatting.
     """
 
-    text = text.strip()
+    text: str = text.strip()
 
     if not text:
         # If the input string is empty or only whitespace, return an empty string
@@ -200,31 +200,55 @@ def to_snake(text) -> str:
     return "_".join([word.lower() for word in words])
 
 
-def to_list(text):
-    """Converts a string to a list of alphanumeric words.
+def to_list(text: str) -> List[str]:
+    """
+    Converts a string to a list of strings, where each word is a separate element in the list.
 
     Args:
-        text (str): The input string to convert.
+        text (str): The input string.
 
     Returns:
-        list: A list of words extracted from the input string.
+        List[str]: A list of strings, where each word in the input string is a separate element in the list.
 
     Examples:
-        >>> to_list("Hello world!")
-        ['Hello', 'world']
+        !!! example "Converting a string to a list"
+            This example shows how to use `to_list()` to convert a string to a list.
 
-        >>> to_list("   another-string_123  ")
-        ['another', 'string', '123']
+            === "Example 1"
+                ```python
+                to_list('hello world')
+                ['hello', 'world']
+                ```
 
-        >>> to_list("   ")
-        []
+            === "Example 2"
+                ```python
+                to_list('HelloWorld')
+                ['Hello', 'World']
+                ```
 
-        >>> to_list("")
-        []
+            === "Example 3"
+                ```python
+                to_list('some-mixed_string With spaces_underscores-and-hyphens')
+                ['some', 'mixed', 'string', 'With', 'spaces', 'underscores', 'and', 'hyphens']
+                ```
+
+            === "Example 4"
+                ```python
+                to_list('123abc')
+                ['123abc']
+                ```
+
+    Warnings:
+        - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
+        - This function uses regular expressions to identify words in the input string.
+
+    Tips:
+        - If you need to convert a string to a list of integers or floats, you can use list comprehension to convert each element to the desired type.
+        - If you need to remove duplicates from the list, you can convert it to a set and then back to a list.
     """
     text = text.strip()
 
-    if not text:  # If the input string is empty or only whitespace, return an empty string
+    if not text:  # If the input string is empty or only whitespace, return an empty list
         return []
 
     # Remove any non-alphanumeric characters and split the string into words
