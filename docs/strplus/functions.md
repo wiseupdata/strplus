@@ -1,1 +1,0 @@
-::: strplus.functions

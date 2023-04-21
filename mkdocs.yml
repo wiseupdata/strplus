@@ -7,6 +7,8 @@ site_url: https://wiseupdata.github.io/strplus/index.html
 # Copyright
 copyright: Copyright &copy; 2023 - 2023 Silvio Liborio
 
+watch: [README.md]
+
 theme:
   name: 'material'
   custom_dir: assets/overrides/html
@@ -57,13 +59,16 @@ extra_css:
   - themes/strplus.css
 
 nav:
-- Str+: strplus/
+- package: strplus/
 - Python file: examples/examples_01.ipynb
 
 plugins:
   - search 
+  - gen-files:
+      scripts:
+      - assets/scripts/gen_ref_pages.py
   - literate-nav:
-      nav_file: SUMMARY.md
+      nav_file: SUMMARY.txt
   - section-index 
   - mkdocstrings:
       handlers:
@@ -72,7 +77,7 @@ plugins:
   - mkdocs-jupyter:
      theme: slate
      show_input: True
-     highlight_extra_classes: "strplus"
+     highlight_extra_classes: "strplus"  
 
 markdown_extensions:
 - tables
