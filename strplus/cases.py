@@ -9,26 +9,51 @@ import re
 
 def to_pascal(text: str) -> str:
     """
-    Converts a string to PascalCase.
+    Simple and efficient method to converts a string to PascalCase.
 
     Args:
-        text (str): The input string.
+    text (str): The input string.
 
     Returns:
         str: The PascalCase version of the input string.
 
     Examples:
-        >>> to_pascal('hello_world')
-        'HelloWorld'
+        !!! example "Converting strings to PascalCase"
+            This example shows how to use `to_pascal()` to convert strings to PascalCase.
 
-        >>> to_pascal('CamelCase')
-        'CamelCase'
+            === "Example 1"
+                ```python
+                to_pascal('hello_world')
+                'HelloWorld'
+                ```
 
-        >>> to_pascal('some-mixed_string With spaces_underscores-and-hyphens')
-        'SomeMixedStringWithSpacesUnderscoresAndHyphens'
+            === "Example 2"
+                ```python
+                to_pascal('CamelCase')
+                'CamelCase'
+                ```
 
-        >>> to_pascal('123abc')
-        '123abc'
+            === "Example 3"
+                ```python
+                to_pascal('some-mixed_string With spaces_underscores-and-hyphens')
+                'SomeMixedStringWithSpacesUnderscoresAndHyphens'
+                ```
+
+            === "Example 4"
+                ```python
+                to_pascal('123abc')
+                '123abc'
+                ```
+    warning:
+        - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
+        - This function will preserve any digits in the input string.
+        - If the input string already has PascalCase formatting, the function will return it unchanged.
+        - This function uses regular expressions to identify words in the input string.
+
+    tip: "See also"
+        - `to_camel()` - Converts a string to camelCase formatting.
+        - `to_snake()` - Converts a string to snake_case formatting.
+
     """
     text = text.strip()
 
