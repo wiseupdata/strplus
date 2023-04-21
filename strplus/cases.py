@@ -145,23 +145,46 @@ def to_camel(text) -> str:
 
 
 def to_snake(text) -> str:
-    """Converts a string to snake_case.
+    """
+    Converts a string to snake_case.
 
     Args:
-        text (str): The input string to convert.
+        text (str): The input string.
 
     Returns:
-        str: The string converted to snake_case.
+        str: The snake_case version of the input string.
 
     Examples:
-        >>> to_snake("HelloWorld")
-        'hello_world'
+        !!! example "Converting strings to snake_case"
+            This example shows how to use `to_snake()` to convert strings to snake_case.
 
-        >>> to_snake("  AnotherString!  ")
-        'another_string'
+            === "Example 1"
+                ```python
+                to_snake('helloWorld')
+                'hello_world'
+                ```
 
-        >>> to_snake("hello-world")
-        'hello_world'
+            === "Example 2"
+                ```python
+                to_snake('Some-Mixed_string With spaces-underscores-and-hyphens')
+                'some_mixed_string_with_spaces_underscores_and_hyphens'
+                ```
+
+            === "Example 3"
+                ```python
+                to_snake('CamelCase')
+                'camel_case'
+                ```
+
+    Warning:
+        - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
+        - This function will convert any uppercase letters to lowercase, and separate words with underscores.
+        - If the input string already has snake_case formatting, the function will return it unchanged.
+        - This function uses regular expressions to identify words in the input string.
+
+    Tips:
+        - `to_camel()` - Converts a string to camelCase formatting.
+        - `to_pascal()` - Converts a string to PascalCase formatting.
     """
 
     text = text.strip()
