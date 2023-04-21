@@ -47,7 +47,8 @@ Python extra functions for strings ❤️
 
 - Wrapper Class
 - +234 test in 32 Tests files!
-- Simple use! 
+- Simple use!
+- Made with A.I. contribution 🤖 
 
 <br>
 
