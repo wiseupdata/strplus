@@ -34,7 +34,7 @@ htmlclean:
 # Generate the documentation
 doc:
 	@rm -Rf docs/strplus
-	@poetry run python artifacts/scripts/gen_ref_pages.py
+	@poetry run python assets/scripts/gen_ref_pages.py
 
 poetry:
 	@poetry install
