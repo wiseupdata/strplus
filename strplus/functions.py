@@ -59,15 +59,46 @@ def to_list(text: str) -> List[str]:
 
 
 def get_separator(input_string):
-    """get_separator _summary_
-
-    _extended_summary_
-
-    :param input_string: _description_
-    :type input_string: _type_
-    :return: _description_
-    :rtype: _type_
     """
+    Finds the most common separator in a given input string.
+
+    Args:
+        input_string (str): The input string to search for separators.
+
+    Returns:
+        str or None: The most common separator found in the input string, or None if no separators are found.
+
+
+    !!! example "Finding the most common separator"
+        This example shows how to use `get_separator()` to find the most common separator in a string.
+
+        === "Example 1"
+            ```python
+            get_separator('This is a sample sentence, separated by commas')
+            ','
+            ```
+
+        === "Example 2"
+            ```python
+            get_separator('This string has no separators')
+            None
+            ```
+
+        === "Example 3"
+            ```python
+            get_separator('This string has multiple separators: ;, |, and /')
+            ';'
+            ```
+
+    Warning:
+        - This function assumes that the input string contains only valid separators.
+        - If multiple separators are tied for the most common, the first one encountered in the list of separators is returned.
+
+    Tips:
+        - This function can be used to split a string into a list using the most common separator, like so: `input_string.split(get_separator(input_string))`.
+        - To split a string into a list using all possible separators, use the `re.split()` function instead.
+    """
+
     separators = [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]
 
     # check each separator in the order of priority
