@@ -15,6 +15,8 @@
         <link rel="canonical" href="https://wiseupdata.github.io/strplus/index.html/strplus/cases/">
       
       
+        <link rel="prev" href="../SUMMARY/">
+      
       
         <link rel="next" href="../functions/">
       
@@ -23,7 +25,7 @@
     
     
       
-        <title>cases - strplus</title>
+        <title>Cases - strplus</title>
       
     
     
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              cases
+              Cases
             
           </span>
         </div>
@@ -275,15 +277,21 @@
       
       
       
-        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-          Str+
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../SUMMARY/">package</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          Str+
+          package
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -301,12 +309,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          cases
+          Cases
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        cases
+        Cases
       </a>
       
         
@@ -375,7 +383,7 @@
   
     <li class="md-nav__item">
       <a href="../functions/" class="md-nav__link">
-        functions
+        Functions
       </a>
     </li>
   
@@ -389,7 +397,7 @@
   
     <li class="md-nav__item">
       <a href="../strplus/" class="md-nav__link">
-        strplus
+        Strplus
       </a>
     </li>
   
@@ -499,7 +507,7 @@
   
 
 
-  <h1>cases</h1>
+  <h1>Cases</h1>
 
 <div class="doc doc-object doc-module">
 
@@ -531,7 +539,7 @@
 
   <div class="doc doc-contents ">
   
-      <p>Converts a string from any case to CamelCase.</p>
+      <p>Simple and efficient method to converts a string to camelCase.</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -549,7 +557,7 @@
           <td>
                 <code>str</code>
           </td>
-          <td><p>The string to convert.</p></td>
+          <td><p>The input string.</p></td>
           <td>
               <em>required</em>
           </td>
@@ -568,111 +576,192 @@
     <tbody>
         <tr>
 <td><code>str</code></td>          <td>
+                <code>str</code>
           </td>
-          <td><p>The converted string in CamelCase.</p></td>
-        </tr>
-    </tbody>
-  </table>
-
-  <p><strong>Raises:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code>ValueError</code>
-          </td>
-          <td><p>If the input string is empty.</p></td>
+          <td><p>The camelCase version of the input string.</p></td>
         </tr>
     </tbody>
   </table>
 
 <p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_camel</span><span class="p">(</span><span class="s1">&#39;this_is-an_example&#39;</span><span class="p">)</span>
-<span class="go">&#39;thisIsAnExample&#39;</span>
+    <div class="admonition example">
+<p class="admonition-title">Converting strings to camelCase</p>
+<p>This example shows how to use <code>to_camel()</code> to convert strings to camelCase.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="strplus.cases.to_camel--__tabbed_1_1" name="strplus.cases.to_camel--__tabbed_1" type="radio" /><input id="strplus.cases.to_camel--__tabbed_1_2" name="strplus.cases.to_camel--__tabbed_1" type="radio" /><input id="strplus.cases.to_camel--__tabbed_1_3" name="strplus.cases.to_camel--__tabbed_1" type="radio" /><input id="strplus.cases.to_camel--__tabbed_1_4" name="strplus.cases.to_camel--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.cases.to_camel--__tabbed_1_1">Example 1</label><label for="strplus.cases.to_camel--__tabbed_1_2">Example 2</label><label for="strplus.cases.to_camel--__tabbed_1_3">Example 3</label><label for="strplus.cases.to_camel--__tabbed_1_4">Example 4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_camel</span><span class="p">(</span><span class="s1">&#39;hello_world&#39;</span><span class="p">)</span>
+<span class="s1">&#39;helloWorld&#39;</span>
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_camel</span><span class="p">(</span><span class="s1">&#39;This is a test!&#39;</span><span class="p">)</span>
-<span class="go">&#39;thisIsATest&#39;</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_camel</span><span class="p">(</span><span class="s1">&#39;PascalCase&#39;</span><span class="p">)</span>
+<span class="s1">&#39;pascalCase&#39;</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_camel</span><span class="p">(</span><span class="s1">&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;</span><span class="p">)</span>
+<span class="s1">&#39;someMixedStringWithSpacesUnderscoresAndHyphens&#39;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_camel</span><span class="p">(</span><span class="s1">&#39;123abc&#39;</span><span class="p">)</span>
+<span class="s1">&#39;123abc&#39;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 
+<details class="warning">
+  <summary>warning</summary>
+  <ul>
+<li>For best results, avoid using punctuation or non-alphanumeric characters in the input string.</li>
+<li>This function will preserve any digits in the input string.</li>
+<li>If the input string already has camelCase formatting, the function will return it unchanged.</li>
+<li>This function uses regular expressions to identify words in the input string.</li>
+</ul>
+</details>
+<details class="tip">
+  <summary>"See also"</summary>
+  <ul>
+<li><code>to_pascal()</code> - Converts a string to PascalCase formatting.</li>
+<li><code>to_snake()</code> - Converts a string to snake_case formatting.</li>
+</ul>
+</details>
       <details class="quote">
         <summary>Source code in <code>strplus/cases.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_camel</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts a string from any case to CamelCase.</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_camel</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Simple and efficient method to converts a string to camelCase.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        text (str): The string to convert.</span>
+<span class="sd">        text (str): The input string.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        str: The converted string in CamelCase.</span>
-
-<span class="sd">    Raises:</span>
-<span class="sd">        ValueError: If the input string is empty.</span>
+<span class="sd">        str: The camelCase version of the input string.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; to_camel(&#39;this_is-an_example&#39;)</span>
-<span class="sd">        &#39;thisIsAnExample&#39;</span>
+<span class="sd">        !!! example &quot;Converting strings to camelCase&quot;</span>
+<span class="sd">            This example shows how to use `to_camel()` to convert strings to camelCase.</span>
 
-<span class="sd">        &gt;&gt;&gt; to_camel(&#39;This is a test!&#39;)</span>
-<span class="sd">        &#39;thisIsATest&#39;</span>
+<span class="sd">            === &quot;Example 1&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_camel(&#39;hello_world&#39;)</span>
+<span class="sd">                &#39;helloWorld&#39;</span>
+<span class="sd">                ```</span>
+
+<span class="sd">            === &quot;Example 2&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_camel(&#39;PascalCase&#39;)</span>
+<span class="sd">                &#39;pascalCase&#39;</span>
+<span class="sd">                ```</span>
+
+<span class="sd">            === &quot;Example 3&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_camel(&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;)</span>
+<span class="sd">                &#39;someMixedStringWithSpacesUnderscoresAndHyphens&#39;</span>
+<span class="sd">                ```</span>
+
+<span class="sd">            === &quot;Example 4&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_camel(&#39;123abc&#39;)</span>
+<span class="sd">                &#39;123abc&#39;</span>
+<span class="sd">                ```</span>
+
+<span class="sd">    warning:</span>
+<span class="sd">        - For best results, avoid using punctuation or non-alphanumeric characters in the input string.</span>
+<span class="sd">        - This function will preserve any digits in the input string.</span>
+<span class="sd">        - If the input string already has camelCase formatting, the function will return it unchanged.</span>
+<span class="sd">        - This function uses regular expressions to identify words in the input string.</span>
+
+<span class="sd">    tip: &quot;See also&quot;</span>
+<span class="sd">        - `to_pascal()` - Converts a string to PascalCase formatting.</span>
+<span class="sd">        - `to_snake()` - Converts a string to snake_case formatting.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">text</span><span class="p">:</span>  <span class="c1"># If the input string is empty, return an empty string</span>
         <span class="k">return</span> <span class="s2">&quot;&quot;</span>
 
     <span class="c1"># Split the string into words using regex, split 1</span>
-    <span class="n">words</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-zA-Z0-9]+&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([A-Z][a-z]+)&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot; \1&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([A-Z]+)&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot; \1&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">()],</span> <span class="p">[])</span>
+    <span class="n">words</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[a-zA-Z0-9]+&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([A-Z][a-z]+)&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot; \1&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([A-Z]+)&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot; \1&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">))</span><span class="o">.</span><span class="n">split</span><span class="p">()],</span> <span class="p">[])</span>
 
     <span class="c1"># Capitalize the first letter of each word except the first word</span>
-    <span class="n">capitalized_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">+</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>
+    <span class="n">capitalized_words</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">[</span><span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="o">+</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>
 
     <span class="c1"># Join the words back together to form the CamelCase string</span>
-    <span class="n">check_01</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">capitalized_words</span><span class="p">)</span>
+    <span class="n">check_01</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">capitalized_words</span><span class="p">)</span>
 
     <span class="c1"># Final check</span>
-    <span class="n">words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;[-_]&quot;</span><span class="p">,</span> <span class="n">check_01</span><span class="p">)</span>
+    <span class="n">words</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;[-_]&quot;</span><span class="p">,</span> <span class="n">check_01</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -752,37 +841,37 @@
 
       <details class="quote">
         <summary>Source code in <code>strplus/cases.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts a string to a list of alphanumeric words.</span>
 
 <span class="sd">    Args:</span>
@@ -831,31 +920,8 @@
 
   <div class="doc doc-contents ">
   
-      <p>Converts a string to PascalCase.</p>
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>text</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td><p>The input string.</p></td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      <p>Simple and efficient method to converts a string to PascalCase.</p>
+      <p>text (str): The input string.</p>
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -876,19 +942,51 @@
   </table>
 
 <p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_pascal</span><span class="p">(</span><span class="s1">&#39;hello_world&#39;</span><span class="p">)</span>
-<span class="go">&#39;HelloWorld&#39;</span>
+    <div class="admonition example">
+<p class="admonition-title">Converting strings to PascalCase</p>
+<p>This example shows how to use <code>to_pascal()</code> to convert strings to PascalCase.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="strplus.cases.to_pascal--__tabbed_1_1" name="strplus.cases.to_pascal--__tabbed_1" type="radio" /><input id="strplus.cases.to_pascal--__tabbed_1_2" name="strplus.cases.to_pascal--__tabbed_1" type="radio" /><input id="strplus.cases.to_pascal--__tabbed_1_3" name="strplus.cases.to_pascal--__tabbed_1" type="radio" /><input id="strplus.cases.to_pascal--__tabbed_1_4" name="strplus.cases.to_pascal--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.cases.to_pascal--__tabbed_1_1">Example 1</label><label for="strplus.cases.to_pascal--__tabbed_1_2">Example 2</label><label for="strplus.cases.to_pascal--__tabbed_1_3">Example 3</label><label for="strplus.cases.to_pascal--__tabbed_1_4">Example 4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_pascal</span><span class="p">(</span><span class="s1">&#39;hello_world&#39;</span><span class="p">)</span>
+<span class="s1">&#39;HelloWorld&#39;</span>
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_pascal</span><span class="p">(</span><span class="s1">&#39;CamelCase&#39;</span><span class="p">)</span>
-<span class="go">&#39;CamelCase&#39;</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_pascal</span><span class="p">(</span><span class="s1">&#39;CamelCase&#39;</span><span class="p">)</span>
+<span class="s1">&#39;CamelCase&#39;</span>
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_pascal</span><span class="p">(</span><span class="s1">&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;</span><span class="p">)</span>
-<span class="go">&#39;SomeMixedStringWithSpacesUnderscoresAndHyphens&#39;</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_pascal</span><span class="p">(</span><span class="s1">&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;</span><span class="p">)</span>
+<span class="s1">&#39;SomeMixedStringWithSpacesUnderscoresAndHyphens&#39;</span>
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_pascal</span><span class="p">(</span><span class="s1">&#39;123abc&#39;</span><span class="p">)</span>
-<span class="go">&#39;123abc&#39;</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_pascal</span><span class="p">(</span><span class="s1">&#39;123abc&#39;</span><span class="p">)</span>
+<span class="s1">&#39;123abc&#39;</span>
 </code></pre></div>
+</div>
+</div>
+</div>
+</div>
 
+<details class="warning">
+  <summary>warning</summary>
+  <ul>
+<li>For best results, avoid using punctuation or non-alphanumeric characters in the input string.</li>
+<li>This function will preserve any digits in the input string.</li>
+<li>If the input string already has PascalCase formatting, the function will return it unchanged.</li>
+<li>This function uses regular expressions to identify words in the input string.</li>
+</ul>
+</details>
+<details class="tip">
+  <summary>"See also"</summary>
+  <ul>
+<li><code>to_camel()</code> - Converts a string to camelCase formatting.</li>
+<li><code>to_snake()</code> - Converts a string to snake_case formatting.</li>
+</ul>
+</details>
       <details class="quote">
         <summary>Source code in <code>strplus/cases.py</code></summary>
         <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
@@ -931,28 +1029,78 @@
 <span class="normal">47</span>
 <span class="normal">48</span>
 <span class="normal">49</span>
-<span class="normal">50</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Converts a string to PascalCase.</span>
+<span class="sd">    Simple and efficient method to converts a string to PascalCase.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        text (str): The input string.</span>
+<span class="sd">    text (str): The input string.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        str: The PascalCase version of the input string.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; to_pascal(&#39;hello_world&#39;)</span>
-<span class="sd">        &#39;HelloWorld&#39;</span>
+<span class="sd">        !!! example &quot;Converting strings to PascalCase&quot;</span>
+<span class="sd">            This example shows how to use `to_pascal()` to convert strings to PascalCase.</span>
 
-<span class="sd">        &gt;&gt;&gt; to_pascal(&#39;CamelCase&#39;)</span>
-<span class="sd">        &#39;CamelCase&#39;</span>
+<span class="sd">            === &quot;Example 1&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_pascal(&#39;hello_world&#39;)</span>
+<span class="sd">                &#39;HelloWorld&#39;</span>
+<span class="sd">                ```</span>
 
-<span class="sd">        &gt;&gt;&gt; to_pascal(&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;)</span>
-<span class="sd">        &#39;SomeMixedStringWithSpacesUnderscoresAndHyphens&#39;</span>
+<span class="sd">            === &quot;Example 2&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_pascal(&#39;CamelCase&#39;)</span>
+<span class="sd">                &#39;CamelCase&#39;</span>
+<span class="sd">                ```</span>
 
-<span class="sd">        &gt;&gt;&gt; to_pascal(&#39;123abc&#39;)</span>
-<span class="sd">        &#39;123abc&#39;</span>
+<span class="sd">            === &quot;Example 3&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_pascal(&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;)</span>
+<span class="sd">                &#39;SomeMixedStringWithSpacesUnderscoresAndHyphens&#39;</span>
+<span class="sd">                ```</span>
+
+<span class="sd">            === &quot;Example 4&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_pascal(&#39;123abc&#39;)</span>
+<span class="sd">                &#39;123abc&#39;</span>
+<span class="sd">                ```</span>
+<span class="sd">    warning:</span>
+<span class="sd">        - For best results, avoid using punctuation or non-alphanumeric characters in the input string.</span>
+<span class="sd">        - This function will preserve any digits in the input string.</span>
+<span class="sd">        - If the input string already has PascalCase formatting, the function will return it unchanged.</span>
+<span class="sd">        - This function uses regular expressions to identify words in the input string.</span>
+
+<span class="sd">    tip: &quot;See also&quot;</span>
+<span class="sd">        - `to_camel()` - Converts a string to camelCase formatting.</span>
+<span class="sd">        - `to_snake()` - Converts a string to snake_case formatting.</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
@@ -1008,7 +1156,7 @@
           <td>
                 <code>str</code>
           </td>
-          <td><p>The input string to convert.</p></td>
+          <td><p>The input string.</p></td>
           <td>
               <em>required</em>
           </td>
@@ -1027,73 +1175,150 @@
     <tbody>
         <tr>
 <td><code>str</code></td>          <td>
+                <code>str</code>
           </td>
-          <td><p>The string converted to snake_case.</p></td>
+          <td><p>The snake_case version of the input string.</p></td>
         </tr>
     </tbody>
   </table>
 
 <p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_snake</span><span class="p">(</span><span class="s2">&quot;HelloWorld&quot;</span><span class="p">)</span>
-<span class="go">&#39;hello_world&#39;</span>
+    <div class="admonition example">
+<p class="admonition-title">Converting strings to snake_case</p>
+<p>This example shows how to use <code>to_snake()</code> to convert strings to snake_case.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="strplus.cases.to_snake--__tabbed_1_1" name="strplus.cases.to_snake--__tabbed_1" type="radio" /><input id="strplus.cases.to_snake--__tabbed_1_2" name="strplus.cases.to_snake--__tabbed_1" type="radio" /><input id="strplus.cases.to_snake--__tabbed_1_3" name="strplus.cases.to_snake--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.cases.to_snake--__tabbed_1_1">Example 1</label><label for="strplus.cases.to_snake--__tabbed_1_2">Example 2</label><label for="strplus.cases.to_snake--__tabbed_1_3">Example 3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_snake</span><span class="p">(</span><span class="s1">&#39;helloWorld&#39;</span><span class="p">)</span>
+<span class="s1">&#39;hello_world&#39;</span>
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_snake</span><span class="p">(</span><span class="s2">&quot;  AnotherString!  &quot;</span><span class="p">)</span>
-<span class="go">&#39;another_string&#39;</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_snake</span><span class="p">(</span><span class="s1">&#39;Some-Mixed_string With spaces-underscores-and-hyphens&#39;</span><span class="p">)</span>
+<span class="s1">&#39;some_mixed_string_with_spaces_underscores_and_hyphens&#39;</span>
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">to_snake</span><span class="p">(</span><span class="s2">&quot;hello-world&quot;</span><span class="p">)</span>
-<span class="go">&#39;hello_world&#39;</span>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">to_snake</span><span class="p">(</span><span class="s1">&#39;CamelCase&#39;</span><span class="p">)</span>
+<span class="s1">&#39;camel_case&#39;</span>
 </code></pre></div>
+</div>
+</div>
+</div>
+</div>
 
+<details class="warning">
+  <summary>Warning</summary>
+  <ul>
+<li>For best results, avoid using punctuation or non-alphanumeric characters in the input string.</li>
+<li>This function will convert any uppercase letters to lowercase, and separate words with underscores.</li>
+<li>If the input string already has snake_case formatting, the function will return it unchanged.</li>
+<li>This function uses regular expressions to identify words in the input string.</li>
+</ul>
+</details>
+<details class="tips">
+  <summary>Tips</summary>
+  <ul>
+<li><code>to_camel()</code> - Converts a string to camelCase formatting.</li>
+<li><code>to_pascal()</code> - Converts a string to PascalCase formatting.</li>
+</ul>
+</details>
       <details class="quote">
         <summary>Source code in <code>strplus/cases.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_snake</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts a string to snake_case.</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_snake</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a string to snake_case.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        text (str): The input string to convert.</span>
+<span class="sd">        text (str): The input string.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        str: The string converted to snake_case.</span>
+<span class="sd">        str: The snake_case version of the input string.</span>
 
 <span class="sd">    Examples:</span>
-<span class="sd">        &gt;&gt;&gt; to_snake(&quot;HelloWorld&quot;)</span>
-<span class="sd">        &#39;hello_world&#39;</span>
+<span class="sd">        !!! example &quot;Converting strings to snake_case&quot;</span>
+<span class="sd">            This example shows how to use `to_snake()` to convert strings to snake_case.</span>
 
-<span class="sd">        &gt;&gt;&gt; to_snake(&quot;  AnotherString!  &quot;)</span>
-<span class="sd">        &#39;another_string&#39;</span>
+<span class="sd">            === &quot;Example 1&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_snake(&#39;helloWorld&#39;)</span>
+<span class="sd">                &#39;hello_world&#39;</span>
+<span class="sd">                ```</span>
 
-<span class="sd">        &gt;&gt;&gt; to_snake(&quot;hello-world&quot;)</span>
-<span class="sd">        &#39;hello_world&#39;</span>
+<span class="sd">            === &quot;Example 2&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_snake(&#39;Some-Mixed_string With spaces-underscores-and-hyphens&#39;)</span>
+<span class="sd">                &#39;some_mixed_string_with_spaces_underscores_and_hyphens&#39;</span>
+<span class="sd">                ```</span>
+
+<span class="sd">            === &quot;Example 3&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                to_snake(&#39;CamelCase&#39;)</span>
+<span class="sd">                &#39;camel_case&#39;</span>
+<span class="sd">                ```</span>
+
+<span class="sd">    Warning:</span>
+<span class="sd">        - For best results, avoid using punctuation or non-alphanumeric characters in the input string.</span>
+<span class="sd">        - This function will convert any uppercase letters to lowercase, and separate words with underscores.</span>
+<span class="sd">        - If the input string already has snake_case formatting, the function will return it unchanged.</span>
+<span class="sd">        - This function uses regular expressions to identify words in the input string.</span>
+
+<span class="sd">    Tips:</span>
+<span class="sd">        - `to_camel()` - Converts a string to camelCase formatting.</span>
+<span class="sd">        - `to_pascal()` - Converts a string to PascalCase formatting.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
