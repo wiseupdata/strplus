@@ -1,4 +1,5 @@
-from strplus.cases import to_camel, to_list, to_pascal, to_snake
+from strplus.cases import to_camel, to_pascal, to_snake
+from strplus.functions import to_list
 
 
 class Str(str):

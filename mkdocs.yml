@@ -93,5 +93,5 @@ markdown_extensions:
 # language options
 extra:
   alternate:
-    - link: /
+    - link: https://wiseupdata.github.io/strplus/
       name: English

@@ -124,7 +124,7 @@ def to_camel(text) -> str:
         - `to_snake()` - Converts a string to snake_case formatting.
     """
 
-    text = text.strip()
+    text: str = text.strip()
 
     if not text:  # If the input string is empty, return an empty string
         return ""
@@ -187,7 +187,7 @@ def to_snake(text) -> str:
         - `to_pascal()` - Converts a string to PascalCase formatting.
     """
 
-    text = text.strip()
+    text: str = text.strip()
 
     if not text:
         # If the input string is empty or only whitespace, return an empty string
@@ -198,36 +198,3 @@ def to_snake(text) -> str:
 
     # Join the words back together to form the snake_case string
     return "_".join([word.lower() for word in words])
-
-
-def to_list(text):
-    """Converts a string to a list of alphanumeric words.
-
-    Args:
-        text (str): The input string to convert.
-
-    Returns:
-        list: A list of words extracted from the input string.
-
-    Examples:
-        >>> to_list("Hello world!")
-        ['Hello', 'world']
-
-        >>> to_list("   another-string_123  ")
-        ['another', 'string', '123']
-
-        >>> to_list("   ")
-        []
-
-        >>> to_list("")
-        []
-    """
-    text = text.strip()
-
-    if not text:  # If the input string is empty or only whitespace, return an empty string
-        return []
-
-    # Remove any non-alphanumeric characters and split the string into words
-    word_list = sum([re.findall(r"[a-zA-Z0-9]+", word) for word in re.sub("([A-Z][a-z]+)", r"_\1", re.sub("([A-Z]+)", r"_\1", text)).split()], [])
-
-    return word_list
