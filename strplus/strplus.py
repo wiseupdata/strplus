@@ -3,19 +3,19 @@ from strplus.cases import to_camel, to_list, to_pascal, to_snake
 
 class Str(str):
     """
-    
+
     !!! info
-    
+
         The Str Class is a Wrapper class that extends the str Class, giving it superpowers
-        to handle strings and making it easy to use the strplus functions! You don't need to import, only if you want! 
+        to handle strings and making it easy to use the strplus functions! You don't need to import, only if you want!
         All methods from Str are recursive and return the Str object itself, so you always have the same features in the result.
 
     !!! example "Never was so easy! Simple no parentheses! "
-    
+
         === "Snake case"
             ```python
             my_string = Str("Cast_this_StringToSnake")
-            
+
             my_string.snake
             ```
             'cast_this_string_to_snake'
@@ -31,20 +31,20 @@ class Str(str):
         === "Pascal"
             ```python
             my_string = Str("Cast_this_string_TO_Pascal!")
-            
+
             my_string.pascal
             ```
             'CastThisStringToPascal'
-            
+
 
     !!! tip "Use parentheses if you prefer!"
 
         === "Snake case"
             ```python
             my_string = Str("HelloWorld")
-            
+
             my_string.to_snake()
-    
+
             ```
             'hello_world'
     """
@@ -80,9 +80,9 @@ class Str(str):
     def print(self):
         print(self)
 
-    def to_pascal(self) -> Str:
+    def to_pascal(self):
         """
-        !!! info 
+        !!! info
             Simple method to converts a string to PascalCase.
             Extend the method: to_pascal
 
@@ -94,22 +94,22 @@ class Str(str):
 
             ```python
             my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')
-            
+
             my_string.to_pascal()
             ```
             'SomeMixedStringWithSpacesUnderscoresAndHyphens'
-            
+
         """
         return Str(to_pascal(self))
 
-    def to_camel(self) -> Str:
+    def to_camel(self):
         """Converts a string from any case to CamelCase.
 
         Returns:
             str: The converted string in CamelCase.
 
         Examples:
-        
+
             >>> my_string = Str('this_is-an_example')
             >>> my_string.to_camel()
             'thisIsAnExample'
@@ -117,18 +117,18 @@ class Str(str):
             >>> my_string = Str('This is a test!')
             >>> my_string.to_camel()
             'thisIsATest'
-            
+
         """
         return Str(to_camel(self))
 
-    def to_snake(self) -> Str:
+    def to_snake(self):
         """Converts a string to snake_case.
 
         Returns:
             str: The string converted to snake_case.
 
         Examples:
-        
+
             >>> my_string = Str("HelloWorld")
             >>> my_string.snake("HelloWorld")
             'hello_world'
@@ -140,7 +140,7 @@ class Str(str):
             >>>  my_string = Str("hello-world")
             >>> my_string.to_snake()
             'hello_world'
-            
+
         """
         return Str(to_snake(self))
 
