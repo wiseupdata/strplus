@@ -75,46 +75,76 @@ def to_pascal(text: str) -> str:
     return "".join(capitalized_words)
 
 
-def to_camel(text):
-    """Converts a string from any case to CamelCase.
+def to_camel(text) -> str:
+    """
+    Simple and efficient method to converts a string to camelCase.
 
     Args:
-        text (str): The string to convert.
+        text (str): The input string.
 
     Returns:
-        str: The converted string in CamelCase.
-
-    Raises:
-        ValueError: If the input string is empty.
+        str: The camelCase version of the input string.
 
     Examples:
-        >>> to_camel('this_is-an_example')
-        'thisIsAnExample'
+        !!! example "Converting strings to camelCase"
+            This example shows how to use `to_camel()` to convert strings to camelCase.
 
-        >>> to_camel('This is a test!')
-        'thisIsATest'
+            === "Example 1"
+                ```python
+                to_camel('hello_world')
+                'helloWorld'
+                ```
+
+            === "Example 2"
+                ```python
+                to_camel('PascalCase')
+                'pascalCase'
+                ```
+
+            === "Example 3"
+                ```python
+                to_camel('some-mixed_string With spaces_underscores-and-hyphens')
+                'someMixedStringWithSpacesUnderscoresAndHyphens'
+                ```
+
+            === "Example 4"
+                ```python
+                to_camel('123abc')
+                '123abc'
+                ```
+
+    warning:
+        - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
+        - This function will preserve any digits in the input string.
+        - If the input string already has camelCase formatting, the function will return it unchanged.
+        - This function uses regular expressions to identify words in the input string.
+
+    tip: "See also"
+        - `to_pascal()` - Converts a string to PascalCase formatting.
+        - `to_snake()` - Converts a string to snake_case formatting.
     """
+
     text = text.strip()
 
     if not text:  # If the input string is empty, return an empty string
         return ""
 
     # Split the string into words using regex, split 1
-    words = sum([re.findall(r"[a-zA-Z0-9]+", word) for word in re.sub("([A-Z][a-z]+)", r" \1", re.sub("([A-Z]+)", r" \1", text)).split()], [])
+    words: str = sum([re.findall(r"[a-zA-Z0-9]+", word) for word in re.sub("([A-Z][a-z]+)", r" \1", re.sub("([A-Z]+)", r" \1", text)).split()], [])
 
     # Capitalize the first letter of each word except the first word
-    capitalized_words = [words[0].lower()] + [word.capitalize() for word in words[1:]]
+    capitalized_words: str = [words[0].lower()] + [word.capitalize() for word in words[1:]]
 
     # Join the words back together to form the CamelCase string
-    check_01 = "".join(capitalized_words)
+    check_01: str = "".join(capitalized_words)
 
     # Final check
-    words = re.split("[-_]", check_01)
+    words: str = re.split("[-_]", check_01)
 
     return words[0] + "".join(word.capitalize() for word in words[1:]).replace("_", "")
 
 
-def to_snake(text):
+def to_snake(text) -> str:
     """Converts a string to snake_case.
 
     Args:
