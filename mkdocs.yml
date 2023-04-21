@@ -12,6 +12,8 @@ watch: [README.md]
 theme:
   name: 'material'
   custom_dir: assets/overrides/html
+  favicon: "https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/imgs/python.png"
+  logo: "https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/imgs/python.png"
   palette:
   - media: "(prefers-color-scheme: dark)"
     # scheme: strplus
