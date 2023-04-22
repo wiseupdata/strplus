@@ -11,7 +11,7 @@ watch: [README.md]
 
 theme:
   name: 'material'
-  custom_dir: assets/overrides/html
+  # custom_dir: assets/overrides/html
   favicon: "https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/imgs/python.png"
   logo: "https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/imgs/python.png"
   palette:
@@ -62,7 +62,8 @@ extra_css:
 
 nav:
 - package: strplus/
-- Python file: examples/examples_01.ipynb
+- Python file: examples/cases_01.ipynb
+- Python file: examples/functions_01.ipynb
 
 plugins:
   - search 
