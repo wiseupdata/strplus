@@ -18,7 +18,7 @@
         <link rel="prev" href="../functions/">
       
       
-        <link rel="next" href="../../examples/examples_01/">
+        <link rel="next" href="../../examples/cases_01/">
       
       <link rel="icon" href="https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/imgs/python.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="lime">
   
     
     
@@ -125,7 +125,7 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -133,7 +133,7 @@
           
         
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
@@ -381,6 +381,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.to_list" class="md-nav__link">
+    to_list()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#strplus.strplus.Str.to_pascal" class="md-nav__link">
     to_pascal()
   </a>
@@ -422,8 +429,23 @@
   
   
     <li class="md-nav__item">
-      <a href="../../examples/examples_01/" class="md-nav__link">
-        Examples! ❤️
+      <a href="../../examples/cases_01/" class="md-nav__link">
+        Cases examples! 🚀
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/functions_01/" class="md-nav__link">
+        Functions Examples!  💕
       </a>
     </li>
   
@@ -478,6 +500,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.to_list" class="md-nav__link">
+    to_list()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#strplus.strplus.Str.to_pascal" class="md-nav__link">
     to_pascal()
   </a>
@@ -508,9 +537,6 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-    <p> Welcome </p>
-
-
                   
 
   
@@ -553,52 +579,42 @@
 
   
       <div class="admonition info">
-<p class="admonition-title">Info</p>
+<p class="admonition-title">Str Class</p>
 <p>The Str Class is a Wrapper class that extends the str Class, giving it superpowers
 to handle strings and making it easy to use the strplus functions! You don't need to import, only if you want!
 All methods from Str are recursive and return the Str object itself, so you always have the same features in the result.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Never was so easy! Simple no parentheses! </p>
+<p class="admonition-title">Easy and simple no parentheses!</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="strplus.strplus.Str--__tabbed_1_1" name="strplus.strplus.Str--__tabbed_1" type="radio" /><input id="strplus.strplus.Str--__tabbed_1_2" name="strplus.strplus.Str--__tabbed_1" type="radio" /><input id="strplus.strplus.Str--__tabbed_1_3" name="strplus.strplus.Str--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.strplus.Str--__tabbed_1_1">Snake case</label><label for="strplus.strplus.Str--__tabbed_1_2">Camel case</label><label for="strplus.strplus.Str--__tabbed_1_3">Pascal</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;Cast_this_StringToSnake&quot;</span><span class="p">)</span>
-
 <span class="n">my_string</span><span class="o">.</span><span class="n">snake</span>
 </code></pre></div>
-'cast_this_string_to_snake'</p>
+cast_this_string_to_snake</p>
 </div>
 <div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;cast_this_string_to_camel&quot;</span><span class="p">)</span>
-
 <span class="n">my_string</span><span class="o">.</span><span class="n">camel</span>
 </code></pre></div>
-'castThisStringToCamel'</p>
+castThisStringToCamel</p>
 </div>
 <div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;Cast_this_string_TO_Pascal!&quot;</span><span class="p">)</span>
-
 <span class="n">my_string</span><span class="o">.</span><span class="n">pascal</span>
 </code></pre></div>
-'CastThisStringToPascal'</p>
+CastThisStringToPascal</p>
 </div>
 </div>
 </div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Use parentheses if you prefer!</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="strplus.strplus.Str--__tabbed_2_1" name="strplus.strplus.Str--__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="strplus.strplus.Str--__tabbed_2_1">Snake case</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
 <p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;HelloWorld&quot;</span><span class="p">)</span>
-
 <span class="n">my_string</span><span class="o">.</span><span class="n">to_snake</span><span class="p">()</span>
 </code></pre></div>
-'hello_world'</p>
-</div>
-</div>
-</div>
+hello_world</p>
 </div>
 
 
@@ -748,52 +764,102 @@ All methods from Str are recursive and return the Str object itself, so you alwa
 <span class="normal">146</span>
 <span class="normal">147</span>
 <span class="normal">148</span>
-<span class="normal">149</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Str</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Str</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
-<span class="sd">    !!! info</span>
+<span class="sd">    !!! Info &quot;Str Class&quot;</span>
 
 <span class="sd">        The Str Class is a Wrapper class that extends the str Class, giving it superpowers</span>
 <span class="sd">        to handle strings and making it easy to use the strplus functions! You don&#39;t need to import, only if you want!</span>
 <span class="sd">        All methods from Str are recursive and return the Str object itself, so you always have the same features in the result.</span>
 
-<span class="sd">    !!! example &quot;Never was so easy! Simple no parentheses! &quot;</span>
+<span class="sd">    !!! Example &quot;Easy and simple no parentheses!&quot;</span>
 
 <span class="sd">        === &quot;Snake case&quot;</span>
 <span class="sd">            ```python</span>
 <span class="sd">            my_string = Str(&quot;Cast_this_StringToSnake&quot;)</span>
-
 <span class="sd">            my_string.snake</span>
 <span class="sd">            ```</span>
-<span class="sd">            &#39;cast_this_string_to_snake&#39;</span>
+<span class="sd">            cast_this_string_to_snake</span>
 
 <span class="sd">        === &quot;Camel case&quot;</span>
 <span class="sd">            ```python</span>
 <span class="sd">            my_string = Str(&quot;cast_this_string_to_camel&quot;)</span>
-
 <span class="sd">            my_string.camel</span>
 <span class="sd">            ```</span>
-<span class="sd">            &#39;castThisStringToCamel&#39;</span>
+<span class="sd">            castThisStringToCamel</span>
 
 <span class="sd">        === &quot;Pascal&quot;</span>
 <span class="sd">            ```python</span>
 <span class="sd">            my_string = Str(&quot;Cast_this_string_TO_Pascal!&quot;)</span>
-
 <span class="sd">            my_string.pascal</span>
 <span class="sd">            ```</span>
-<span class="sd">            &#39;CastThisStringToPascal&#39;</span>
+<span class="sd">            CastThisStringToPascal</span>
 
 
-<span class="sd">    !!! tip &quot;Use parentheses if you prefer!&quot;</span>
+<span class="sd">    !!! Tip &quot;Use parentheses if you prefer!&quot;</span>
 
-<span class="sd">        === &quot;Snake case&quot;</span>
-<span class="sd">            ```python</span>
-<span class="sd">            my_string = Str(&quot;HelloWorld&quot;)</span>
+<span class="sd">        ```python</span>
+<span class="sd">        my_string = Str(&quot;HelloWorld&quot;)</span>
+<span class="sd">        my_string.to_snake()</span>
 
-<span class="sd">            my_string.to_snake()</span>
+<span class="sd">        ```</span>
+<span class="sd">        hello_world</span>
 
-<span class="sd">            ```</span>
-<span class="sd">            &#39;hello_world&#39;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -829,69 +895,127 @@ All methods from Str are recursive and return the Str object itself, so you alwa
 
     <span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        !!! info</span>
-<span class="sd">            Simple method to converts a string to PascalCase.</span>
-<span class="sd">            Extend the method: to_pascal</span>
+
+<span class="sd">        Simple method to converts a string to PascalCase.</span>
+<span class="sd">        Extend the method: to_pascal</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            str: The PascalCase version of the input string.</span>
 
-
-<span class="sd">        !!! example</span>
+<span class="sd">        !!! Example</span>
 
 <span class="sd">            ```python</span>
 <span class="sd">            my_string = Str(&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;)</span>
-
 <span class="sd">            my_string.to_pascal()</span>
 <span class="sd">            ```</span>
-<span class="sd">            &#39;SomeMixedStringWithSpacesUnderscoresAndHyphens&#39;</span>
+<span class="sd">            SomeMixedStringWithSpacesUnderscoresAndHyphens</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Converts a string from any case to CamelCase.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Converts a string from any case to CamelCase.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            str: The converted string in CamelCase.</span>
 
-<span class="sd">        Examples:</span>
+<span class="sd">        !!! Example</span>
 
-<span class="sd">            &gt;&gt;&gt; my_string = Str(&#39;this_is-an_example&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; my_string.to_camel()</span>
-<span class="sd">            &#39;thisIsAnExample&#39;</span>
+<span class="sd">            === &quot;Example 01&quot;</span>
+<span class="sd">                ```</span>
+<span class="sd">                my_string = Str(&#39;this_is-an_example&#39;)</span>
+<span class="sd">                my_string.to_camel()</span>
+<span class="sd">                ```</span>
+<span class="sd">                thisIsAnExample</span>
 
-<span class="sd">            &gt;&gt;&gt; my_string = Str(&#39;This is a test!&#39;)</span>
-<span class="sd">            &gt;&gt;&gt; my_string.to_camel()</span>
-<span class="sd">            &#39;thisIsATest&#39;</span>
+<span class="sd">            === &quot;Example 02&quot;</span>
+<span class="sd">                ```</span>
+<span class="sd">                my_string = Str(&#39;This is a test!&#39;)</span>
+<span class="sd">                my_string.to_camel()</span>
+<span class="sd">                ```</span>
+<span class="sd">                thisIsATest</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Converts a string to snake_case.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Converts a string to snake_case.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            str: The string converted to snake_case.</span>
 
-<span class="sd">        Examples:</span>
+<span class="sd">        !!! Example &quot;Examples&quot;</span>
 
-<span class="sd">            &gt;&gt;&gt; my_string = Str(&quot;HelloWorld&quot;)</span>
-<span class="sd">            &gt;&gt;&gt; my_string.snake(&quot;HelloWorld&quot;)</span>
-<span class="sd">            &#39;hello_world&#39;</span>
+<span class="sd">            === &quot;Example 01&quot;</span>
+<span class="sd">                ```</span>
+<span class="sd">                my_string = Str(&quot;HelloWorld&quot;)</span>
+<span class="sd">                my_string.snake(&quot;HelloWorld&quot;)</span>
+<span class="sd">                ```</span>
+<span class="sd">                hello_world</span>
 
-<span class="sd">            &gt;&gt;&gt; my_string = Str(&quot;  AnotherString!  &quot;)</span>
-<span class="sd">            &gt;&gt;&gt; my_string.to_snake()</span>
-<span class="sd">            &#39;another_string&#39;</span>
+<span class="sd">            === &quot;Example 02&quot;</span>
+<span class="sd">                ```</span>
+<span class="sd">                my_string = Str(&quot;  AnotherString!  &quot;)</span>
+<span class="sd">                my_string.to_snake()</span>
+<span class="sd">                ```</span>
+<span class="sd">                another_string</span>
 
-<span class="sd">            &gt;&gt;&gt;  my_string = Str(&quot;hello-world&quot;)</span>
-<span class="sd">            &gt;&gt;&gt; my_string.to_snake()</span>
-<span class="sd">            &#39;hello_world&#39;</span>
+<span class="sd">            === &quot;Example 03&quot;</span>
+<span class="sd">                ```</span>
+<span class="sd">                my_string = Str(&quot;hello-world&quot;)</span>
+<span class="sd">                my_string.to_snake()</span>
+<span class="sd">                ```</span>
+<span class="sd">                hello_world</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Converts a string to a list of strings, where each word is a separate element in the list.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: A list of strings, where each word in the input string is a separate element in the list.</span>
+
+<span class="sd">        !!! Example &quot;Converting a string to a list&quot;</span>
+<span class="sd">            This example shows how to use `to_list()` to convert a string to a list.</span>
+
+<span class="sd">            === &quot;Example 1&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                my_string = Str(&#39;hello world&#39;)</span>
+<span class="sd">                my_string.to_list</span>
+<span class="sd">                ```</span>
+<span class="sd">                [&#39;hello&#39;, &#39;world&#39;]</span>
+
+
+<span class="sd">            === &quot;Example 2&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                my_string = Str(&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;)</span>
+<span class="sd">                my_string.to_list</span>
+<span class="sd">                ```</span>
+<span class="sd">                [&#39;some&#39;, &#39;mixed&#39;, &#39;string&#39;, &#39;With&#39;, &#39;spaces&#39;, &#39;underscores&#39;, &#39;and&#39;, &#39;hyphens&#39;]</span>
+
+<span class="sd">            === &quot;Example 2&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                my_string = Str(&#39;123abc&#39;)</span>
+<span class="sd">                my_string.to_list</span>
+<span class="sd">                ```</span>
+<span class="sd">                [&#39;123abc&#39;]</span>
+
+<span class="sd">        Tip: Use tips</span>
+<span class="sd">            - If you need to convert a string to a list of integers or floats, you can use list comprehension to convert each element to the desired type.</span>
+<span class="sd">            - If you need to remove duplicates from the list, you can convert it to a set and then back to a list.</span>
+
+<span class="sd">        Info: Important</span>
+<span class="sd">            - For best results, avoid using punctuation or non-alphanumeric characters in the input string.</span>
+<span class="sd">            - This function uses regular expressions to identify words in the input string.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">Str</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div>
         </details>
@@ -938,20 +1062,35 @@ All methods from Str are recursive and return the Str object itself, so you alwa
         </tr>
     </tbody>
   </table>
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s1">&#39;this_is-an_example&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span><span class="o">.</span><span class="n">to_camel</span><span class="p">()</span>
-<span class="go">&#39;thisIsAnExample&#39;</span>
+      <div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="strplus.strplus.Str.to_camel--__tabbed_1_1" name="strplus.strplus.Str.to_camel--__tabbed_1" type="radio" /><input id="strplus.strplus.Str.to_camel--__tabbed_1_2" name="strplus.strplus.Str.to_camel--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.strplus.Str.to_camel--__tabbed_1_1">Example 01</label><label for="strplus.strplus.Str.to_camel--__tabbed_1_2">Example 02</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code>my_string = Str(&#39;this_is-an_example&#39;)
+my_string.to_camel()
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s1">&#39;This is a test!&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span><span class="o">.</span><span class="n">to_camel</span><span class="p">()</span>
-<span class="go">&#39;thisIsATest&#39;</span>
+thisIsAnExample</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code>my_string = Str(&#39;This is a test!&#39;)
+my_string.to_camel()
 </code></pre></div>
+thisIsATest</p>
+</div>
+</div>
+</div>
+</div>
 
       <details class="quote">
         <summary>Source code in <code>strplus/strplus.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">106</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
 <span class="normal">107</span>
 <span class="normal">108</span>
 <span class="normal">109</span>
@@ -968,24 +1107,198 @@ All methods from Str are recursive and return the Str object itself, so you alwa
 <span class="normal">120</span>
 <span class="normal">121</span>
 <span class="normal">122</span>
-<span class="normal">123</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts a string from any case to CamelCase.</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Converts a string from any case to CamelCase.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        str: The converted string in CamelCase.</span>
 
-<span class="sd">    Examples:</span>
+<span class="sd">    !!! Example</span>
 
-<span class="sd">        &gt;&gt;&gt; my_string = Str(&#39;this_is-an_example&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; my_string.to_camel()</span>
-<span class="sd">        &#39;thisIsAnExample&#39;</span>
+<span class="sd">        === &quot;Example 01&quot;</span>
+<span class="sd">            ```</span>
+<span class="sd">            my_string = Str(&#39;this_is-an_example&#39;)</span>
+<span class="sd">            my_string.to_camel()</span>
+<span class="sd">            ```</span>
+<span class="sd">            thisIsAnExample</span>
 
-<span class="sd">        &gt;&gt;&gt; my_string = Str(&#39;This is a test!&#39;)</span>
-<span class="sd">        &gt;&gt;&gt; my_string.to_camel()</span>
-<span class="sd">        &#39;thisIsATest&#39;</span>
+<span class="sd">        === &quot;Example 02&quot;</span>
+<span class="sd">            ```</span>
+<span class="sd">            my_string = Str(&#39;This is a test!&#39;)</span>
+<span class="sd">            my_string.to_camel()</span>
+<span class="sd">            ```</span>
+<span class="sd">            thisIsATest</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="strplus.strplus.Str.to_list" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">to_list</span><span class="p">()</span></code>
+
+<a href="#strplus.strplus.Str.to_list" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Converts a string to a list of strings, where each word is a separate element in the list.</p>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>List[str]: A list of strings, where each word in the input string is a separate element in the list.</p></td>
+        </tr>
+    </tbody>
+  </table>
+      <div class="admonition example">
+<p class="admonition-title">Converting a string to a list</p>
+<p>This example shows how to use <code>to_list()</code> to convert a string to a list.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="strplus.strplus.Str.to_list--__tabbed_1_1" name="strplus.strplus.Str.to_list--__tabbed_1" type="radio" /><input id="strplus.strplus.Str.to_list--__tabbed_1_2" name="strplus.strplus.Str.to_list--__tabbed_1" type="radio" /><input id="strplus.strplus.Str.to_list--__tabbed_1_3" name="strplus.strplus.Str.to_list--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.strplus.Str.to_list--__tabbed_1_1">Example 1</label><label for="strplus.strplus.Str.to_list--__tabbed_1_2">Example 2</label><label for="strplus.strplus.Str.to_list--__tabbed_1_3">Example 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">to_list</span>
+</code></pre></div>
+['hello', 'world']</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s1">&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;</span><span class="p">)</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">to_list</span>
+</code></pre></div>
+['some', 'mixed', 'string', 'With', 'spaces', 'underscores', 'and', 'hyphens']</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s1">&#39;123abc&#39;</span><span class="p">)</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">to_list</span>
+</code></pre></div>
+['123abc']</p>
+</div>
+</div>
+</div>
+</div>
+
+<details class="tip">
+  <summary>Use tips</summary>
+  <ul>
+<li>If you need to convert a string to a list of integers or floats, you can use list comprehension to convert each element to the desired type.</li>
+<li>If you need to remove duplicates from the list, you can convert it to a set and then back to a list.</li>
+</ul>
+</details>
+<details class="info">
+  <summary>Important</summary>
+  <ul>
+<li>For best results, avoid using punctuation or non-alphanumeric characters in the input string.</li>
+<li>This function uses regular expressions to identify words in the input string.</li>
+</ul>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>strplus/strplus.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Converts a string to a list of strings, where each word is a separate element in the list.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: A list of strings, where each word in the input string is a separate element in the list.</span>
+
+<span class="sd">    !!! Example &quot;Converting a string to a list&quot;</span>
+<span class="sd">        This example shows how to use `to_list()` to convert a string to a list.</span>
+
+<span class="sd">        === &quot;Example 1&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            my_string = Str(&#39;hello world&#39;)</span>
+<span class="sd">            my_string.to_list</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&#39;hello&#39;, &#39;world&#39;]</span>
+
+
+<span class="sd">        === &quot;Example 2&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            my_string = Str(&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;)</span>
+<span class="sd">            my_string.to_list</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&#39;some&#39;, &#39;mixed&#39;, &#39;string&#39;, &#39;With&#39;, &#39;spaces&#39;, &#39;underscores&#39;, &#39;and&#39;, &#39;hyphens&#39;]</span>
+
+<span class="sd">        === &quot;Example 2&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            my_string = Str(&#39;123abc&#39;)</span>
+<span class="sd">            my_string.to_list</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&#39;123abc&#39;]</span>
+
+<span class="sd">    Tip: Use tips</span>
+<span class="sd">        - If you need to convert a string to a list of integers or floats, you can use list comprehension to convert each element to the desired type.</span>
+<span class="sd">        - If you need to remove duplicates from the list, you can convert it to a set and then back to a list.</span>
+
+<span class="sd">    Info: Important</span>
+<span class="sd">        - For best results, avoid using punctuation or non-alphanumeric characters in the input string.</span>
+<span class="sd">        - This function uses regular expressions to identify words in the input string.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">Str</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)]</span>
 </code></pre></div></td></tr></table></div>
       </details>
   </div>
@@ -1004,11 +1317,8 @@ All methods from Str are recursive and return the Str object itself, so you alwa
 
   <div class="doc doc-contents ">
   
-      <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Simple method to converts a string to PascalCase.
+      <p>Simple method to converts a string to PascalCase.
 Extend the method: to_pascal</p>
-</div>
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1029,52 +1339,47 @@ Extend the method: to_pascal</p>
       <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s1">&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;</span><span class="p">)</span>
-
 <span class="n">my_string</span><span class="o">.</span><span class="n">to_pascal</span><span class="p">()</span>
 </code></pre></div>
-'SomeMixedStringWithSpacesUnderscoresAndHyphens'</p>
+SomeMixedStringWithSpacesUnderscoresAndHyphens</p>
 </div>
 
       <details class="quote">
         <summary>Source code in <code>strplus/strplus.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 84</span>
-<span class="normal"> 85</span>
-<span class="normal"> 86</span>
-<span class="normal"> 87</span>
-<span class="normal"> 88</span>
-<span class="normal"> 89</span>
-<span class="normal"> 90</span>
-<span class="normal"> 91</span>
-<span class="normal"> 92</span>
-<span class="normal"> 93</span>
-<span class="normal"> 94</span>
-<span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span>
+<span class="normal">98</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    !!! info</span>
-<span class="sd">        Simple method to converts a string to PascalCase.</span>
-<span class="sd">        Extend the method: to_pascal</span>
+
+<span class="sd">    Simple method to converts a string to PascalCase.</span>
+<span class="sd">    Extend the method: to_pascal</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        str: The PascalCase version of the input string.</span>
 
-
-<span class="sd">    !!! example</span>
+<span class="sd">    !!! Example</span>
 
 <span class="sd">        ```python</span>
 <span class="sd">        my_string = Str(&#39;some-mixed_string With spaces_underscores-and-hyphens&#39;)</span>
-
 <span class="sd">        my_string.to_pascal()</span>
 <span class="sd">        ```</span>
-<span class="sd">        &#39;SomeMixedStringWithSpacesUnderscoresAndHyphens&#39;</span>
+<span class="sd">        SomeMixedStringWithSpacesUnderscoresAndHyphens</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
@@ -1114,26 +1419,35 @@ Extend the method: to_pascal</p>
         </tr>
     </tbody>
   </table>
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;HelloWorld&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span><span class="o">.</span><span class="n">snake</span><span class="p">(</span><span class="s2">&quot;HelloWorld&quot;</span><span class="p">)</span>
-<span class="go">&#39;hello_world&#39;</span>
+      <div class="admonition example">
+<p class="admonition-title">Examples</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="strplus.strplus.Str.to_snake--__tabbed_1_1" name="strplus.strplus.Str.to_snake--__tabbed_1" type="radio" /><input id="strplus.strplus.Str.to_snake--__tabbed_1_2" name="strplus.strplus.Str.to_snake--__tabbed_1" type="radio" /><input id="strplus.strplus.Str.to_snake--__tabbed_1_3" name="strplus.strplus.Str.to_snake--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.strplus.Str.to_snake--__tabbed_1_1">Example 01</label><label for="strplus.strplus.Str.to_snake--__tabbed_1_2">Example 02</label><label for="strplus.strplus.Str.to_snake--__tabbed_1_3">Example 03</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code>my_string = Str(&quot;HelloWorld&quot;)
+my_string.snake(&quot;HelloWorld&quot;)
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;  AnotherString!  &quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span><span class="o">.</span><span class="n">to_snake</span><span class="p">()</span>
-<span class="go">&#39;another_string&#39;</span>
+hello_world</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code>my_string = Str(&quot;  AnotherString!  &quot;)
+my_string.to_snake()
 </code></pre></div>
-    <div class="highlight"><pre><span></span><code><span class="gp">&gt;&gt;&gt; </span> <span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;hello-world&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span><span class="o">.</span><span class="n">to_snake</span><span class="p">()</span>
-<span class="go">&#39;hello_world&#39;</span>
+another_string</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code>my_string = Str(&quot;hello-world&quot;)
+my_string.to_snake()
 </code></pre></div>
+hello_world</p>
+</div>
+</div>
+</div>
+</div>
 
       <details class="quote">
         <summary>Source code in <code>strplus/strplus.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">127</span>
 <span class="normal">128</span>
 <span class="normal">129</span>
 <span class="normal">130</span>
@@ -1152,25 +1466,49 @@ Extend the method: to_pascal</p>
 <span class="normal">143</span>
 <span class="normal">144</span>
 <span class="normal">145</span>
-<span class="normal">146</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Converts a string to snake_case.</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Converts a string to snake_case.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        str: The string converted to snake_case.</span>
 
-<span class="sd">    Examples:</span>
+<span class="sd">    !!! Example &quot;Examples&quot;</span>
 
-<span class="sd">        &gt;&gt;&gt; my_string = Str(&quot;HelloWorld&quot;)</span>
-<span class="sd">        &gt;&gt;&gt; my_string.snake(&quot;HelloWorld&quot;)</span>
-<span class="sd">        &#39;hello_world&#39;</span>
+<span class="sd">        === &quot;Example 01&quot;</span>
+<span class="sd">            ```</span>
+<span class="sd">            my_string = Str(&quot;HelloWorld&quot;)</span>
+<span class="sd">            my_string.snake(&quot;HelloWorld&quot;)</span>
+<span class="sd">            ```</span>
+<span class="sd">            hello_world</span>
 
-<span class="sd">        &gt;&gt;&gt; my_string = Str(&quot;  AnotherString!  &quot;)</span>
-<span class="sd">        &gt;&gt;&gt; my_string.to_snake()</span>
-<span class="sd">        &#39;another_string&#39;</span>
+<span class="sd">        === &quot;Example 02&quot;</span>
+<span class="sd">            ```</span>
+<span class="sd">            my_string = Str(&quot;  AnotherString!  &quot;)</span>
+<span class="sd">            my_string.to_snake()</span>
+<span class="sd">            ```</span>
+<span class="sd">            another_string</span>
 
-<span class="sd">        &gt;&gt;&gt;  my_string = Str(&quot;hello-world&quot;)</span>
-<span class="sd">        &gt;&gt;&gt; my_string.to_snake()</span>
-<span class="sd">        &#39;hello_world&#39;</span>
+<span class="sd">        === &quot;Example 03&quot;</span>
+<span class="sd">            ```</span>
+<span class="sd">            my_string = Str(&quot;hello-world&quot;)</span>
+<span class="sd">            my_string.to_snake()</span>
+<span class="sd">            ```</span>
+<span class="sd">            hello_world</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
@@ -1202,7 +1540,6 @@ Extend the method: to_pascal</p>
 
 
                 
-
               </article>
             </div>
           
