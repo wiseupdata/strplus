@@ -159,6 +159,47 @@ class Str(str):
         return Str(to_snake(self))
 
     def to_list(self):
+        """
+        
+        Converts a string to a list of strings, where each word is a separate element in the list.
+
+        Returns:
+            List[str]: A list of strings, where each word in the input string is a separate element in the list.
+
+        !!! Example "Converting a string to a list"
+            This example shows how to use `to_list()` to convert a string to a list.
+
+            === "Example 1"
+                ```python
+                my_string = Str('hello world')
+                my_string.to_list
+                ```
+                ['hello', 'world']
+
+
+            === "Example 2"
+                ```python
+                my_string = Str('some-mixed_string With spaces_underscores-and-hyphens')
+                my_string.to_list
+                ```
+                ['some', 'mixed', 'string', 'With', 'spaces', 'underscores', 'and', 'hyphens']
+
+            === "Example 2"
+                ```python
+                my_string = Str('123abc')
+                my_string.to_list
+                ```
+                ['123abc']
+
+        Tip: Use tips
+            - If you need to convert a string to a list of integers or floats, you can use list comprehension to convert each element to the desired type.
+            - If you need to remove duplicates from the list, you can convert it to a set and then back to a list.
+
+        Info: Important
+            - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
+            - This function uses regular expressions to identify words in the input string.
+
+        """
         return [Str(word) for word in to_list(self)]
 
 
