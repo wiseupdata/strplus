@@ -11,22 +11,25 @@ watch: [README.md]
 
 theme:
   name: 'material'
-  custom_dir: assets/overrides/html
+  # custom_dir: assets/overrides/html
   favicon: "https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/imgs/python.png"
   logo: "https://raw.githubusercontent.com/wiseupdata/strplus/main/assets/imgs/python.png"
   palette:
-  - media: "(prefers-color-scheme: dark)"
-    # scheme: strplus
-    scheme: slate
-    toggle:
-      icon: material/brightness-4
-      name: "Switch to light mode"
-  - media: "(prefers-color-scheme: light)"
-    primary: pink
-    accent: pink
-    toggle:
-      icon: material/weather-night
-      name: "Switch to dark mode"
+    # Palette toggle for dark mode
+    # - scheme: strplus
+    - scheme: slate
+      primary: pink
+      accent: lime
+      toggle:
+        icon: material/brightness-4
+        name: "Switch to light mode"
+    # Palette toggle for light mode
+    - scheme: default
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: "Switch to dark mode"
   font:
     text: Roboto
     code: Roboto Mono
@@ -62,7 +65,8 @@ extra_css:
 
 nav:
 - package: strplus/
-- Python file: examples/examples_01.ipynb
+- Python file: examples/cases_01.ipynb
+- Python file: examples/functions_01.ipynb
 
 plugins:
   - search 

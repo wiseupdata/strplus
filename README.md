@@ -54,28 +54,33 @@ Python extra functions for strings ❤️
 
 ### Simple use example 😍
 ```
->>> my_string = Str('Cast_this_string_TO_Pascal')
->>> my_string.pascal
-'CastThisStringToPascal'
-
->>> my_string = Str('CastMeUseLikeANormalFunction')
->>> my_string.snake
-'cast_me_use_like_a_normal_function'
-
+my_string = Str('Cast_this_string_TO_Pascal')
+my_string.pascal
 ```
+CastThisStringToPascal
+
 <br>
 
-* [More Examples !](https://wiseupdata.github.io/strplus/examples/examples_01/)
-* [Documentations examples](https://wiseupdata.github.io/strplus/index.html)! 
+```
+my_string = Str('CastMeUseLikeANormalFunction')
+my_string.snake
+```
+cast_me_use_like_a_normal_function
+
+<br>
+
+* [Documentation and more examples! ](https://wiseupdata.github.io/strplus/index.html)! 
 
 <br>
 <br>
 
 # References 🌍 🗄️
 
+1. [strplus](https://wiseupdata.github.io/strplus/index.html)
+1. [Emojis](https://github.com/wiseupdata/emojis)
+1. [Pypi Deploy](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)
 1. [Wise Up Data](https://github.com/wiseupdata)
-2. [Emojis](https://github.com/wiseupdata/emojis)
-3. [Pypi Deploy](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)
+
 
 <br>
 <br>

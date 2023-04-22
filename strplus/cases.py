@@ -9,6 +9,7 @@ import re
 
 def to_pascal(text: str) -> str:
     """
+
     Simple and efficient method to converts a string to PascalCase.
 
     Args:
@@ -17,42 +18,38 @@ def to_pascal(text: str) -> str:
     Returns:
         str: The PascalCase version of the input string.
 
-    Examples:
-        !!! example "Converting strings to PascalCase"
-            This example shows how to use `to_pascal()` to convert strings to PascalCase.
+    !!! Example "Converting strings to PascalCase"
+        This examples shows how to use `to_pascal()` to convert strings to PascalCase.
 
-            === "Example 1"
-                ```python
-                to_pascal('hello_world')
-                'HelloWorld'
-                ```
+        === "Example 1"
+            ```python
+            to_pascal('hello_world')
+            ```
+            HelloWorld
 
-            === "Example 2"
-                ```python
-                to_pascal('CamelCase')
-                'CamelCase'
-                ```
+        === "Example 2"
+            ```python
+            to_pascal('CamelCase')
+            ```
+            CamelCase
 
-            === "Example 3"
-                ```python
-                to_pascal('some-mixed_string With spaces_underscores-and-hyphens')
-                'SomeMixedStringWithSpacesUnderscoresAndHyphens'
-                ```
+        === "Example 3"
+            ```python
+            to_pascal('some-mixed_string With spaces_underscores-and-hyphens')
+            ```
+            SomeMixedStringWithSpacesUnderscoresAndHyphens
 
-            === "Example 4"
-                ```python
-                to_pascal('123abc')
-                '123abc'
-                ```
-    warning:
+        === "Example 4"
+            ```python
+            to_pascal('123abc')
+            ```
+            123abc
+
+    Info: Important
         - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
         - This function will preserve any digits in the input string.
         - If the input string already has PascalCase formatting, the function will return it unchanged.
         - This function uses regular expressions to identify words in the input string.
-
-    tip: "See also"
-        - `to_camel()` - Converts a string to camelCase formatting.
-        - `to_snake()` - Converts a string to snake_case formatting.
 
     """
     text = text.strip()
@@ -77,6 +74,7 @@ def to_pascal(text: str) -> str:
 
 def to_camel(text) -> str:
     """
+
     Simple and efficient method to converts a string to camelCase.
 
     Args:
@@ -85,43 +83,40 @@ def to_camel(text) -> str:
     Returns:
         str: The camelCase version of the input string.
 
-    Examples:
-        !!! example "Converting strings to camelCase"
-            This example shows how to use `to_camel()` to convert strings to camelCase.
+    !!! Example "Converting strings to camelCase"
 
-            === "Example 1"
-                ```python
-                to_camel('hello_world')
-                'helloWorld'
-                ```
+        This example shows how to use `to_camel()` to convert strings to camelCase.
 
-            === "Example 2"
-                ```python
-                to_camel('PascalCase')
-                'pascalCase'
-                ```
+        === "Example 1"
+            ```python
+            to_camel('hello_world')
+            ```
+            helloWorld
 
-            === "Example 3"
-                ```python
-                to_camel('some-mixed_string With spaces_underscores-and-hyphens')
-                'someMixedStringWithSpacesUnderscoresAndHyphens'
-                ```
+        === "Example 2"
+            ```python
+            to_camel('PascalCase')
+            ```
+            pascalCase
 
-            === "Example 4"
-                ```python
-                to_camel('123abc')
-                '123abc'
-                ```
+        === "Example 3"
+            ```python
+            to_camel('some-mixed_string With spaces_underscores-and-hyphens')
+            ```
+            someMixedStringWithSpacesUnderscoresAndHyphens
 
-    warning:
+        === "Example 4"
+            ```python
+            to_camel('123abc')
+            ```
+            123abc
+
+    Info: Important
         - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
         - This function will preserve any digits in the input string.
         - If the input string already has camelCase formatting, the function will return it unchanged.
         - This function uses regular expressions to identify words in the input string.
 
-    tip: "See also"
-        - `to_pascal()` - Converts a string to PascalCase formatting.
-        - `to_snake()` - Converts a string to snake_case formatting.
     """
 
     text: str = text.strip()
@@ -146,6 +141,7 @@ def to_camel(text) -> str:
 
 def to_snake(text) -> str:
     """
+
     Converts a string to snake_case.
 
     Args:
@@ -154,37 +150,33 @@ def to_snake(text) -> str:
     Returns:
         str: The snake_case version of the input string.
 
-    Examples:
-        !!! example "Converting strings to snake_case"
-            This example shows how to use `to_snake()` to convert strings to snake_case.
+    !!! Example "Converting strings to snake_case"
+        This example shows how to use `to_snake()` to convert strings to snake_case.
 
-            === "Example 1"
-                ```python
-                to_snake('helloWorld')
-                'hello_world'
-                ```
+        === "Example 1"
+            ```python
+            to_snake('helloWorld')
+            ```
+            hello_world
 
-            === "Example 2"
-                ```python
-                to_snake('Some-Mixed_string With spaces-underscores-and-hyphens')
-                'some_mixed_string_with_spaces_underscores_and_hyphens'
-                ```
+        === "Example 2"
+            ```python
+            to_snake('Some-Mixed_string With spaces-underscores-and-hyphens')
+            ```
+            some_mixed_string_with_spaces_underscores_and_hyphens
 
-            === "Example 3"
-                ```python
-                to_snake('CamelCase')
-                'camel_case'
-                ```
+        === "Example 3"
+            ```python
+            to_snake('CamelCase')
+            ```
+            camel_case
 
-    Warning:
+    Info: Important
         - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
         - This function will convert any uppercase letters to lowercase, and separate words with underscores.
         - If the input string already has snake_case formatting, the function will return it unchanged.
         - This function uses regular expressions to identify words in the input string.
 
-    Tips:
-        - `to_camel()` - Converts a string to camelCase formatting.
-        - `to_pascal()` - Converts a string to PascalCase formatting.
     """
 
     text: str = text.strip()
