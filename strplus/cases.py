@@ -9,6 +9,7 @@ import re
 
 def to_pascal(text: str) -> str:
     """
+    
     Simple and efficient method to converts a string to PascalCase.
 
     Args:
@@ -73,6 +74,7 @@ def to_pascal(text: str) -> str:
 
 def to_camel(text) -> str:
     """
+    
     Simple and efficient method to converts a string to camelCase.
 
     Args:
@@ -139,6 +141,7 @@ def to_camel(text) -> str:
 
 def to_snake(text) -> str:
     """
+    
     Converts a string to snake_case.
 
     Args:
