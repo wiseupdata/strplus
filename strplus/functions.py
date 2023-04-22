@@ -38,13 +38,14 @@ def to_list(text: str) -> List[str]:
             ```
             ['123abc']
 
-    Warning:
+    Tip: Use tips
+        - If you need to convert a string to a list of integers or floats, you can use list comprehension to convert each element to the desired type.
+        - If you need to remove duplicates from the list, you can convert it to a set and then back to a list.
+
+    Info: Important
         - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
         - This function uses regular expressions to identify words in the input string.
 
-    Tip:
-        - If you need to convert a string to a list of integers or floats, you can use list comprehension to convert each element to the desired type.
-        - If you need to remove duplicates from the list, you can convert it to a set and then back to a list.
     """
     text = text.strip()
 
@@ -88,13 +89,14 @@ def get_separator(input_string):
             ```
             ;
 
-    Warning:
+    Tip: Use tips
+        - This function can be used to split a string into a list using the most common separator, like so: `input_string.split(get_separator(input_string))`.
+        - To split a string into a list using all possible separators, use the `re.split()` function instead.
+
+    Info: Important
         - This function assumes that the input string contains only valid separators.
         - If multiple separators are tied for the most common, the first one encountered in the list of separators is returned.
 
-    Tip:
-        - This function can be used to split a string into a list using the most common separator, like so: `input_string.split(get_separator(input_string))`.
-        - To split a string into a list using all possible separators, use the `re.split()` function instead.
     """
 
     separators = [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]

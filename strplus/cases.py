@@ -44,15 +44,11 @@ def to_pascal(text: str) -> str:
             ```
             123abc
 
-    Warning:
+    Info: Important
         - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
         - This function will preserve any digits in the input string.
         - If the input string already has PascalCase formatting, the function will return it unchanged.
         - This function uses regular expressions to identify words in the input string.
-
-    Tip: See also
-        - `to_camel()` - Converts a string to camelCase formatting.
-        - `to_snake()` - Converts a string to snake_case formatting.
 
     """
     text = text.strip()
@@ -113,15 +109,12 @@ def to_camel(text) -> str:
             ```
             123abc
 
-    Warning:
+    Info: Important
         - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
         - This function will preserve any digits in the input string.
         - If the input string already has camelCase formatting, the function will return it unchanged.
         - This function uses regular expressions to identify words in the input string.
 
-    Tip: See also
-        - `to_pascal()` - Converts a string to PascalCase formatting.
-        - `to_snake()` - Converts a string to snake_case formatting.
     """
 
     text: str = text.strip()
@@ -174,16 +167,13 @@ def to_snake(text) -> str:
             to_snake('CamelCase')
             ```
             camel_case
-
-    Warning:
+        
+    Info: Important
         - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
         - This function will convert any uppercase letters to lowercase, and separate words with underscores.
         - If the input string already has snake_case formatting, the function will return it unchanged.
         - This function uses regular expressions to identify words in the input string.
-
-    Tip:
-        - `to_camel()` - Converts a string to camelCase formatting.
-        - `to_pascal()` - Converts a string to PascalCase formatting.
+    
     """
 
     text: str = text.strip()
