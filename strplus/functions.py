@@ -3,7 +3,7 @@ from strplus.cases import *
 
 def to_list(text: str) -> List[str]:
     """
-    
+
     Converts a string to a list of strings, where each word is a separate element in the list.
 
     Args:
@@ -61,7 +61,7 @@ def to_list(text: str) -> List[str]:
 
 def get_separator(input_string):
     """
-    
+
     Finds the most common separator in a given input string.
 
     Args:

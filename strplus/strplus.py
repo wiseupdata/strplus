@@ -43,7 +43,7 @@ class Str(str):
 
         ```
         hello_world
-        
+
     """
 
     def __new__(cls, *args, **kwargs):
@@ -79,7 +79,7 @@ class Str(str):
 
     def to_pascal(self):
         """
-        
+
         Simple method to converts a string to PascalCase.
         Extend the method: to_pascal
 
@@ -99,7 +99,7 @@ class Str(str):
 
     def to_camel(self):
         """
-        
+
         Converts a string from any case to CamelCase.
 
         Returns:
@@ -113,7 +113,7 @@ class Str(str):
                 my_string.to_camel()
                 ```
                 thisIsAnExample
-            
+
             === "Example 02"
                 ```
                 my_string = Str('This is a test!')
@@ -126,14 +126,14 @@ class Str(str):
 
     def to_snake(self):
         """
-        
+
         Converts a string to snake_case.
 
         Returns:
             str: The string converted to snake_case.
 
         !!! Example "Examples"
-        
+
             === "Example 01"
                 ```
                 my_string = Str("HelloWorld")
@@ -147,7 +147,7 @@ class Str(str):
                 my_string.to_snake()
                 ```
                 another_string
-                
+
             === "Example 03"
                 ```
                 my_string = Str("hello-world")
@@ -160,7 +160,7 @@ class Str(str):
 
     def to_list(self):
         """
-        
+
         Converts a string to a list of strings, where each word is a separate element in the list.
 
         Returns:

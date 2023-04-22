@@ -9,7 +9,7 @@ import re
 
 def to_pascal(text: str) -> str:
     """
-    
+
     Simple and efficient method to converts a string to PascalCase.
 
     Args:
@@ -74,7 +74,7 @@ def to_pascal(text: str) -> str:
 
 def to_camel(text) -> str:
     """
-    
+
     Simple and efficient method to converts a string to camelCase.
 
     Args:
@@ -141,7 +141,7 @@ def to_camel(text) -> str:
 
 def to_snake(text) -> str:
     """
-    
+
     Converts a string to snake_case.
 
     Args:
@@ -170,13 +170,13 @@ def to_snake(text) -> str:
             to_snake('CamelCase')
             ```
             camel_case
-        
+
     Info: Important
         - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
         - This function will convert any uppercase letters to lowercase, and separate words with underscores.
         - If the input string already has snake_case formatting, the function will return it unchanged.
         - This function uses regular expressions to identify words in the input string.
-    
+
     """
 
     text: str = text.strip()
