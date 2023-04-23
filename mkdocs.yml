@@ -67,6 +67,7 @@ nav:
 - package: strplus/
 - Python file: examples/cases_01.ipynb
 - Python file: examples/functions_01.ipynb
+- Python file: examples/str_class.ipynb
 
 plugins:
   - search 

@@ -4,9 +4,15 @@
 
 !!! success "Features ✨️"
     - Wrapper Class
-    - +234 test in 32 Tests files!
+    - +421 test covered in 36 Tests files!
     - Simple use!
     - Made with A.I. contribution 🤖 
+
+## Install 📀 
+
+```
+pip install strplus
+```
 
 ## Main Class: 🚀
 

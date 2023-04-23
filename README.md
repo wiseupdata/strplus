@@ -46,9 +46,17 @@ Python extra functions for strings ❤️
 ## Features ✨️
 
 - Wrapper Class
-- +234 test in 32 Tests files!
+- +421 test covered in 36 Tests files!
 - Simple use!
 - Made with A.I. contribution 🤖 
+
+<br>
+
+## Install 📀 
+
+```
+pip install strplus
+```
 
 <br>
 

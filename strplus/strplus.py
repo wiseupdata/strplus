@@ -1,5 +1,7 @@
+from typing import List, Optional, Union
+
 from strplus.cases import to_camel, to_pascal, to_snake
-from strplus.functions import to_list
+from strplus.functions import cast_sep_to_comma, split_by_separator, to_list
 
 
 class Str(str):
@@ -59,29 +61,58 @@ class Str(str):
 
     @property
     def pascal(self):
+        """
+        pascal is an alias for [`to_pascal`][strplus.Str.to_pascal]
+        """
         return self.to_pascal()
 
     @property
     def camel(self):
+        """
+        camel is an alias for [`to_camel`][strplus.Str.to_camel]
+        """
         return self.to_camel()
 
     @property
     def snake(self):
+        """
+        snake is an alias for [`to_snake`][strplus.Str.to_snake]
+        """
         return self.to_snake()
 
     @property
     def list(self):
+        """
+        list is an alias for [`to_list`][strplus.Str.to_list]
+        """
         return self.to_list()
 
     @property
+    def split_by_sep(self):
+        """
+        split_by_sep is an alias for [`split_by_separator`][strplus.Str.split_by_separator]
+        """
+        return self.to_list()
+
+    @property
+    def sep_to_comma(self):
+        """
+        sep_to_comma is an alias for [`cast_sep_to_comma`][strplus.Str.cast_sep_to_comma]
+        """
+        return self.cast_sep_to_comma()
+
+    @property
     def print(self):
+        """
+        print is an alias for `str.print`
+        """
         print(self)
 
     def to_pascal(self):
         """
 
         Simple method to converts a string to PascalCase.
-        Extend the method: to_pascal
+        Implementation of [strplus.cases.to_pascal][]
 
         Returns:
             str: The PascalCase version of the input string.
@@ -101,6 +132,7 @@ class Str(str):
         """
 
         Converts a string from any case to CamelCase.
+        Implementation of [strplus.cases.to_camel][]
 
         Returns:
             str: The converted string in CamelCase.
@@ -128,6 +160,7 @@ class Str(str):
         """
 
         Converts a string to snake_case.
+        Implementation of [strplus.cases.to_snake][]
 
         Returns:
             str: The string converted to snake_case.
@@ -162,6 +195,7 @@ class Str(str):
         """
 
         Converts a string to a list of strings, where each word is a separate element in the list.
+        Implementation of [strplus.functions.to_list][]
 
         Returns:
             List[str]: A list of strings, where each word in the input string is a separate element in the list.
@@ -201,6 +235,113 @@ class Str(str):
 
         """
         return [Str(word) for word in to_list(self)]
+
+    def split_by_separator(self, separator: Optional[Union[List[str], str]] = None):
+        """
+
+        Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
+        Implementation of [strplus.functions.split_by_separator][]
+
+        Args:
+            input_string (str): The input string to split.
+            separator (Optional[Union[List[str], str]], optional): The separator(s) to use when splitting the input string.
+                This can be a single string, a list of strings, or None. If None, the function will attempt to determine
+                the appropriate separator based on the input string. Defaults to None.
+
+        Returns:
+            List[str]: A list of strings resulting from splitting the input string using the specified separator(s).
+
+        !!! Example "This example shows how to use `split_by_separator()` to split a string using a single separator"
+
+            === "Example 1"
+                ```python
+                my_string = Str("one,two,three")
+                my_string.split_by_separator(",")
+                ```
+                Returns:
+                ```
+                ["one", "two", "three"]
+                ```
+
+            === "Example 2"
+                ```python
+                my_string = Str("one-two three|four")
+                my_string.split_by_separator(["-", " ", "|"])
+                ```
+                Returns:
+                ```
+                ['one', 'two three|four']
+                ```
+                !!! Warning
+                    Only one separator frequency found in the list provided, so the priority will be respect!
+
+            === "Example 3"
+                ```python
+                my_string = Str("one two three four")
+                my_string.split_by_separator()
+                ```
+                Returns:
+                ```
+                ["one", "two", "three", "four"]
+                ```
+
+        Tips:
+            - If the input string contains multiple consecutive instances of the specified separator(s), the resulting
+            list may contain empty strings. To remove empty strings from the resulting list, you can use a list
+            comprehension to filter out any empty strings.
+            - See the `get_separator` for mor details about how the function will attempt to determine the appropriate separator.
+
+        Info: Important
+            - If the separator is a list of strings, the function will attempt to determine the appropriate separator
+            to use based on the input string. If no appropriate separator is found, the function will return the
+            original input string as a single-element list.
+        """
+        return [Str(word) for word in split_by_separator(self, separator=separator)]
+
+    def cast_sep_to_comma(self, separator: Optional[str] = None):
+        """
+
+        Replaces a specified separator or the automatically detected one with a comma in the input string.
+        Implementation of [strplus.functions.cast_sep_to_comma][]
+
+        Args:
+            input_string (str): The input string to replace separators in.
+            separator (Optional[str], optional): The separator to replace with a comma. If None, the function will
+                attempt to determine the appropriate separator based on the input string. Defaults to None.
+
+        Returns:
+            str: A string resulting from replacing the specified or detected separator with a comma.
+
+        !!! Example "This example shows how to use `cast_sep_to_comma()` to replace a separator in a string"
+
+            === "Example 1"
+                ```python
+                my_string = Str("one-two-three", "-")
+                my_string.cast_sep_to_comma("-")
+                ```
+                Returns:
+                ```
+                "one,two,three"
+                ```
+
+            === "Example 2"
+                ```python
+                my_string = Str("one two three")
+                my_string.cast_sep_to_comma()
+                ```
+                Returns:
+                ```
+                "one,two,three"
+                ```
+                !!! Warning
+                    The function will only attempt to detect the separator when the `separator` argument is None.
+
+        Tips:
+            - If the input string does not contain the specified or detected separator, the function will return the
+            original input string unchanged.
+            - See the `get_separator` function for more details about how the function will attempt to detect the separator.
+        """
+        return Str(cast_sep_to_comma(self, separator=separator))
 
 
 for name in dir(str):

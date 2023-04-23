@@ -1,3 +1,5 @@
+from typing import List, Optional, Union
+
 from strplus.cases import *
 
 
@@ -59,58 +61,192 @@ def to_list(text: str) -> List[str]:
     return word_list
 
 
-def get_separator(input_string):
+def get_separator(input_string, separator_list: Optional[List[str]] = None):
     """
 
-    Finds the most common separator in a given input string.
+    Returns the most frequent separator character in an input string.
 
     Args:
-        input_string (str): The input string to search for separators.
+        input_string (str): The input string to analyze.
+        separator_list (Optional[List[str]], optional): A list of separator characters to consider. Defaults to None.
 
     Returns:
-        str or None: The most common separator found in the input string, or None if no separators are found.
+        Union[str, None]: The most frequent separator character in the input string, or None if there are no separators.
 
-    !!! Example "Finding the most common separator"
-        This example shows how to use `get_separator()` to find the most common separator in a string.
+    !!! Example "Finding the most frequent separator character"
+        This example shows how to use `get_separator()` to find the most frequent separator character in a string.
 
         === "Example 1"
             ```python
-            get_separator('This is a sample sentence, separated by commas')
+            get_separator("John, Doe; Jane | Doe")
             ```
-            ,
+            ','
 
         === "Example 2"
             ```python
-            get_separator('This string has no separators')
+            get_separator("John Doe Jane Doe")
             ```
-            None
+            " "
 
         === "Example 3"
             ```python
-            get_separator('This string has multiple separators: ;, |, and /')
+            get_separator("A/B/C")
             ```
-            ;
+            '/'
 
     Tip: Use tips
-        - This function can be used to split a string into a list using the most common separator, like so: `input_string.split(get_separator(input_string))`.
-        - To split a string into a list using all possible separators, use the `re.split()` function instead.
+        - If you want to specify a custom list of separator characters, pass it as the `separator_list` argument.
+        - If you want to find the second most frequent separator character (or any other rank), you can modify the code to return a list of separator characters sorted by frequency.
 
     Info: Important
-        - This function assumes that the input string contains only valid separators.
-        - If multiple separators are tied for the most common, the first one encountered in the list of separators is returned.
+        - The function assumes that any character that appears at least once in the input string is a potential separator.
+        - The function uses a common list of separator characters by default, but this list may not be appropriate for all types of input strings.
+        - The function returns None if there are no separators in the input string.
 
     """
 
-    separators = [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]
+    # Common separator list by priority!
+    common_separators = [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]
+    input_string = input_string.strip()
 
-    # check each separator in the order of priority
-    for sep in [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]:
-        if sep in input_string:
-            sep_count = input_string.count(sep)
-            if sep_count == 1:
-                return sep
-            elif sep_count > 1:
-                return max(separators, key=input_string.count)
+    # Setting the separator list
+    separator_list_target = separator_list if separator_list is not None and len(separator_list) > 0 else common_separators
 
-    # if no separator was found, return None
-    return None
+    sep_frequency = {sep: input_string.count(sep) for sep in separator_list_target if input_string.count(sep) > 0}
+    most_frequent_separator = None
+
+    if len(sep_frequency) > 0:
+        max_value = max(sep_frequency.values())
+        max_frequency = [key for key, value in sep_frequency.items() if value == max_value]
+        sep_sorted_by_priority = sorted(max_frequency, key=lambda x: separator_list_target.index(x))
+        most_frequent_separator = sep_sorted_by_priority[0]
+
+    if most_frequent_separator is None:
+        print(f"common separators not found in the string provided, please inform the separator_list!\ncommon separator:\n{common_separators}")
+
+    return most_frequent_separator
+
+
+def split_by_separator(input_string: str, separator: Optional[Union[List[str], str]] = None) -> List[str]:
+    """
+
+    Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
+
+    Args:
+        input_string (str): The input string to split.
+        separator (Optional[Union[List[str], str]], optional): The separator(s) to use when splitting the input string.
+            This can be a single string, a list of strings, or None. If None, the function will attempt to determine
+            the appropriate separator based on the input string. Defaults to None.
+
+    Returns:
+        List[str]: A list of strings resulting from splitting the input string using the specified separator(s).
+
+    !!! Example "This example shows how to use `split_by_separator()` to split a string using a single separator"
+
+        === "Example 1"
+            ```python
+            split_by_separator("one,two,three", ",")
+            ```
+            Returns:
+            ```
+            ["one", "two", "three"]
+            ```
+
+        === "Example 2"
+            ```python
+            split_by_separator("one-two three|four", ["-", " ", "|"])
+            ```
+            Returns:
+            ```
+            ['one', 'two three|four']
+            ```
+            !!! Warning
+                Only one separator frequency found in the list provided, so the priority will be respect!
+
+        === "Example 3"
+            ```python
+            split_by_separator("one two three four")
+            ```
+            Returns:
+            ```
+            ["one", "two", "three", "four"]
+            ```
+
+    Tips:
+        - If the input string contains multiple consecutive instances of the specified separator(s), the resulting
+          list may contain empty strings. To remove empty strings from the resulting list, you can use a list
+          comprehension to filter out any empty strings.
+        - See the `get_separator` for mor details about how the function will attempt to determine the appropriate separator.
+
+    Info: Important
+        - If the separator is a list of strings, the function will attempt to determine the appropriate separator
+          to use based on the input string. If no appropriate separator is found, the function will return the
+          original input string as a single-element list.
+    """
+
+    input_string = input_string.strip()
+
+    if separator is None:
+        target_separator = get_separator(input_string=input_string)
+        if target_separator is not None:
+            return input_string.split(target_separator)
+    elif isinstance(separator, list):
+        target_separator = get_separator(input_string=input_string, separator_list=separator)
+        if target_separator is not None:
+            return input_string.split(target_separator)
+    else:
+        return input_string.split(separator)
+
+
+def cast_sep_to_comma(input_string: str, separator: Optional[str] = None) -> str:
+    """
+
+    Replaces a specified separator or the automatically detected one with a comma in the input string.
+
+    Args:
+        input_string (str): The input string to replace separators in.
+        separator (Optional[str], optional): The separator to replace with a comma. If None, the function will
+            attempt to determine the appropriate separator based on the input string. Defaults to None.
+
+    Returns:
+        str: A string resulting from replacing the specified or detected separator with a comma.
+
+    !!! Example "This example shows how to use `cast_sep_to_comma()` to replace a separator in a string"
+
+        === "Example 1"
+            ```python
+            cast_sep_to_comma("one-two-three", "-")
+            ```
+            Returns:
+            ```
+            "one,two,three"
+            ```
+
+        === "Example 2"
+            ```python
+            cast_sep_to_comma("one two three")
+            ```
+            Returns:
+            ```
+            "one,two,three"
+            ```
+            !!! Warning
+                The function will only attempt to detect the separator when the `separator` argument is None.
+
+    Tips:
+        - If the input string does not contain the specified or detected separator, the function will return the
+          original input string unchanged.
+        - See the `get_separator` function for more details about how the function will attempt to detect the separator.
+    """
+
+    # Simple cleansing
+    input_string = input_string.strip()
+
+    if separator is not None:
+        return input_string.replace(separator, ",")
+    else:
+        separator = get_separator(input_string=input_string)
+        if separator is not None:
+            return input_string.replace(separator, ",")
+        else:
+            return input_string
