@@ -365,6 +365,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="examples/str_class/" class="md-nav__link">
+        Str class usage!  🏆
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -394,6 +409,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install 📀
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#main-class" class="md-nav__link">
     Main Class: 🚀
   </a>
@@ -414,6 +436,69 @@
   
     <nav class="md-nav" aria-label="Str">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.camel" class="md-nav__link">
+    camel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.list" class="md-nav__link">
+    list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.pascal" class="md-nav__link">
+    pascal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.print" class="md-nav__link">
+    print
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.sep_to_comma" class="md-nav__link">
+    sep_to_comma
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.snake" class="md-nav__link">
+    snake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.split_by_sep" class="md-nav__link">
+    split_by_sep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.cast_sep_to_comma" class="md-nav__link">
+    cast_sep_to_comma()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strplus.strplus.Str.split_by_separator" class="md-nav__link">
+    split_by_separator()
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#strplus.strplus.Str.to_camel" class="md-nav__link">
@@ -471,11 +556,14 @@
 <p class="admonition-title">Features ✨️</p>
 <ul>
 <li>Wrapper Class</li>
-<li>+234 test in 32 Tests files!</li>
+<li>+421 test covered in 36 Tests files!</li>
 <li>Simple use!</li>
 <li>Made with A.I. contribution 🤖 </li>
 </ul>
 </div>
+<h2 id="install">Install 📀<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>pip install strplus
+</code></pre></div>
 <h2 id="main-class">Main Class: 🚀<a class="headerlink" href="#main-class" title="Permanent link">&para;</a></h2>
 
 
@@ -554,9 +642,7 @@ hello_world</p>
 
         <details class="quote">
           <summary>Source code in <code>strplus/strplus.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  5</span>
-<span class="normal">  6</span>
-<span class="normal">  7</span>
+          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  7</span>
 <span class="normal">  8</span>
 <span class="normal">  9</span>
 <span class="normal"> 10</span>
@@ -752,7 +838,148 @@ hello_world</p>
 <span class="normal">200</span>
 <span class="normal">201</span>
 <span class="normal">202</span>
-<span class="normal">203</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Str</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Str</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    !!! Info &quot;Str Class&quot;</span>
@@ -809,29 +1036,58 @@ hello_world</p>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        pascal is an alias for [`to_pascal`][strplus.Str.to_pascal]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_pascal</span><span class="p">()</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        camel is an alias for [`to_camel`][strplus.Str.to_camel]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_camel</span><span class="p">()</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        snake is an alias for [`to_snake`][strplus.Str.to_snake]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_snake</span><span class="p">()</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        list is an alias for [`to_list`][strplus.Str.to_list]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">split_by_sep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        split_by_sep is an alias for [`split_by_separator`][strplus.Str.split_by_separator]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">sep_to_comma</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        sep_to_comma is an alias for [`cast_sep_to_comma`][strplus.Str.cast_sep_to_comma]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cast_sep_to_comma</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        print is an alias for `str.print`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">        Simple method to converts a string to PascalCase.</span>
-<span class="sd">        Extend the method: to_pascal</span>
+<span class="sd">        Implementation of [strplus.cases.to_pascal][]</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            str: The PascalCase version of the input string.</span>
@@ -851,6 +1107,7 @@ hello_world</p>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">        Converts a string from any case to CamelCase.</span>
+<span class="sd">        Implementation of [strplus.cases.to_camel][]</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            str: The converted string in CamelCase.</span>
@@ -878,6 +1135,7 @@ hello_world</p>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">        Converts a string to snake_case.</span>
+<span class="sd">        Implementation of [strplus.cases.to_snake][]</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            str: The string converted to snake_case.</span>
@@ -912,6 +1170,7 @@ hello_world</p>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">        Converts a string to a list of strings, where each word is a separate element in the list.</span>
+<span class="sd">        Implementation of [strplus.functions.to_list][]</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            List[str]: A list of strings, where each word in the input string is a separate element in the list.</span>
@@ -951,6 +1210,113 @@ hello_world</p>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">Str</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">split_by_separator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">separator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.</span>
+<span class="sd">        Implementation of [strplus.functions.split_by_separator][]</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input_string (str): The input string to split.</span>
+<span class="sd">            separator (Optional[Union[List[str], str]], optional): The separator(s) to use when splitting the input string.</span>
+<span class="sd">                This can be a single string, a list of strings, or None. If None, the function will attempt to determine</span>
+<span class="sd">                the appropriate separator based on the input string. Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: A list of strings resulting from splitting the input string using the specified separator(s).</span>
+
+<span class="sd">        !!! Example &quot;This example shows how to use `split_by_separator()` to split a string using a single separator&quot;</span>
+
+<span class="sd">            === &quot;Example 1&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                my_string = Str(&quot;one,two,three&quot;)</span>
+<span class="sd">                my_string.split_by_separator(&quot;,&quot;)</span>
+<span class="sd">                ```</span>
+<span class="sd">                Returns:</span>
+<span class="sd">                ```</span>
+<span class="sd">                [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]</span>
+<span class="sd">                ```</span>
+
+<span class="sd">            === &quot;Example 2&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                my_string = Str(&quot;one-two three|four&quot;)</span>
+<span class="sd">                my_string.split_by_separator([&quot;-&quot;, &quot; &quot;, &quot;|&quot;])</span>
+<span class="sd">                ```</span>
+<span class="sd">                Returns:</span>
+<span class="sd">                ```</span>
+<span class="sd">                [&#39;one&#39;, &#39;two three|four&#39;]</span>
+<span class="sd">                ```</span>
+<span class="sd">                !!! Warning</span>
+<span class="sd">                    Only one separator frequency found in the list provided, so the priority will be respect!</span>
+
+<span class="sd">            === &quot;Example 3&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                my_string = Str(&quot;one two three four&quot;)</span>
+<span class="sd">                my_string.split_by_separator()</span>
+<span class="sd">                ```</span>
+<span class="sd">                Returns:</span>
+<span class="sd">                ```</span>
+<span class="sd">                [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</span>
+<span class="sd">                ```</span>
+
+<span class="sd">        Tips:</span>
+<span class="sd">            - If the input string contains multiple consecutive instances of the specified separator(s), the resulting</span>
+<span class="sd">            list may contain empty strings. To remove empty strings from the resulting list, you can use a list</span>
+<span class="sd">            comprehension to filter out any empty strings.</span>
+<span class="sd">            - See the `get_separator` for mor details about how the function will attempt to determine the appropriate separator.</span>
+
+<span class="sd">        Info: Important</span>
+<span class="sd">            - If the separator is a list of strings, the function will attempt to determine the appropriate separator</span>
+<span class="sd">            to use based on the input string. If no appropriate separator is found, the function will return the</span>
+<span class="sd">            original input string as a single-element list.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">Str</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">split_by_separator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="n">separator</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">cast_sep_to_comma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">separator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">        Replaces a specified separator or the automatically detected one with a comma in the input string.</span>
+<span class="sd">        Implementation of [strplus.functions.cast_sep_to_comma][]</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            input_string (str): The input string to replace separators in.</span>
+<span class="sd">            separator (Optional[str], optional): The separator to replace with a comma. If None, the function will</span>
+<span class="sd">                attempt to determine the appropriate separator based on the input string. Defaults to None.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: A string resulting from replacing the specified or detected separator with a comma.</span>
+
+<span class="sd">        !!! Example &quot;This example shows how to use `cast_sep_to_comma()` to replace a separator in a string&quot;</span>
+
+<span class="sd">            === &quot;Example 1&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                my_string = Str(&quot;one-two-three&quot;, &quot;-&quot;)</span>
+<span class="sd">                my_string.cast_sep_to_comma(&quot;-&quot;)</span>
+<span class="sd">                ```</span>
+<span class="sd">                Returns:</span>
+<span class="sd">                ```</span>
+<span class="sd">                &quot;one,two,three&quot;</span>
+<span class="sd">                ```</span>
+
+<span class="sd">            === &quot;Example 2&quot;</span>
+<span class="sd">                ```python</span>
+<span class="sd">                my_string = Str(&quot;one two three&quot;)</span>
+<span class="sd">                my_string.cast_sep_to_comma()</span>
+<span class="sd">                ```</span>
+<span class="sd">                Returns:</span>
+<span class="sd">                ```</span>
+<span class="sd">                &quot;one,two,three&quot;</span>
+<span class="sd">                ```</span>
+<span class="sd">                !!! Warning</span>
+<span class="sd">                    The function will only attempt to detect the separator when the `separator` argument is None.</span>
+
+<span class="sd">        Tips:</span>
+<span class="sd">            - If the input string does not contain the specified or detected separator, the function will return the</span>
+<span class="sd">            original input string unchanged.</span>
+<span class="sd">            - See the `get_separator` function for more details about how the function will attempt to detect the separator.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">cast_sep_to_comma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="n">separator</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
         </details>
 
@@ -964,7 +1330,600 @@ hello_world</p>
 
 
 
+<div class="doc doc-object doc-attribute">
 
+
+
+<h3 id="strplus.strplus.Str.camel" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">camel</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#strplus.strplus.Str.camel" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>camel is an alias for <a class="autorefs autorefs-internal" href="strplus/strplus/#strplus.strplus.Str.to_camel"><code>to_camel</code></a></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="strplus.strplus.Str.list" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">list</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#strplus.strplus.Str.list" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>list is an alias for <a class="autorefs autorefs-internal" href="strplus/strplus/#strplus.strplus.Str.to_list"><code>to_list</code></a></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="strplus.strplus.Str.pascal" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">pascal</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#strplus.strplus.Str.pascal" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>pascal is an alias for <a class="autorefs autorefs-internal" href="strplus/strplus/#strplus.strplus.Str.to_pascal"><code>to_pascal</code></a></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="strplus.strplus.Str.print" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">print</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#strplus.strplus.Str.print" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>print is an alias for <code>str.print</code></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="strplus.strplus.Str.sep_to_comma" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sep_to_comma</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#strplus.strplus.Str.sep_to_comma" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>sep_to_comma is an alias for <a class="autorefs autorefs-internal" href="strplus/strplus/#strplus.strplus.Str.cast_sep_to_comma"><code>cast_sep_to_comma</code></a></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="strplus.strplus.Str.snake" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">snake</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#strplus.strplus.Str.snake" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>snake is an alias for <a class="autorefs autorefs-internal" href="strplus/strplus/#strplus.strplus.Str.to_snake"><code>to_snake</code></a></p>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="strplus.strplus.Str.split_by_sep" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">split_by_sep</span></code>
+  
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#strplus.strplus.Str.split_by_sep" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>split_by_sep is an alias for <a class="autorefs autorefs-internal" href="strplus/strplus/#strplus.strplus.Str.split_by_separator"><code>split_by_separator</code></a></p>
+  </div>
+
+</div>
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="strplus.strplus.Str.cast_sep_to_comma" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cast_sep_to_comma</span><span class="p">(</span><span class="n">separator</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#strplus.strplus.Str.cast_sep_to_comma" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Replaces a specified separator or the automatically detected one with a comma in the input string.
+Implementation of <a class="autorefs autorefs-internal" href="strplus/functions/#strplus.functions.cast_sep_to_comma">strplus.functions.cast_sep_to_comma</a></p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_string</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The input string to replace separators in.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>separator</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The separator to replace with a comma. If None, the function will
+attempt to determine the appropriate separator based on the input string. Defaults to None.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+          </td>
+          <td><p>A string resulting from replacing the specified or detected separator with a comma.</p></td>
+        </tr>
+    </tbody>
+  </table>
+      <div class="admonition example">
+<p class="admonition-title">This example shows how to use <code>cast_sep_to_comma()</code> to replace a separator in a string</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="strplus.strplus.Str.cast_sep_to_comma--__tabbed_1_1" name="strplus.strplus.Str.cast_sep_to_comma--__tabbed_1" type="radio" /><input id="strplus.strplus.Str.cast_sep_to_comma--__tabbed_1_2" name="strplus.strplus.Str.cast_sep_to_comma--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.strplus.Str.cast_sep_to_comma--__tabbed_1_1">Example 1</label><label for="strplus.strplus.Str.cast_sep_to_comma--__tabbed_1_2">Example 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;one-two-three&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">cast_sep_to_comma</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>&quot;one,two,three&quot;
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;one two three&quot;</span><span class="p">)</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">cast_sep_to_comma</span><span class="p">()</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>&quot;one,two,three&quot;
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The function will only attempt to detect the separator when the <code>separator</code> argument is None.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<details class="tips">
+  <summary>Tips</summary>
+  <ul>
+<li>If the input string does not contain the specified or detected separator, the function will return the
+original input string unchanged.</li>
+<li>See the <code>get_separator</code> function for more details about how the function will attempt to detect the separator.</li>
+</ul>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>strplus/strplus.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cast_sep_to_comma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">separator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Replaces a specified separator or the automatically detected one with a comma in the input string.</span>
+<span class="sd">    Implementation of [strplus.functions.cast_sep_to_comma][]</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input_string (str): The input string to replace separators in.</span>
+<span class="sd">        separator (Optional[str], optional): The separator to replace with a comma. If None, the function will</span>
+<span class="sd">            attempt to determine the appropriate separator based on the input string. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: A string resulting from replacing the specified or detected separator with a comma.</span>
+
+<span class="sd">    !!! Example &quot;This example shows how to use `cast_sep_to_comma()` to replace a separator in a string&quot;</span>
+
+<span class="sd">        === &quot;Example 1&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            my_string = Str(&quot;one-two-three&quot;, &quot;-&quot;)</span>
+<span class="sd">            my_string.cast_sep_to_comma(&quot;-&quot;)</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            &quot;one,two,three&quot;</span>
+<span class="sd">            ```</span>
+
+<span class="sd">        === &quot;Example 2&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            my_string = Str(&quot;one two three&quot;)</span>
+<span class="sd">            my_string.cast_sep_to_comma()</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            &quot;one,two,three&quot;</span>
+<span class="sd">            ```</span>
+<span class="sd">            !!! Warning</span>
+<span class="sd">                The function will only attempt to detect the separator when the `separator` argument is None.</span>
+
+<span class="sd">    Tips:</span>
+<span class="sd">        - If the input string does not contain the specified or detected separator, the function will return the</span>
+<span class="sd">        original input string unchanged.</span>
+<span class="sd">        - See the `get_separator` function for more details about how the function will attempt to detect the separator.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">Str</span><span class="p">(</span><span class="n">cast_sep_to_comma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="n">separator</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h3 id="strplus.strplus.Str.split_by_separator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">split_by_separator</span><span class="p">(</span><span class="n">separator</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#strplus.strplus.Str.split_by_separator" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
+Implementation of <a class="autorefs autorefs-internal" href="strplus/functions/#strplus.functions.split_by_separator">strplus.functions.split_by_separator</a></p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_string</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The input string to split.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>separator</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="typing.List">List</span>[str], str]]</code>
+          </td>
+          <td><p>The separator(s) to use when splitting the input string.
+This can be a single string, a list of strings, or None. If None, the function will attempt to determine
+the appropriate separator based on the input string. Defaults to None.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+          </td>
+          <td><p>List[str]: A list of strings resulting from splitting the input string using the specified separator(s).</p></td>
+        </tr>
+    </tbody>
+  </table>
+      <div class="admonition example">
+<p class="admonition-title">This example shows how to use <code>split_by_separator()</code> to split a string using a single separator</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="strplus.strplus.Str.split_by_separator--__tabbed_1_1" name="strplus.strplus.Str.split_by_separator--__tabbed_1" type="radio" /><input id="strplus.strplus.Str.split_by_separator--__tabbed_1_2" name="strplus.strplus.Str.split_by_separator--__tabbed_1" type="radio" /><input id="strplus.strplus.Str.split_by_separator--__tabbed_1_3" name="strplus.strplus.Str.split_by_separator--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.strplus.Str.split_by_separator--__tabbed_1_1">Example 1</label><label for="strplus.strplus.Str.split_by_separator--__tabbed_1_2">Example 2</label><label for="strplus.strplus.Str.split_by_separator--__tabbed_1_3">Example 3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;one,two,three&quot;</span><span class="p">)</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">split_by_separator</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>[&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;one-two three|four&quot;</span><span class="p">)</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">split_by_separator</span><span class="p">([</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">])</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>[&#39;one&#39;, &#39;two three|four&#39;]
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only one separator frequency found in the list provided, so the priority will be respect!</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">my_string</span> <span class="o">=</span> <span class="n">Str</span><span class="p">(</span><span class="s2">&quot;one two three four&quot;</span><span class="p">)</span>
+<span class="n">my_string</span><span class="o">.</span><span class="n">split_by_separator</span><span class="p">()</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>[&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]
+</code></pre></div></p>
+</div>
+</div>
+</div>
+</div>
+
+<details class="tips">
+  <summary>Tips</summary>
+  <ul>
+<li>If the input string contains multiple consecutive instances of the specified separator(s), the resulting
+list may contain empty strings. To remove empty strings from the resulting list, you can use a list
+comprehension to filter out any empty strings.</li>
+<li>See the <code>get_separator</code> for mor details about how the function will attempt to determine the appropriate separator.</li>
+</ul>
+</details>
+<details class="info">
+  <summary>Important</summary>
+  <ul>
+<li>If the separator is a list of strings, the function will attempt to determine the appropriate separator
+to use based on the input string. If no appropriate separator is found, the function will return the
+original input string as a single-element list.</li>
+</ul>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>strplus/strplus.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">split_by_separator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">separator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.</span>
+<span class="sd">    Implementation of [strplus.functions.split_by_separator][]</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input_string (str): The input string to split.</span>
+<span class="sd">        separator (Optional[Union[List[str], str]], optional): The separator(s) to use when splitting the input string.</span>
+<span class="sd">            This can be a single string, a list of strings, or None. If None, the function will attempt to determine</span>
+<span class="sd">            the appropriate separator based on the input string. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: A list of strings resulting from splitting the input string using the specified separator(s).</span>
+
+<span class="sd">    !!! Example &quot;This example shows how to use `split_by_separator()` to split a string using a single separator&quot;</span>
+
+<span class="sd">        === &quot;Example 1&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            my_string = Str(&quot;one,two,three&quot;)</span>
+<span class="sd">            my_string.split_by_separator(&quot;,&quot;)</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]</span>
+<span class="sd">            ```</span>
+
+<span class="sd">        === &quot;Example 2&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            my_string = Str(&quot;one-two three|four&quot;)</span>
+<span class="sd">            my_string.split_by_separator([&quot;-&quot;, &quot; &quot;, &quot;|&quot;])</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&#39;one&#39;, &#39;two three|four&#39;]</span>
+<span class="sd">            ```</span>
+<span class="sd">            !!! Warning</span>
+<span class="sd">                Only one separator frequency found in the list provided, so the priority will be respect!</span>
+
+<span class="sd">        === &quot;Example 3&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            my_string = Str(&quot;one two three four&quot;)</span>
+<span class="sd">            my_string.split_by_separator()</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</span>
+<span class="sd">            ```</span>
+
+<span class="sd">    Tips:</span>
+<span class="sd">        - If the input string contains multiple consecutive instances of the specified separator(s), the resulting</span>
+<span class="sd">        list may contain empty strings. To remove empty strings from the resulting list, you can use a list</span>
+<span class="sd">        comprehension to filter out any empty strings.</span>
+<span class="sd">        - See the `get_separator` for mor details about how the function will attempt to determine the appropriate separator.</span>
+
+<span class="sd">    Info: Important</span>
+<span class="sd">        - If the separator is a list of strings, the function will attempt to determine the appropriate separator</span>
+<span class="sd">        to use based on the input string. If no appropriate separator is found, the function will return the</span>
+<span class="sd">        original input string as a single-element list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">Str</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">split_by_separator</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="n">separator</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
 
 <div class="doc doc-object doc-function">
 
@@ -978,7 +1937,8 @@ hello_world</p>
 
   <div class="doc doc-contents ">
   
-      <p>Converts a string from any case to CamelCase.</p>
+      <p>Converts a string from any case to CamelCase.
+Implementation of <a class="autorefs autorefs-internal" href="strplus/cases/#strplus.cases.to_camel">strplus.cases.to_camel</a></p>
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1018,35 +1978,37 @@ thisIsATest</p>
 
       <details class="quote">
         <summary>Source code in <code>strplus/strplus.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_camel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    Converts a string from any case to CamelCase.</span>
+<span class="sd">    Implementation of [strplus.cases.to_camel][]</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        str: The converted string in CamelCase.</span>
@@ -1087,7 +2049,8 @@ thisIsATest</p>
 
   <div class="doc doc-contents ">
   
-      <p>Converts a string to a list of strings, where each word is a separate element in the list.</p>
+      <p>Converts a string to a list of strings, where each word is a separate element in the list.
+Implementation of <a class="autorefs autorefs-internal" href="strplus/functions/#strplus.functions.to_list">strplus.functions.to_list</a></p>
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1148,40 +2111,7 @@ thisIsATest</p>
 </details>
       <details class="quote">
         <summary>Source code in <code>strplus/strplus.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
-<span class="normal">173</span>
-<span class="normal">174</span>
-<span class="normal">175</span>
-<span class="normal">176</span>
-<span class="normal">177</span>
-<span class="normal">178</span>
-<span class="normal">179</span>
-<span class="normal">180</span>
-<span class="normal">181</span>
-<span class="normal">182</span>
-<span class="normal">183</span>
-<span class="normal">184</span>
-<span class="normal">185</span>
-<span class="normal">186</span>
-<span class="normal">187</span>
-<span class="normal">188</span>
-<span class="normal">189</span>
-<span class="normal">190</span>
-<span class="normal">191</span>
-<span class="normal">192</span>
-<span class="normal">193</span>
-<span class="normal">194</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">194</span>
 <span class="normal">195</span>
 <span class="normal">196</span>
 <span class="normal">197</span>
@@ -1190,10 +2120,45 @@ thisIsATest</p>
 <span class="normal">200</span>
 <span class="normal">201</span>
 <span class="normal">202</span>
-<span class="normal">203</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    Converts a string to a list of strings, where each word is a separate element in the list.</span>
+<span class="sd">    Implementation of [strplus.functions.to_list][]</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        List[str]: A list of strings, where each word in the input string is a separate element in the list.</span>
@@ -1252,7 +2217,7 @@ thisIsATest</p>
   <div class="doc doc-contents ">
   
       <p>Simple method to converts a string to PascalCase.
-Extend the method: to_pascal</p>
+Implementation of <a class="autorefs autorefs-internal" href="strplus/cases/#strplus.cases.to_pascal">strplus.cases.to_pascal</a></p>
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1280,29 +2245,29 @@ SomeMixedStringWithSpacesUnderscoresAndHyphens</p>
 
       <details class="quote">
         <summary>Source code in <code>strplus/strplus.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span>
-<span class="normal">93</span>
-<span class="normal">94</span>
-<span class="normal">95</span>
-<span class="normal">96</span>
-<span class="normal">97</span>
-<span class="normal">98</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_pascal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    Simple method to converts a string to PascalCase.</span>
-<span class="sd">    Extend the method: to_pascal</span>
+<span class="sd">    Implementation of [strplus.cases.to_pascal][]</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        str: The PascalCase version of the input string.</span>
@@ -1335,7 +2300,8 @@ SomeMixedStringWithSpacesUnderscoresAndHyphens</p>
 
   <div class="doc doc-contents ">
   
-      <p>Converts a string to snake_case.</p>
+      <p>Converts a string to snake_case.
+Implementation of <a class="autorefs autorefs-internal" href="strplus/cases/#strplus.cases.to_snake">strplus.cases.to_snake</a></p>
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1381,42 +2347,44 @@ hello_world</p>
 
       <details class="quote">
         <summary>Source code in <code>strplus/strplus.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span>
-<span class="normal">139</span>
-<span class="normal">140</span>
-<span class="normal">141</span>
-<span class="normal">142</span>
-<span class="normal">143</span>
-<span class="normal">144</span>
-<span class="normal">145</span>
-<span class="normal">146</span>
-<span class="normal">147</span>
-<span class="normal">148</span>
-<span class="normal">149</span>
-<span class="normal">150</span>
-<span class="normal">151</span>
-<span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_snake</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    Converts a string to snake_case.</span>
+<span class="sd">    Implementation of [strplus.cases.to_snake][]</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        str: The string converted to snake_case.</span>

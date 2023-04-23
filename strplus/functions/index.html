@@ -352,8 +352,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#strplus.functions.cast_sep_to_comma" class="md-nav__link">
+    cast_sep_to_comma()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#strplus.functions.get_separator" class="md-nav__link">
     get_separator()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strplus.functions.split_by_separator" class="md-nav__link">
+    split_by_separator()
   </a>
   
 </li>
@@ -424,6 +438,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/str_class/" class="md-nav__link">
+        Str class usage!  🏆
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -458,8 +487,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#strplus.functions.cast_sep_to_comma" class="md-nav__link">
+    cast_sep_to_comma()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#strplus.functions.get_separator" class="md-nav__link">
     get_separator()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strplus.functions.split_by_separator" class="md-nav__link">
+    split_by_separator()
   </a>
   
 </li>
@@ -513,15 +556,15 @@
 
 
 
-<h2 id="strplus.functions.get_separator" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_separator</span><span class="p">(</span><span class="n">input_string</span><span class="p">)</span></code>
+<h2 id="strplus.functions.cast_sep_to_comma" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cast_sep_to_comma</span><span class="p">(</span><span class="n">input_string</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
-<a href="#strplus.functions.get_separator" class="headerlink" title="Permanent link">&para;</a></h2>
+<a href="#strplus.functions.cast_sep_to_comma" class="headerlink" title="Permanent link">&para;</a></h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Finds the most common separator in a given input string.</p>
+      <p>Replaces a specified separator or the automatically detected one with a comma in the input string.</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -539,9 +582,230 @@
           <td>
                 <code>str</code>
           </td>
-          <td><p>The input string to search for separators.</p></td>
+          <td><p>The input string to replace separators in.</p></td>
           <td>
               <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>separator</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
+          </td>
+          <td><p>The separator to replace with a comma. If None, the function will
+attempt to determine the appropriate separator based on the input string. Defaults to None.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>str</code></td>          <td>
+                <code>str</code>
+          </td>
+          <td><p>A string resulting from replacing the specified or detected separator with a comma.</p></td>
+        </tr>
+    </tbody>
+  </table>
+      <div class="admonition example">
+<p class="admonition-title">This example shows how to use <code>cast_sep_to_comma()</code> to replace a separator in a string</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="strplus.functions.cast_sep_to_comma--__tabbed_1_1" name="strplus.functions.cast_sep_to_comma--__tabbed_1" type="radio" /><input id="strplus.functions.cast_sep_to_comma--__tabbed_1_2" name="strplus.functions.cast_sep_to_comma--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.functions.cast_sep_to_comma--__tabbed_1_1">Example 1</label><label for="strplus.functions.cast_sep_to_comma--__tabbed_1_2">Example 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">cast_sep_to_comma</span><span class="p">(</span><span class="s2">&quot;one-two-three&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">)</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>&quot;one,two,three&quot;
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">cast_sep_to_comma</span><span class="p">(</span><span class="s2">&quot;one two three&quot;</span><span class="p">)</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>&quot;one,two,three&quot;
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The function will only attempt to detect the separator when the <code>separator</code> argument is None.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<details class="tips">
+  <summary>Tips</summary>
+  <ul>
+<li>If the input string does not contain the specified or detected separator, the function will return the
+  original input string unchanged.</li>
+<li>See the <code>get_separator</code> function for more details about how the function will attempt to detect the separator.</li>
+</ul>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>strplus/functions.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">cast_sep_to_comma</span><span class="p">(</span><span class="n">input_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">separator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Replaces a specified separator or the automatically detected one with a comma in the input string.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input_string (str): The input string to replace separators in.</span>
+<span class="sd">        separator (Optional[str], optional): The separator to replace with a comma. If None, the function will</span>
+<span class="sd">            attempt to determine the appropriate separator based on the input string. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: A string resulting from replacing the specified or detected separator with a comma.</span>
+
+<span class="sd">    !!! Example &quot;This example shows how to use `cast_sep_to_comma()` to replace a separator in a string&quot;</span>
+
+<span class="sd">        === &quot;Example 1&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            cast_sep_to_comma(&quot;one-two-three&quot;, &quot;-&quot;)</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            &quot;one,two,three&quot;</span>
+<span class="sd">            ```</span>
+
+<span class="sd">        === &quot;Example 2&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            cast_sep_to_comma(&quot;one two three&quot;)</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            &quot;one,two,three&quot;</span>
+<span class="sd">            ```</span>
+<span class="sd">            !!! Warning</span>
+<span class="sd">                The function will only attempt to detect the separator when the `separator` argument is None.</span>
+
+<span class="sd">    Tips:</span>
+<span class="sd">        - If the input string does not contain the specified or detected separator, the function will return the</span>
+<span class="sd">          original input string unchanged.</span>
+<span class="sd">        - See the `get_separator` function for more details about how the function will attempt to detect the separator.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Simple cleansing</span>
+    <span class="n">input_string</span> <span class="o">=</span> <span class="n">input_string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">separator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">input_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">separator</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">separator</span> <span class="o">=</span> <span class="n">get_separator</span><span class="p">(</span><span class="n">input_string</span><span class="o">=</span><span class="n">input_string</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">separator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">input_string</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">separator</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">input_string</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="strplus.functions.get_separator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">get_separator</span><span class="p">(</span><span class="n">input_string</span><span class="p">,</span> <span class="n">separator_list</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#strplus.functions.get_separator" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Returns the most frequent separator character in an input string.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_string</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The input string to analyze.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>separator_list</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="strplus.cases.List">List</span>[str]]</code>
+          </td>
+          <td><p>A list of separator characters to consider. Defaults to None.</p></td>
+          <td>
+                <code>None</code>
           </td>
         </tr>
     </tbody>
@@ -559,29 +823,29 @@
         <tr>
           <td>
           </td>
-          <td><p>str or None: The most common separator found in the input string, or None if no separators are found.</p></td>
+          <td><p>Union[str, None]: The most frequent separator character in the input string, or None if there are no separators.</p></td>
         </tr>
     </tbody>
   </table>
       <div class="admonition example">
-<p class="admonition-title">Finding the most common separator</p>
-<p>This example shows how to use <code>get_separator()</code> to find the most common separator in a string.</p>
+<p class="admonition-title">Finding the most frequent separator character</p>
+<p>This example shows how to use <code>get_separator()</code> to find the most frequent separator character in a string.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="strplus.functions.get_separator--__tabbed_1_1" name="strplus.functions.get_separator--__tabbed_1" type="radio" /><input id="strplus.functions.get_separator--__tabbed_1_2" name="strplus.functions.get_separator--__tabbed_1" type="radio" /><input id="strplus.functions.get_separator--__tabbed_1_3" name="strplus.functions.get_separator--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.functions.get_separator--__tabbed_1_1">Example 1</label><label for="strplus.functions.get_separator--__tabbed_1_2">Example 2</label><label for="strplus.functions.get_separator--__tabbed_1_3">Example 3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><span class="n">get_separator</span><span class="p">(</span><span class="s1">&#39;This is a sample sentence, separated by commas&#39;</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">get_separator</span><span class="p">(</span><span class="s2">&quot;John, Doe; Jane | Doe&quot;</span><span class="p">)</span>
 </code></pre></div>
-,</p>
+','</p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><span class="n">get_separator</span><span class="p">(</span><span class="s1">&#39;This string has no separators&#39;</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">get_separator</span><span class="p">(</span><span class="s2">&quot;John Doe Jane Doe&quot;</span><span class="p">)</span>
 </code></pre></div>
-None</p>
+" "</p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><pre><span></span><code><span class="n">get_separator</span><span class="p">(</span><span class="s1">&#39;This string has multiple separators: ;, |, and /&#39;</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">get_separator</span><span class="p">(</span><span class="s2">&quot;A/B/C&quot;</span><span class="p">)</span>
 </code></pre></div>
-;</p>
+'/'</p>
 </div>
 </div>
 </div>
@@ -590,22 +854,21 @@ None</p>
 <details class="tip">
   <summary>Use tips</summary>
   <ul>
-<li>This function can be used to split a string into a list using the most common separator, like so: <code>input_string.split(get_separator(input_string))</code>.</li>
-<li>To split a string into a list using all possible separators, use the <code>re.split()</code> function instead.</li>
+<li>If you want to specify a custom list of separator characters, pass it as the <code>separator_list</code> argument.</li>
+<li>If you want to find the second most frequent separator character (or any other rank), you can modify the code to return a list of separator characters sorted by frequency.</li>
 </ul>
 </details>
 <details class="info">
   <summary>Important</summary>
   <ul>
-<li>This function assumes that the input string contains only valid separators.</li>
-<li>If multiple separators are tied for the most common, the first one encountered in the list of separators is returned.</li>
+<li>The function assumes that any character that appears at least once in the input string is a potential separator.</li>
+<li>The function uses a common list of separator characters by default, but this list may not be appropriate for all types of input strings.</li>
+<li>The function returns None if there are no separators in the input string.</li>
 </ul>
 </details>
       <details class="quote">
         <summary>Source code in <code>strplus/functions.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 62</span>
-<span class="normal"> 63</span>
-<span class="normal"> 64</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 64</span>
 <span class="normal"> 65</span>
 <span class="normal"> 66</span>
 <span class="normal"> 67</span>
@@ -657,61 +920,343 @@ None</p>
 <span class="normal">113</span>
 <span class="normal">114</span>
 <span class="normal">115</span>
-<span class="normal">116</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_separator</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_separator</span><span class="p">(</span><span class="n">input_string</span><span class="p">,</span> <span class="n">separator_list</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
-<span class="sd">    Finds the most common separator in a given input string.</span>
+<span class="sd">    Returns the most frequent separator character in an input string.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        input_string (str): The input string to search for separators.</span>
+<span class="sd">        input_string (str): The input string to analyze.</span>
+<span class="sd">        separator_list (Optional[List[str]], optional): A list of separator characters to consider. Defaults to None.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        str or None: The most common separator found in the input string, or None if no separators are found.</span>
+<span class="sd">        Union[str, None]: The most frequent separator character in the input string, or None if there are no separators.</span>
 
-<span class="sd">    !!! Example &quot;Finding the most common separator&quot;</span>
-<span class="sd">        This example shows how to use `get_separator()` to find the most common separator in a string.</span>
+<span class="sd">    !!! Example &quot;Finding the most frequent separator character&quot;</span>
+<span class="sd">        This example shows how to use `get_separator()` to find the most frequent separator character in a string.</span>
 
 <span class="sd">        === &quot;Example 1&quot;</span>
 <span class="sd">            ```python</span>
-<span class="sd">            get_separator(&#39;This is a sample sentence, separated by commas&#39;)</span>
+<span class="sd">            get_separator(&quot;John, Doe; Jane | Doe&quot;)</span>
 <span class="sd">            ```</span>
-<span class="sd">            ,</span>
+<span class="sd">            &#39;,&#39;</span>
 
 <span class="sd">        === &quot;Example 2&quot;</span>
 <span class="sd">            ```python</span>
-<span class="sd">            get_separator(&#39;This string has no separators&#39;)</span>
+<span class="sd">            get_separator(&quot;John Doe Jane Doe&quot;)</span>
 <span class="sd">            ```</span>
-<span class="sd">            None</span>
+<span class="sd">            &quot; &quot;</span>
 
 <span class="sd">        === &quot;Example 3&quot;</span>
 <span class="sd">            ```python</span>
-<span class="sd">            get_separator(&#39;This string has multiple separators: ;, |, and /&#39;)</span>
+<span class="sd">            get_separator(&quot;A/B/C&quot;)</span>
 <span class="sd">            ```</span>
-<span class="sd">            ;</span>
+<span class="sd">            &#39;/&#39;</span>
 
 <span class="sd">    Tip: Use tips</span>
-<span class="sd">        - This function can be used to split a string into a list using the most common separator, like so: `input_string.split(get_separator(input_string))`.</span>
-<span class="sd">        - To split a string into a list using all possible separators, use the `re.split()` function instead.</span>
+<span class="sd">        - If you want to specify a custom list of separator characters, pass it as the `separator_list` argument.</span>
+<span class="sd">        - If you want to find the second most frequent separator character (or any other rank), you can modify the code to return a list of separator characters sorted by frequency.</span>
 
 <span class="sd">    Info: Important</span>
-<span class="sd">        - This function assumes that the input string contains only valid separators.</span>
-<span class="sd">        - If multiple separators are tied for the most common, the first one encountered in the list of separators is returned.</span>
+<span class="sd">        - The function assumes that any character that appears at least once in the input string is a potential separator.</span>
+<span class="sd">        - The function uses a common list of separator characters by default, but this list may not be appropriate for all types of input strings.</span>
+<span class="sd">        - The function returns None if there are no separators in the input string.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">separators</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="c1"># Common separator list by priority!</span>
+    <span class="n">common_separators</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="n">input_string</span> <span class="o">=</span> <span class="n">input_string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
-    <span class="c1"># check each separator in the order of priority</span>
-    <span class="k">for</span> <span class="n">sep</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">]:</span>
-        <span class="k">if</span> <span class="n">sep</span> <span class="ow">in</span> <span class="n">input_string</span><span class="p">:</span>
-            <span class="n">sep_count</span> <span class="o">=</span> <span class="n">input_string</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">sep</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">sep_count</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">sep</span>
-            <span class="k">elif</span> <span class="n">sep_count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">separators</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">input_string</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+    <span class="c1"># Setting the separator list</span>
+    <span class="n">separator_list_target</span> <span class="o">=</span> <span class="n">separator_list</span> <span class="k">if</span> <span class="n">separator_list</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">separator_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">common_separators</span>
 
-    <span class="c1"># if no separator was found, return None</span>
-    <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">sep_frequency</span> <span class="o">=</span> <span class="p">{</span><span class="n">sep</span><span class="p">:</span> <span class="n">input_string</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">sep</span><span class="p">)</span> <span class="k">for</span> <span class="n">sep</span> <span class="ow">in</span> <span class="n">separator_list_target</span> <span class="k">if</span> <span class="n">input_string</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">sep</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="n">most_frequent_separator</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sep_frequency</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">max_value</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">sep_frequency</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">max_frequency</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sep_frequency</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">max_value</span><span class="p">]</span>
+        <span class="n">sep_sorted_by_priority</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">max_frequency</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">separator_list_target</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">most_frequent_separator</span> <span class="o">=</span> <span class="n">sep_sorted_by_priority</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">most_frequent_separator</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;common separators not found in the string provided, please inform the separator_list!</span><span class="se">\n</span><span class="s2">common separator:</span><span class="se">\n</span><span class="si">{</span><span class="n">common_separators</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">most_frequent_separator</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="strplus.functions.split_by_separator" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">split_by_separator</span><span class="p">(</span><span class="n">input_string</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+
+<a href="#strplus.functions.split_by_separator" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>input_string</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td><p>The input string to split.</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>separator</code></td>
+          <td>
+                <code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="strplus.cases.List">List</span>[str], str]]</code>
+          </td>
+          <td><p>The separator(s) to use when splitting the input string.
+This can be a single string, a list of strings, or None. If None, the function will attempt to determine
+the appropriate separator based on the input string. Defaults to None.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><span title="typing.List">List</span>[str]</code>
+          </td>
+          <td><p>List[str]: A list of strings resulting from splitting the input string using the specified separator(s).</p></td>
+        </tr>
+    </tbody>
+  </table>
+      <div class="admonition example">
+<p class="admonition-title">This example shows how to use <code>split_by_separator()</code> to split a string using a single separator</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="strplus.functions.split_by_separator--__tabbed_1_1" name="strplus.functions.split_by_separator--__tabbed_1" type="radio" /><input id="strplus.functions.split_by_separator--__tabbed_1_2" name="strplus.functions.split_by_separator--__tabbed_1" type="radio" /><input id="strplus.functions.split_by_separator--__tabbed_1_3" name="strplus.functions.split_by_separator--__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="strplus.functions.split_by_separator--__tabbed_1_1">Example 1</label><label for="strplus.functions.split_by_separator--__tabbed_1_2">Example 2</label><label for="strplus.functions.split_by_separator--__tabbed_1_3">Example 3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">split_by_separator</span><span class="p">(</span><span class="s2">&quot;one,two,three&quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>[&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">split_by_separator</span><span class="p">(</span><span class="s2">&quot;one-two three|four&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">])</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>[&#39;one&#39;, &#39;two three|four&#39;]
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only one separator frequency found in the list provided, so the priority will be respect!</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="n">split_by_separator</span><span class="p">(</span><span class="s2">&quot;one two three four&quot;</span><span class="p">)</span>
+</code></pre></div>
+Returns:
+<div class="highlight"><pre><span></span><code>[&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]
+</code></pre></div></p>
+</div>
+</div>
+</div>
+</div>
+
+<details class="tips">
+  <summary>Tips</summary>
+  <ul>
+<li>If the input string contains multiple consecutive instances of the specified separator(s), the resulting
+  list may contain empty strings. To remove empty strings from the resulting list, you can use a list
+  comprehension to filter out any empty strings.</li>
+<li>See the <code>get_separator</code> for mor details about how the function will attempt to determine the appropriate separator.</li>
+</ul>
+</details>
+<details class="info">
+  <summary>Important</summary>
+  <ul>
+<li>If the separator is a list of strings, the function will attempt to determine the appropriate separator
+  to use based on the input string. If no appropriate separator is found, the function will return the
+  original input string as a single-element list.</li>
+</ul>
+</details>
+      <details class="quote">
+        <summary>Source code in <code>strplus/functions.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">split_by_separator</span><span class="p">(</span><span class="n">input_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">separator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        input_string (str): The input string to split.</span>
+<span class="sd">        separator (Optional[Union[List[str], str]], optional): The separator(s) to use when splitting the input string.</span>
+<span class="sd">            This can be a single string, a list of strings, or None. If None, the function will attempt to determine</span>
+<span class="sd">            the appropriate separator based on the input string. Defaults to None.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: A list of strings resulting from splitting the input string using the specified separator(s).</span>
+
+<span class="sd">    !!! Example &quot;This example shows how to use `split_by_separator()` to split a string using a single separator&quot;</span>
+
+<span class="sd">        === &quot;Example 1&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            split_by_separator(&quot;one,two,three&quot;, &quot;,&quot;)</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]</span>
+<span class="sd">            ```</span>
+
+<span class="sd">        === &quot;Example 2&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            split_by_separator(&quot;one-two three|four&quot;, [&quot;-&quot;, &quot; &quot;, &quot;|&quot;])</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&#39;one&#39;, &#39;two three|four&#39;]</span>
+<span class="sd">            ```</span>
+<span class="sd">            !!! Warning</span>
+<span class="sd">                Only one separator frequency found in the list provided, so the priority will be respect!</span>
+
+<span class="sd">        === &quot;Example 3&quot;</span>
+<span class="sd">            ```python</span>
+<span class="sd">            split_by_separator(&quot;one two three four&quot;)</span>
+<span class="sd">            ```</span>
+<span class="sd">            Returns:</span>
+<span class="sd">            ```</span>
+<span class="sd">            [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]</span>
+<span class="sd">            ```</span>
+
+<span class="sd">    Tips:</span>
+<span class="sd">        - If the input string contains multiple consecutive instances of the specified separator(s), the resulting</span>
+<span class="sd">          list may contain empty strings. To remove empty strings from the resulting list, you can use a list</span>
+<span class="sd">          comprehension to filter out any empty strings.</span>
+<span class="sd">        - See the `get_separator` for mor details about how the function will attempt to determine the appropriate separator.</span>
+
+<span class="sd">    Info: Important</span>
+<span class="sd">        - If the separator is a list of strings, the function will attempt to determine the appropriate separator</span>
+<span class="sd">          to use based on the input string. If no appropriate separator is found, the function will return the</span>
+<span class="sd">          original input string as a single-element list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">input_string</span> <span class="o">=</span> <span class="n">input_string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">separator</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">target_separator</span> <span class="o">=</span> <span class="n">get_separator</span><span class="p">(</span><span class="n">input_string</span><span class="o">=</span><span class="n">input_string</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target_separator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">input_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">target_separator</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">separator</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">target_separator</span> <span class="o">=</span> <span class="n">get_separator</span><span class="p">(</span><span class="n">input_string</span><span class="o">=</span><span class="n">input_string</span><span class="p">,</span> <span class="n">separator_list</span><span class="o">=</span><span class="n">separator</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target_separator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">input_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">target_separator</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">input_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">separator</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
       </details>
   </div>
@@ -767,7 +1312,7 @@ None</p>
     <tbody>
         <tr>
           <td>
-                <code>List[str]</code>
+                <code><span title="typing.List">List</span>[str]</code>
           </td>
           <td><p>List[str]: A list of strings, where each word in the input string is a separate element in the list.</p></td>
         </tr>
@@ -818,9 +1363,7 @@ None</p>
 </details>
       <details class="quote">
         <summary>Source code in <code>strplus/functions.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 6</span>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
@@ -873,7 +1416,9 @@ None</p>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">to_list</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">    Converts a string to a list of strings, where each word is a separate element in the list.</span>
