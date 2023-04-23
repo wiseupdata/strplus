@@ -95,6 +95,13 @@ class Str(str):
         return self.to_list()
 
     @property
+    def sep_to_comma(self):
+        """
+        sep_to_comma is an alias for [`cast_sep_to_comma`][strplus.Str.cast_sep_to_comma]
+        """
+        return self.cast_sep_to_comma()
+
+    @property
     def print(self):
         """
         print is an alias for `str.print`
@@ -334,7 +341,7 @@ class Str(str):
             original input string unchanged.
             - See the `get_separator` function for more details about how the function will attempt to detect the separator.
         """
-        return Str(cast_sep_to_comma, separator=separator)
+        return Str(cast_sep_to_comma(self, separator=separator))
 
 
 for name in dir(str):
