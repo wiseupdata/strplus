@@ -1,4 +1,5 @@
 from strplus.cases import *
+from typing import List, Optional
 
 
 def to_list(text: str) -> List[str]:
@@ -59,58 +60,21 @@ def to_list(text: str) -> List[str]:
     return word_list
 
 
-def get_separator(input_string):
-    """
+def get_separator(input_string, separator_list: Optional[List[str]]=None):
 
-    Finds the most common separator in a given input string.
-
-    Args:
-        input_string (str): The input string to search for separators.
-
-    Returns:
-        str or None: The most common separator found in the input string, or None if no separators are found.
-
-    !!! Example "Finding the most common separator"
-        This example shows how to use `get_separator()` to find the most common separator in a string.
-
-        === "Example 1"
-            ```python
-            get_separator('This is a sample sentence, separated by commas')
-            ```
-            ,
-
-        === "Example 2"
-            ```python
-            get_separator('This string has no separators')
-            ```
-            None
-
-        === "Example 3"
-            ```python
-            get_separator('This string has multiple separators: ;, |, and /')
-            ```
-            ;
-
-    Tip: Use tips
-        - This function can be used to split a string into a list using the most common separator, like so: `input_string.split(get_separator(input_string))`.
-        - To split a string into a list using all possible separators, use the `re.split()` function instead.
-
-    Info: Important
-        - This function assumes that the input string contains only valid separators.
-        - If multiple separators are tied for the most common, the first one encountered in the list of separators is returned.
-
-    """
-
-    separators = [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]
-
-    # check each separator in the order of priority
-    for sep in [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]:
-        if sep in input_string:
-            sep_count = input_string.count(sep)
-            if sep_count == 1:
-                return sep
-            elif sep_count > 1:
-                return max(separators, key=input_string.count)
-
-    # if no separator was found, return None
-    return None
+    # Common separator list by priority!
+    common_separators = [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]
+    
+    # Setting the separator list
+    separator_list_target = separator_list if separator_list is not None and len(separator_list) > 0 else common_separators
+    
+    sep_frequency = {sep:input_string.count(sep) for sep in separator_list_target if input_string.count(sep) > 0}
+    most_frequent_separator = None
+    
+    if len(sep_frequency) > 0:
+        max_value = max(sep_frequency.values())
+        max_frequency= [key for key, value in sep_frequency.items() if value == max_value]
+        sep_sorted_by_priority = sorted(max_frequency, key=lambda x: separator_list_target.index(x))
+        most_frequent_separator = sep_sorted_by_priority[0]
+    
+    return most_frequent_separator
