@@ -90,6 +90,7 @@ class Str(str):
     @property
     def split_by_sep(self):
         """
+        Split itself by an inferred separator!
         split_by_sep is an alias for [`split_by_separator`][strplus.Str.split_by_separator]
         """
         return self.to_list()
