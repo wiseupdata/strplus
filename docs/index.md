@@ -8,6 +8,12 @@
     - Simple use!
     - Made with A.I. contribution 🤖 
 
+## Install 📀 
+
+```
+pip install strplus
+```
+
 ## Main Class: 🚀
 
 ::: strplus.strplus

@@ -1,5 +1,7 @@
+from typing import List, Optional, Union
+
 from strplus.cases import to_camel, to_pascal, to_snake
-from strplus.functions import to_list
+from strplus.functions import split_by_separator, to_list
 
 
 class Str(str):
@@ -201,6 +203,67 @@ class Str(str):
 
         """
         return [Str(word) for word in to_list(self)]
+
+    def split_by_separator(self, separator: Optional[Union[List[str], str]] = None):
+        """
+
+        Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
+
+        Args:
+            input_string (str): The input string to split.
+            separator (Optional[Union[List[str], str]], optional): The separator(s) to use when splitting the input string.
+                This can be a single string, a list of strings, or None. If None, the function will attempt to determine
+                the appropriate separator based on the input string. Defaults to None.
+
+        Returns:
+            List[str]: A list of strings resulting from splitting the input string using the specified separator(s).
+
+        !!! Example "This example shows how to use `split_by_separator()` to split a string using a single separator"
+
+            === "Example 1"
+                ```python
+                my_string = Str("one,two,three")
+                my_string.split_by_separator(",")
+                ```
+                Returns:
+                ```
+                ["one", "two", "three"]
+                ```
+
+            === "Example 2"
+                ```python
+                my_string = Str("one-two three|four")
+                my_string.split_by_separator(["-", " ", "|"])
+                ```
+                Returns:
+                ```
+                ['one', 'two three|four']
+                ```
+                !!! Warning
+                    Only one separator frequency found in the list provided, so the priority will be respect!
+
+            === "Example 3"
+                ```python
+                my_string = Str("one two three four")
+                my_string.split_by_separator()
+                ```
+                Returns:
+                ```
+                ["one", "two", "three", "four"]
+                ```
+
+        Tips:
+            - If the input string contains multiple consecutive instances of the specified separator(s), the resulting
+            list may contain empty strings. To remove empty strings from the resulting list, you can use a list
+            comprehension to filter out any empty strings.
+            - See the `get_separator` for mor details about how the function will attempt to determine the appropriate separator.
+
+        Info: Important
+            - If the separator is a list of strings, the function will attempt to determine the appropriate separator
+            to use based on the input string. If no appropriate separator is found, the function will return the
+            original input string as a single-element list.
+        """
+        return [Str(word) for word in split_by_separator(self, separator=separator)]
 
 
 for name in dir(str):

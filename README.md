@@ -52,6 +52,14 @@ Python extra functions for strings ❤️
 
 <br>
 
+## Install 📀 
+
+```
+pip install strplus
+```
+
+<br>
+
 ### Simple use example 😍
 ```
 my_string = Str('Cast_this_string_TO_Pascal')
