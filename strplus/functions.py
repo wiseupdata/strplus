@@ -63,7 +63,7 @@ def to_list(text: str) -> List[str]:
 
 def get_separator(input_string, separator_list: Optional[List[str]] = None):
     """
-    
+
     Returns the most frequent separator character in an input string.
 
     Args:
@@ -102,11 +102,12 @@ def get_separator(input_string, separator_list: Optional[List[str]] = None):
         - The function assumes that any character that appears at least once in the input string is a potential separator.
         - The function uses a common list of separator characters by default, but this list may not be appropriate for all types of input strings.
         - The function returns None if there are no separators in the input string.
-    
-    """   
-    
+
+    """
+
     # Common separator list by priority!
     common_separators = [",", ";", "|", " ", "\t", ":", "/", "\\", "\n"]
+    input_string = input_string.strip()
 
     # Setting the separator list
     separator_list_target = separator_list if separator_list is not None and len(separator_list) > 0 else common_separators
@@ -119,21 +120,79 @@ def get_separator(input_string, separator_list: Optional[List[str]] = None):
         max_frequency = [key for key, value in sep_frequency.items() if value == max_value]
         sep_sorted_by_priority = sorted(max_frequency, key=lambda x: separator_list_target.index(x))
         most_frequent_separator = sep_sorted_by_priority[0]
-        
-    if most_frequent_separator is None: print(f"common separators not found in the string provided, please inform the separator_list!\ncommon separator:\n{common_separators}")
+
+    if most_frequent_separator is None:
+        print(f"common separators not found in the string provided, please inform the separator_list!\ncommon separator:\n{common_separators}")
 
     return most_frequent_separator
 
 
-def split_by_separator(input_string: str, separator: Optional[Union[List[str], str] ]= None) -> List[str]:
-    
+def split_by_separator(input_string: str, separator: Optional[Union[List[str], str]] = None) -> List[str]:
+    """
+
+    Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
+
+    Args:
+        input_string (str): The input string to split.
+        separator (Optional[Union[List[str], str]], optional): The separator(s) to use when splitting the input string.
+            This can be a single string, a list of strings, or None. If None, the function will attempt to determine
+            the appropriate separator based on the input string. Defaults to None.
+
+    Returns:
+        List[str]: A list of strings resulting from splitting the input string using the specified separator(s).
+
+    !!! Example "This example shows how to use `split_by_separator()` to split a string using a single separator"
+
+        === "Example 1"
+            ```python
+            split_by_separator("one,two,three", ",")
+            ```
+            Returns:
+            ```
+            ["one", "two", "three"]
+            ```
+
+        === "Example 2"
+            ```python
+            split_by_separator("one-two three|four", ["-", " ", "|"])
+            ```
+            Returns:
+            ```
+            ['one', 'two three|four']
+            ```
+            !!! Warning 
+                Only one separator frequency, so the priority will be respect
+
+        === "Example 3"
+            ```python
+            split_by_separator("one two three four")
+            ```
+            Returns:
+            ```
+            ["one", "two", "three", "four"]
+            ```
+
+    Tips:
+        - If the input string contains multiple consecutive instances of the specified separator(s), the resulting
+          list may contain empty strings. To remove empty strings from the resulting list, you can use a list
+          comprehension to filter out any empty strings.
+        - See the `get_separator` for mor details about how the function will attempt to determine the appropriate separator.
+
+    Info: Important
+        - If the separator is a list of strings, the function will attempt to determine the appropriate separator
+          to use based on the input string. If no appropriate separator is found, the function will return the
+          original input string as a single-element list.
+    """
+
+    input_string = input_string.strip()
+
     if separator is None:
-        target_separator = get_separator(input_string = input_string)
+        target_separator = get_separator(input_string=input_string)
         if target_separator is not None:
             return input_string.split(target_separator)
     elif isinstance(separator, list):
-        target_separator = get_separator(input_string = input_string, separator_list=separator)
+        target_separator = get_separator(input_string=input_string, separator_list=separator)
         if target_separator is not None:
             return input_string.split(target_separator)
     else:
-        return  input_string.split(separator)      
+        return input_string.split(separator)
