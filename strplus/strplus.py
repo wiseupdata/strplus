@@ -61,26 +61,43 @@ class Str(str):
 
     @property
     def pascal(self):
+        """
+        pascal is an alias for [strplus.to_pascal]
+        """
         return self.to_pascal()
 
     @property
     def camel(self):
+        """
+        camel is an alias for [strplus.camel]
+        """
         return self.to_camel()
 
     @property
     def snake(self):
+        """
+        snake is an alias for [`snake`][strplus.snake]
+        
+        """
         return self.to_snake()
 
     @property
     def list(self):
+        """
+        list is an alias for [`list`][strplus.list]
+        """
         return self.to_list()
 
     @property
     def print(self):
+        """
+        print is an alias for `str.print`
+        """
         print(self)
 
     def to_pascal(self):
         """
+        Implementation [strplus.cases.to_pascal]
 
         Simple method to converts a string to PascalCase.
         Extend the method: to_pascal
@@ -101,7 +118,7 @@ class Str(str):
 
     def to_camel(self):
         """
-
+        Implementation of `strplus.cases.to_camel`
         Converts a string from any case to CamelCase.
 
         Returns:
@@ -128,7 +145,7 @@ class Str(str):
 
     def to_snake(self):
         """
-
+        Implementation of `strplus.cases.to_snake`
         Converts a string to snake_case.
 
         Returns:
@@ -163,6 +180,7 @@ class Str(str):
     def to_list(self):
         """
 
+        Implementation of `strplus.function.to_list`
         Converts a string to a list of strings, where each word is a separate element in the list.
 
         Returns:
@@ -207,6 +225,7 @@ class Str(str):
     def split_by_separator(self, separator: Optional[Union[List[str], str]] = None):
         """
 
+        Implementation of `strplus.function.split_by_separator`
         Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
 
         Args:
