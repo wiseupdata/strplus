@@ -86,6 +86,13 @@ class Str(str):
         list is an alias for [`to_list`][strplus.Str.to_list]
         """
         return self.to_list()
+    
+    @property
+    def split_by_sep(self):
+        """
+        split_by_sep is an alias for [`split_by_separator`][strplus.Str.split_by_separator]
+        """
+        return self.to_list()
 
     @property
     def print(self):
