@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import List, Optional, Union
 
 from strplus.cases import *
 
@@ -119,5 +119,21 @@ def get_separator(input_string, separator_list: Optional[List[str]] = None):
         max_frequency = [key for key, value in sep_frequency.items() if value == max_value]
         sep_sorted_by_priority = sorted(max_frequency, key=lambda x: separator_list_target.index(x))
         most_frequent_separator = sep_sorted_by_priority[0]
+        
+    if most_frequent_separator is None: print(f"common separators not found in the string provided, please inform the separator_list!\ncommon separator:\n{common_separators}")
 
     return most_frequent_separator
+
+
+def split_by_separator(input_string: str, separator: Optional[Union[List[str], str] ]= None) -> List[str]:
+    
+    if separator is None:
+        target_separator = get_separator(input_string = input_string)
+        if target_separator is not None:
+            return input_string.split(target_separator)
+    elif isinstance(separator, list):
+        target_separator = get_separator(input_string = input_string, separator_list=separator)
+        if target_separator is not None:
+            return input_string.split(target_separator)
+    else:
+        return  input_string.split(separator)      

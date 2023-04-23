@@ -1,6 +1,7 @@
 import pytest
 
-from strplus.functions import get_separator
+from strplus.functions import get_separator, split_by_separator
+from typing import List
 
 
 def test_get_separator_one_separator():
@@ -85,3 +86,26 @@ def test_separator_list():
     separator_list = ["/", "\\"]
     expected_output = None
     assert get_separator(input_string, separator_list) == expected_output
+
+
+def test_split_by_separator():
+    # Test with default separator
+    assert split_by_separator('1,2,3,4') == ['1', '2', '3', '4']
+    assert split_by_separator('1;2;3;4') == ['1', '2', '3', '4']
+    assert split_by_separator('1:2:3:4') == ['1', '2', '3', '4']
+    assert split_by_separator('1-2-3-4', separator=["-"]) == ['1', '2', '3', '4']
+    
+    # Test with a specific separator
+    assert split_by_separator('1,2,3,4', ',') == ['1', '2', '3', '4']
+    assert split_by_separator('1;2;3;4', ';') == ['1', '2', '3', '4']
+    assert split_by_separator('1:2:3:4', ':') == ['1', '2', '3', '4']
+    assert split_by_separator('1-2-3-4', '-') == ['1', '2', '3', '4']
+    
+    # Test with a list of separators
+    assert split_by_separator('1,2,3,4', [',', ';']) == ['1', '2', '3', '4']
+    assert split_by_separator('1;2;3;4', [',', ';']) == ['1', '2', '3', '4']
+    assert split_by_separator('1:2:3:4', [',', ';', ':']) == ['1', '2', '3', '4']
+    assert split_by_separator('1-2-3-4', [':', '-']) == ['1', '2', '3', '4']
+    
+    # Test with no separator found
+    assert split_by_separator('1234') == None
