@@ -86,7 +86,7 @@ class Str(str):
         list is an alias for [`to_list`][strplus.Str.to_list]
         """
         return self.to_list()
-    
+
     @property
     def split_by_sep(self):
         """
@@ -123,8 +123,8 @@ class Str(str):
 
     def to_camel(self):
         """
-        
-        Converts a string from any case to CamelCase. 
+
+        Converts a string from any case to CamelCase.
         Implementation of [strplus.cases.to_camel][]
 
         Returns:
@@ -151,7 +151,7 @@ class Str(str):
 
     def to_snake(self):
         """
-        
+
         Converts a string to snake_case.
         Implementation of [strplus.cases.to_snake][]
 
