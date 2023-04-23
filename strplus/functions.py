@@ -160,8 +160,8 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
             ```
             ['one', 'two three|four']
             ```
-            !!! Warning 
-                Only one separator frequency, so the priority will be respect
+            !!! Warning
+                Only one separator frequency found in the list provided, so the priority will be respect!
 
         === "Example 3"
             ```python
