@@ -196,3 +196,57 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
             return input_string.split(target_separator)
     else:
         return input_string.split(separator)
+
+
+def cast_sep_to_comma(input_string: str, separator: Optional[str] = None) -> str:
+    """
+
+    Replaces a specified separator or the automatically detected one with a comma in the input string.
+
+    Args:
+        input_string (str): The input string to replace separators in.
+        separator (Optional[str], optional): The separator to replace with a comma. If None, the function will
+            attempt to determine the appropriate separator based on the input string. Defaults to None.
+
+    Returns:
+        str: A string resulting from replacing the specified or detected separator with a comma.
+
+    !!! Example "This example shows how to use `cast_sep_to_comma()` to replace a separator in a string"
+
+        === "Example 1"
+            ```python
+            cast_sep_to_comma("one-two-three", "-")
+            ```
+            Returns:
+            ```
+            "one,two,three"
+            ```
+
+        === "Example 2"
+            ```python
+            cast_sep_to_comma("one two three")
+            ```
+            Returns:
+            ```
+            "one,two,three"
+            ```
+            !!! Warning
+                The function will only attempt to detect the separator when the `separator` argument is None.
+
+    Tips:
+        - If the input string does not contain the specified or detected separator, the function will return the
+          original input string unchanged.
+        - See the `get_separator` function for more details about how the function will attempt to detect the separator.
+    """
+
+    # Simple cleansing
+    input_string = input_string.strip()
+
+    if separator is not None:
+        return input_string.replace(separator, ",")
+    else:
+        separator = get_separator(input_string=input_string)
+        if separator is not None:
+            return input_string.replace(separator, ",")
+        else:
+            return input_string
