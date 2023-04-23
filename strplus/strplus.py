@@ -1,7 +1,7 @@
 from typing import List, Optional, Union
 
 from strplus.cases import to_camel, to_pascal, to_snake
-from strplus.functions import split_by_separator, to_list
+from strplus.functions import cast_sep_to_comma, split_by_separator, to_list
 
 
 class Str(str):
@@ -290,6 +290,51 @@ class Str(str):
             original input string as a single-element list.
         """
         return [Str(word) for word in split_by_separator(self, separator=separator)]
+
+    def cast_sep_to_comma(self, separator: Optional[str] = None):
+        """
+
+        Replaces a specified separator or the automatically detected one with a comma in the input string.
+        Implementation of [strplus.functions.cast_sep_to_comma][]
+
+        Args:
+            input_string (str): The input string to replace separators in.
+            separator (Optional[str], optional): The separator to replace with a comma. If None, the function will
+                attempt to determine the appropriate separator based on the input string. Defaults to None.
+
+        Returns:
+            str: A string resulting from replacing the specified or detected separator with a comma.
+
+        !!! Example "This example shows how to use `cast_sep_to_comma()` to replace a separator in a string"
+
+            === "Example 1"
+                ```python
+                my_string = Str("one-two-three", "-")
+                my_string.cast_sep_to_comma("-")
+                ```
+                Returns:
+                ```
+                "one,two,three"
+                ```
+
+            === "Example 2"
+                ```python
+                my_string = Str("one two three")
+                my_string.cast_sep_to_comma()
+                ```
+                Returns:
+                ```
+                "one,two,three"
+                ```
+                !!! Warning
+                    The function will only attempt to detect the separator when the `separator` argument is None.
+
+        Tips:
+            - If the input string does not contain the specified or detected separator, the function will return the
+            original input string unchanged.
+            - See the `get_separator` function for more details about how the function will attempt to detect the separator.
+        """
+        return Str(cast_sep_to_comma, separator=separator)
 
 
 for name in dir(str):
