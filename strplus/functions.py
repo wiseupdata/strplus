@@ -1,4 +1,3 @@
-import warnings
 from typing import Any, List, Optional, Union
 
 from strplus.cases import *
@@ -131,13 +130,14 @@ def get_separator(input_string, separator_list: Optional[List[str]] = None):
 def split_by_separator(input_string: str, separator: Optional[Union[List[str], str]] = None, type_constraint: bool = True) -> Any:
     """
 
-    Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
+    Splits a string into a list of strings using the specified separator(s), based on the built-in common separators.
 
     Args:
         input_string (str): The input string to split.
         separator (Optional[Union[List[str], str]], optional): The separator(s) to use when splitting the input string.
             This can be a single string, a list of strings, or None. If None, the function will attempt to determine
             the appropriate separator based on the input string. Defaults to None.
+        type_constraint (bool, optional): If True (default), raise an exception if input_string is not a string.
 
     Returns:
         List[str]: A list of strings resulting from splitting the input string using the specified separator(s).
@@ -162,7 +162,7 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
             ['one', 'two three|four']
             ```
             !!! Warning
-                Only one separator frequency found in the list provided, so the priority will be respect!
+                Only one separator frequency found in the list provided, so the priority will be respected!
 
         === "Example 3"
             ```python
@@ -177,7 +177,10 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
         - If the input string contains multiple consecutive instances of the specified separator(s), the resulting
           list may contain empty strings. To remove empty strings from the resulting list, you can use a list
           comprehension to filter out any empty strings.
-        - See the `get_separator` for mor details about how the function will attempt to determine the appropriate separator.
+        - See the `get_separator` for more details about how the function will attempt to determine the appropriate separator.
+
+    Raises:
+        TypeError: If the input string is not a string and `type_constraint` is True.
 
     Info: Important
         - If the separator is a list of strings, the function will attempt to determine the appropriate separator
@@ -206,7 +209,7 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
     elif type_constraint:
         raise ValueError("Error: The value passed is not a string.")
     else:
-        warnings.warn("Skipping: The value passed is not a string.")
+        print("Skipping: The value passed is not a string.")
         return input_string
 
 

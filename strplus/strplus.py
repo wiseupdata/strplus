@@ -93,7 +93,7 @@ class Str(str):
         Split itself by an inferred separator!
         split_by_sep is an alias for [`split_by_separator`][strplus.Str.split_by_separator]
         """
-        return self.to_list()
+        return self.split_by_separator(type_constraint=False)
 
     @property
     def sep_to_comma(self):
@@ -237,7 +237,7 @@ class Str(str):
         """
         return [Str(word) for word in to_list(self)]
 
-    def split_by_separator(self, separator: Optional[Union[List[str], str]] = None):
+    def split_by_separator(self, separator: Optional[Union[List[str], str]] = None, type_constraint=True):
         """
 
         Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
@@ -297,7 +297,7 @@ class Str(str):
             to use based on the input string. If no appropriate separator is found, the function will return the
             original input string as a single-element list.
         """
-        return [Str(word) for word in split_by_separator(self, separator=separator)]
+        return [Str(word) for word in split_by_separator(self, separator=separator, type_constraint=type_constraint)]
 
     def cast_sep_to_comma(self, separator: Optional[str] = None):
         """
