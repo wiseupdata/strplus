@@ -1,5 +1,5 @@
 __title__ = "strplus"
-__version__ = "1.0.9"
+__version__ = "1.0.10"
 __license__ = "MIT"
 __author__ = "SilvioLiborio"
 __copyright__ = "Copyright 2023 WiseUpData"

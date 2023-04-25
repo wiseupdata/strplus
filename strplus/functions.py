@@ -1,4 +1,5 @@
-from typing import List, Optional, Union
+import warnings
+from typing import Any, List, Optional, Union
 
 from strplus.cases import *
 
@@ -127,7 +128,7 @@ def get_separator(input_string, separator_list: Optional[List[str]] = None):
     return most_frequent_separator
 
 
-def split_by_separator(input_string: str, separator: Optional[Union[List[str], str]] = None) -> List[str]:
+def split_by_separator(input_string: str, separator: Optional[Union[List[str], str]] = None, type_constraint: bool = True) -> Any:
     """
 
     Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
@@ -184,18 +185,29 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
           original input string as a single-element list.
     """
 
-    input_string = input_string.strip()
+    if isinstance(input_string, str):
+        input_string = input_string.strip()
 
-    if separator is None:
-        target_separator = get_separator(input_string=input_string)
-        if target_separator is not None:
-            return input_string.split(target_separator)
-    elif isinstance(separator, list):
-        target_separator = get_separator(input_string=input_string, separator_list=separator)
-        if target_separator is not None:
-            return input_string.split(target_separator)
+        if separator is None:
+            # Trying to identify the separator from the common separators!
+            target_separator = get_separator(input_string=input_string)
+            if target_separator is not None:
+                return input_string.split(target_separator)
+        elif isinstance(separator, list):
+            # Trying to identify the separator by frequency and priority from the list passed!
+            target_separator = get_separator(input_string=input_string, separator_list=separator)
+            if target_separator is not None:
+                return input_string.split(target_separator)
+            else:
+                return input_string
+        else:
+            return input_string.split(separator)
+
+    elif type_constraint:
+        raise ValueError("Error: The value passed is not a string.")
     else:
-        return input_string.split(separator)
+        warnings.warn("Skipping: The value passed is not a string.")
+        return input_string
 
 
 def cast_sep_to_comma(input_string: str, separator: Optional[str] = None) -> str:
