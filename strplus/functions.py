@@ -129,8 +129,9 @@ def get_separator(input_string, separator_list: Optional[List[str]] = None):
 
 def split_by_separator(input_string: str, separator: Optional[Union[List[str], str]] = None, type_constraint: bool = True) -> Any:
     """
-
+    Return a list of string or the object itself if the type_constraint is equals False!
     Splits a string into a list of strings using the specified separator(s), based on the built-in common separators.
+    Return an error if it's not a string or return the object if type_constraint is set as False!
 
     Args:
         input_string (str): The input string to split.
@@ -172,6 +173,8 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
             ```
             ["one", "two", "three", "four"]
             ```
+    Raises:
+        TypeError: If the input string is not a string and `type_constraint` is True.
 
     Tips:
         - If the input string contains multiple consecutive instances of the specified separator(s), the resulting
@@ -179,12 +182,9 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
           comprehension to filter out any empty strings.
         - See the `get_separator` for more details about how the function will attempt to determine the appropriate separator.
 
-    Raises:
-        TypeError: If the input string is not a string and `type_constraint` is True.
-
     Info: Important
         - If the separator is a list of strings, the function will attempt to determine the appropriate separator
-          to use based on the input string. If no appropriate separator is found, the function will return the
+          to use based on the input string. If no appropriate separator was found, the function will return the
           original input string as a single-element list.
     """
 
@@ -196,6 +196,8 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
             target_separator = get_separator(input_string=input_string)
             if target_separator is not None:
                 return input_string.split(target_separator)
+            else:
+                return input_string
         elif isinstance(separator, list):
             # Trying to identify the separator by frequency and priority from the list passed!
             target_separator = get_separator(input_string=input_string, separator_list=separator)

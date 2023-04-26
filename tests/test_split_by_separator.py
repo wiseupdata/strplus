@@ -25,7 +25,7 @@ def test_split_by_separator():
     assert split_by_separator("1-2-3-4", [":", "-"]) == ["1", "2", "3", "4"]
 
     # Test with no separator found
-    assert split_by_separator("1234") == None
+    assert split_by_separator("1234") == "1234"
 
 
 def test_split_by_separator_type_constraint():
