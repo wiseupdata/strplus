@@ -1,7 +1,8 @@
 from typing import List, Optional, Union
 
 from strplus.cases import to_camel, to_pascal, to_snake
-from strplus.functions import cast_sep_to_comma, split_by_separator, to_list
+from strplus.functions import (cast_separator_to_comma, split_by_separator,
+                               to_list)
 
 
 class Str(str):
@@ -106,12 +107,12 @@ class Str(str):
         return self.split_by_separator(type_constraint=False)
 
     @property
-    def sep_to_comma(self):
+    def separator_as_comma(self):
         """
         Looks for a separator in your own value and cast it to comma!
-        sep_to_comma is an alias for [`cast_sep_to_comma`][strplus.Str.cast_sep_to_comma]
+        separator_as_comma is an alias for [`cast_separator_to_comma`][strplus.Str.cast_separator_to_comma]
         """
-        return self.cast_sep_to_comma()
+        return self.cast_separator_to_comma()
 
     @property
     def print(self):
@@ -304,10 +305,10 @@ class Str(str):
         result = [Str(word) for word in result] if isinstance(result, list) else result
         return result
 
-    def cast_sep_to_comma(self, separator: Optional[str] = None):
+    def cast_separator_to_comma(self, separator: Optional[str] = None):
         """
         Replaces a specified separator or the automatically detected one with a comma in the input string.
-        Implementation of [strplus.functions.cast_sep_to_comma][]
+        Implementation of [strplus.functions.cast_separator_to_comma][]
 
         Args:
             input_string (str): The input string to replace separators in.
@@ -317,12 +318,12 @@ class Str(str):
         Returns:
             str: A string resulting from replacing the specified or detected separator with a comma.
 
-        !!! Example "This example shows how to use `cast_sep_to_comma()` to replace a separator in a string"
+        !!! Example "This example shows how to use `cast_separator_to_comma()` to replace a separator in a string"
 
             === "Example 1"
                 ```python
                 my_string = Str("one-two-three", "-")
-                my_string.cast_sep_to_comma("-")
+                my_string.cast_separator_to_comma("-")
                 ```
                 Returns:
                 ```
@@ -332,7 +333,7 @@ class Str(str):
             === "Example 2"
                 ```python
                 my_string = Str("one two three")
-                my_string.cast_sep_to_comma()
+                my_string.cast_separator_to_comma()
                 ```
                 Returns:
                 ```
@@ -346,7 +347,7 @@ class Str(str):
             original input string unchanged.
             - See the `get_separator` function for more details about how the function will attempt to detect the separator.
         """
-        return cast_sep_to_comma(self, separator=separator)
+        return cast_separator_to_comma(self, separator=separator)
 
     @staticmethod
     def cast(input_value: any, join_sep: str = ",", type_constraint: bool = True):

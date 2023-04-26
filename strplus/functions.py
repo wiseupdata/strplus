@@ -215,7 +215,7 @@ def split_by_separator(input_string: str, separator: Optional[Union[List[str], s
         return input_string
 
 
-def cast_sep_to_comma(input_string: str, separator: Optional[str] = None) -> str:
+def cast_separator_to_comma(input_string: str, separator: Optional[str] = None) -> str:
     """
 
     Replaces a specified separator or the automatically detected one with a comma in the input string.
@@ -228,11 +228,11 @@ def cast_sep_to_comma(input_string: str, separator: Optional[str] = None) -> str
     Returns:
         str: A string resulting from replacing the specified or detected separator with a comma.
 
-    !!! Example "This example shows how to use `cast_sep_to_comma()` to replace a separator in a string"
+    !!! Example "This example shows how to use `cast_separator_to_comma()` to replace a separator in a string"
 
         === "Example 1"
             ```python
-            cast_sep_to_comma("one-two-three", "-")
+            cast_separator_to_comma("one-two-three", "-")
             ```
             Returns:
             ```
@@ -241,7 +241,7 @@ def cast_sep_to_comma(input_string: str, separator: Optional[str] = None) -> str
 
         === "Example 2"
             ```python
-            cast_sep_to_comma("one two three")
+            cast_separator_to_comma("one two three")
             ```
             Returns:
             ```

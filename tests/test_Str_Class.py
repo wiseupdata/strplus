@@ -115,6 +115,6 @@ def test_split_by_sep():
 
 
 def test_sep_to_comma():
-    assert Str("a;b;c").sep_to_comma == "a,b,c"
-    assert Str("1-2-3-4").sep_to_comma == "1-2-3-4"
-    assert Str("a|b and c").sep_to_comma == "a|b,and,c"
+    assert Str("a;b;c").separator_as_comma == "a,b,c"
+    assert Str("1-2-3-4").separator_as_comma == "1-2-3-4"
+    assert Str("a|b and c").separator_as_comma == "a|b,and,c"
