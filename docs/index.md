@@ -4,7 +4,7 @@
 
 !!! success "Features ✨️"
     - Wrapper Class
-    - +421 test covered in 36 Tests files!
+    - +464 test covered in 36 Tests files!
     - Simple use!
     - Made with A.I. contribution 🤖 
 

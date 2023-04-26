@@ -75,3 +75,46 @@ def test_list():
     # Test accessing an attribute
     s = Str("MyString")
     assert s.to_list() == ["My", "String"]
+
+
+def test_cast_to_str_class():
+    assert Str.cast("hello") == Str("hello")
+    assert Str.cast(["foo", "bar", "baz"], join_sep="-") == Str("foo-bar-baz")
+    with pytest.raises(ValueError):
+        Str.cast(42)
+    assert Str.cast(42, type_constraint=False) == 42
+
+
+def test_to_pascal():
+    assert Str("some-mixed_string With spaces_underscores-and-hyphens").to_pascal() == "SomeMixedStringWithSpacesUnderscoresAndHyphens"
+    assert Str("camelCaseTest").to_pascal() == "CamelCaseTest"
+    assert Str("snake_case_test").to_pascal() == "SnakeCaseTest"
+
+
+def test_to_camel():
+    assert Str("some-mixed_string With spaces_underscores-and-hyphens").to_camel() == "someMixedStringWithSpacesUnderscoresAndHyphens"
+    assert Str("PascalCaseTest").to_camel() == "pascalCaseTest"
+    assert Str("snake_case_test").to_camel() == "snakeCaseTest"
+
+
+def test_to_snake():
+    assert Str("some-mixed_string With spaces_underscores-and-hyphens").to_snake() == "some_mixed_string_with_spaces_underscores_and_hyphens"
+    assert Str("PascalCaseTest").to_snake() == "pascal_case_test"
+    assert Str("camelCaseTest").to_snake() == "camel_case_test"
+
+
+def test_list():
+    assert Str("a,b,c").list == ["a", "b", "c"]
+    assert Str("1,2,3,4").list == ["1", "2", "3", "4"]
+
+
+def test_split_by_sep():
+    assert Str("a,b,c").split_by_sep == ["a", "b", "c"]
+    assert Str("1.2.3.4").split_by_sep == "1.2.3.4"
+    assert Str("a,b and c").split_by_sep == ["a,b", "and", "c"]
+
+
+def test_sep_to_comma():
+    assert Str("a;b;c").separator_as_comma == "a,b,c"
+    assert Str("1-2-3-4").separator_as_comma == "1-2-3-4"
+    assert Str("a|b and c").separator_as_comma == "a|b,and,c"

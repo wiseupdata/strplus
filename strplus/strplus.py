@@ -1,7 +1,8 @@
 from typing import List, Optional, Union
 
 from strplus.cases import to_camel, to_pascal, to_snake
-from strplus.functions import cast_sep_to_comma, split_by_separator, to_list
+from strplus.functions import (cast_separator_to_comma, split_by_separator,
+                               to_list)
 
 
 class Str(str):
@@ -62,55 +63,67 @@ class Str(str):
     @property
     def pascal(self):
         """
-        pascal is an alias for [`to_pascal`][strplus.Str.to_pascal]
+        Cast itself to PascalCase!
+        This attribute is an alias for [`to_pascal`][strplus.Str.to_pascal]
         """
         return self.to_pascal()
 
     @property
     def camel(self):
         """
-        camel is an alias for [`to_camel`][strplus.Str.to_camel]
+        Cast itself to camelCase!
+        This attribute is an alias for [`to_camel`][strplus.Str.to_camel]
         """
         return self.to_camel()
 
     @property
     def snake(self):
         """
-        snake is an alias for [`to_snake`][strplus.Str.to_snake]
+        Cast itself to snake_case!
+        This attribute is an alias for [`to_snake`][strplus.Str.to_snake]
         """
         return self.to_snake()
 
     @property
     def list(self):
         """
-        list is an alias for [`to_list`][strplus.Str.to_list]
+        Split itself into a list!
+        This attribute is an alias for [`to_list`][strplus.Str.to_list]
         """
         return self.to_list()
 
     @property
     def split_by_sep(self):
         """
-        split_by_sep is an alias for [`split_by_separator`][strplus.Str.split_by_separator]
+        Splits itself into a list of strings based on the built-in common separators.
+        This attribute is an alias for the function[`split_by_separator`][strplus.Str.split_by_separator]
+
+        Tip: Use
+            - If you need to to inform a different list in can call the the function split_by_separator from this class
+              and inform your custom list of separators!
+            - You can find examples of use in menu examples.str_class
+
         """
-        return self.to_list()
+        return self.split_by_separator(type_constraint=False)
 
     @property
-    def sep_to_comma(self):
+    def separator_as_comma(self):
         """
-        sep_to_comma is an alias for [`cast_sep_to_comma`][strplus.Str.cast_sep_to_comma]
+        Looks for a separator in your own value and cast it to comma!
+        separator_as_comma is an alias for [`cast_separator_to_comma`][strplus.Str.cast_separator_to_comma]
         """
-        return self.cast_sep_to_comma()
+        return self.cast_separator_to_comma()
 
     @property
     def print(self):
         """
-        print is an alias for `str.print`
+        Print itself!
+        This attribute is an alias for `str.print`
         """
         print(self)
 
     def to_pascal(self):
         """
-
         Simple method to converts a string to PascalCase.
         Implementation of [strplus.cases.to_pascal][]
 
@@ -124,13 +137,11 @@ class Str(str):
             my_string.to_pascal()
             ```
             SomeMixedStringWithSpacesUnderscoresAndHyphens
-
         """
         return Str(to_pascal(self))
 
     def to_camel(self):
         """
-
         Converts a string from any case to CamelCase.
         Implementation of [strplus.cases.to_camel][]
 
@@ -152,13 +163,11 @@ class Str(str):
                 my_string.to_camel()
                 ```
                 thisIsATest
-
         """
         return Str(to_camel(self))
 
     def to_snake(self):
         """
-
         Converts a string to snake_case.
         Implementation of [strplus.cases.to_snake][]
 
@@ -187,13 +196,11 @@ class Str(str):
                 my_string.to_snake()
                 ```
                 hello_world
-
         """
         return Str(to_snake(self))
 
     def to_list(self):
         """
-
         Converts a string to a list of strings, where each word is a separate element in the list.
         Implementation of [strplus.functions.to_list][]
 
@@ -232,13 +239,11 @@ class Str(str):
         Info: Important
             - For best results, avoid using punctuation or non-alphanumeric characters in the input string.
             - This function uses regular expressions to identify words in the input string.
-
         """
         return [Str(word) for word in to_list(self)]
 
-    def split_by_separator(self, separator: Optional[Union[List[str], str]] = None):
+    def split_by_separator(self, separator: Optional[Union[List[str], str]] = None, type_constraint=True):
         """
-
         Splits a string into a list of strings using the specified separator(s), base in the built-in common separators.
         Implementation of [strplus.functions.split_by_separator][]
 
@@ -296,13 +301,14 @@ class Str(str):
             to use based on the input string. If no appropriate separator is found, the function will return the
             original input string as a single-element list.
         """
-        return [Str(word) for word in split_by_separator(self, separator=separator)]
+        result = split_by_separator(self, separator=separator, type_constraint=type_constraint)
+        result = [Str(word) for word in result] if isinstance(result, list) else result
+        return result
 
-    def cast_sep_to_comma(self, separator: Optional[str] = None):
+    def cast_separator_to_comma(self, separator: Optional[str] = None):
         """
-
         Replaces a specified separator or the automatically detected one with a comma in the input string.
-        Implementation of [strplus.functions.cast_sep_to_comma][]
+        Implementation of [strplus.functions.cast_separator_to_comma][]
 
         Args:
             input_string (str): The input string to replace separators in.
@@ -312,12 +318,12 @@ class Str(str):
         Returns:
             str: A string resulting from replacing the specified or detected separator with a comma.
 
-        !!! Example "This example shows how to use `cast_sep_to_comma()` to replace a separator in a string"
+        !!! Example "This example shows how to use `cast_separator_to_comma()` to replace a separator in a string"
 
             === "Example 1"
                 ```python
                 my_string = Str("one-two-three", "-")
-                my_string.cast_sep_to_comma("-")
+                my_string.cast_separator_to_comma("-")
                 ```
                 Returns:
                 ```
@@ -327,7 +333,7 @@ class Str(str):
             === "Example 2"
                 ```python
                 my_string = Str("one two three")
-                my_string.cast_sep_to_comma()
+                my_string.cast_separator_to_comma()
                 ```
                 Returns:
                 ```
@@ -341,7 +347,69 @@ class Str(str):
             original input string unchanged.
             - See the `get_separator` function for more details about how the function will attempt to detect the separator.
         """
-        return Str(cast_sep_to_comma(self, separator=separator))
+        return cast_separator_to_comma(self, separator=separator)
+
+    @staticmethod
+    def cast(input_value: any, join_sep: str = ",", type_constraint: bool = True):
+        """
+        Casts the input value to Str+. If it's a list will be joined by comma or you can define you custom separator to join the elements.
+
+        Args:
+            input_value (any): The input value to cast.
+            join_sep (str, optional): The separator to join list elements with. Defaults to ",".
+            type_constraint (bool, optional): If True (default), raise a ValueError if the input value is not a string or a list.
+
+        Returns:
+            Str: A string or a string representation of a list of values joined by the specified separator.
+
+        !!! Example "This example shows how to use `cast()` to cast an input value to a string"
+            === "Example 1"
+                ```python
+                Str.cast("Hello, world!")
+                ```
+                Returns:
+                ```
+                "Hello, world!"
+                ```
+                Type: strplus.strplus.Str
+
+            === "Example 2"
+                ```python
+                Str.cast(["apple", "banana", "orange"], join_sep="-")
+                ```
+                Returns:
+                ```
+                "apple-banana-orange"
+                ```
+                Type: strplus.strplus.Str
+
+            === "Example 3"
+                ```python
+                Str.cast(123, type_constraint=False)
+                ```
+                Returns:
+                ```
+                Skipping: It's not possible to cast from type: <class 'int'>
+                123
+                ```
+                Type: int
+
+        Raises:
+            ValueError: If the input value is not a string or a list and `type_constraint` is True.
+
+        Tips:
+            - If the input value is a list, the resulting string will be a string representation of the list elements joined by the specified separator.
+        """
+        if isinstance(input_value, str):
+            return Str(input_value)
+        elif isinstance(input_value, list):
+            return Str(f"{join_sep}".join(input_value))
+        else:
+            if type_constraint:
+                raise ValueError(f"Error: It's not possible to cast from type: {type(input_value)}")
+            else:
+                print(f"Skipping: It's not possible to cast from type: {type(input_value)}")
+                return input_value
 
 
 for name in dir(str):
